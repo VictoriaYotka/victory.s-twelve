@@ -1,0 +1,21 @@
+// reset h1, h2, h3, h4, h5, h6
+%title {
+  margin: 0;
+}
+
+// reset p
+%text {
+  margin: 0;
+}
+
+// reset ul
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// reset a
+%link {
+  text-decoration: none;
+}
