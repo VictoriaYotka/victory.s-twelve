@@ -1,0 +1,75 @@
+.reviews {
+  background-image: url('../images/background/bg_mobile@1x.jpg');
+  background-size: contain;
+
+  &__list {
+  }
+  &__card {
+  }
+  &__picture {
+    display: block;
+    margin-bottom: 32px;
+  }
+  &__thumb {
+    background: #84a178;
+    border-radius: 10px;
+
+    padding: 35px 39px;
+    text-align: center;
+
+    margin-bottom: 32px;
+
+    @include tablet {
+      padding: 28px 80px;
+    }
+
+    @include desktop {
+      padding: 43px 109px;
+    }
+  }
+  .round {
+    border-radius: 100px;
+    border: 1px solid transparent;
+
+    margin: 0 auto;
+  }
+  &__text {
+    display: inline-block;
+
+    font-style: regular;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(31 / 12);
+    letter-spacing: 0.04em;
+    color: var(--main-text-color);
+
+    width: 162px;
+
+    @include tablet {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: calc(26 / 14);
+
+      letter-spacing: 0.04em;
+
+      width: 485px;
+    }
+    @include desktop {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc(30 / 16);
+
+      letter-spacing: 0.04em;
+      width: 700px;
+    }
+  }
+  &__name-town {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(37 / 20);
+
+    text-align: center;
+
+    color: var(--secondary-text-color);
+  }
+}
