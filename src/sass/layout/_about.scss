@@ -34,10 +34,10 @@
 .about_text_first::before {
     content: "";
     position: absolute;
-    background-image: url(../images/about/s@1x.jpg);
+    background-image: url("../images/about/s@1x.jpg");
 
     @include retina {
-        background-image: url(../images/about/s@2x.jpg);
+        background-image: url("../images/about/s@2x.jpg");
     }
 }
 
