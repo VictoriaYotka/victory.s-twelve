@@ -1,1 +1,67 @@
+.about {
+    background-color: var(--main-bg-color);
+}
 
+
+
+.about_undertitle {
+    @extend %title;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    margin-bottom: 12px;
+}
+
+.about_text {
+    @extend %text;
+    font-size: 12px;
+    line-height: 1.76;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--main-text-color);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.about_text_first {
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.about_text_first::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/about/s@1x.jpg);
+
+    @include retina {
+        background-image: url(../images/about/s@2x.jpg);
+    }
+}
+
+.about_text_second {
+    line-height: 1.62;
+    margin-bottom: 10px;
+}
+ 
+.about_text_third {
+    display: none;
+
+    @include tablet {
+        display: inline;
+    }
+}
+
+.about_btn_container {
+    display: flex;
+    justify-content: center;
+}
+
+.about_btn {
+    gap: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+}
