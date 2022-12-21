@@ -1,0 +1,63 @@
+.products {
+  display: flex;
+  gap: 29px;
+  @extend %list;
+}
+
+.label {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section__title {
+  @extend %title;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product__field {
+  position: relative;
+
+  min-width: 370px;
+
+  margin-top: 303px;
+  padding-top: 165px;
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-bottom: 126px;
+
+  background: #aec6a5;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.product__img {
+  position: absolute;
+  left: calc(50% - 151px);
+  top: calc(-50% + 46px);
+
+  display: flex;
+  height: 302px;
+  width: 302px;
+  border-radius: 50%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/products/cream-lg@1x.png);
+  background-color: #fff;
+}
+
+.product__name {
+  @extend %title;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 66px;
+}
+
+.product__descr {
+  @extend %text;
+  text-align: center;
+  min-width: 142px;
+}
