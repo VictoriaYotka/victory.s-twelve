@@ -1,8 +1,8 @@
 {
-  "name": "7-UP",
+  "name": "11-friends-of-code",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://VictoriaYotka.github.io/7-UP",
+  "homepage": "https://VictoriaYotka.github.io/11-friends-of-code",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /parcel-project-template/"
