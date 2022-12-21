@@ -1,0 +1,76 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transition: opacity 250ms var(--color-transition),
+    visibility 250ms var(--color-transition);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5e5e5e;
+
+  min-width: 95%;
+
+  background-color: rgba(252, 252, 252, 100%);
+  border-radius: 10px;
+  padding: 28px;
+
+  @media screen and (min-width: 1199px) {
+    min-width: 280px;
+  }
+
+  @media screen and (min-width: 479px) {
+    min-width: 280px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.send-form {
+  width: 134px;
+  height: 42px;
+  margin-top: 24px;
+
+  background-color: rgba(248, 210, 48, 100%);
+  border: transparent;
+  color: rgba(19, 19, 19, 100%);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
