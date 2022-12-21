@@ -1,7 +1,13 @@
 <header class="header">
   <div class="container header_container">
     <a href="./index.html" class="logo">
-      <img src="./images/logo.png" alt="company logo" />
+      <img
+        srcset="./images/logo/logo_lg1x.png 1x, ./images/logo/logo_lg2x.png 2x"
+        src="./images/logo/logo_lg1x.png"
+        alt="company logo"
+        width="60"
+        height="65"
+      />
     </a>
     <nav class="nav">
       <ul class="site-nav_list">
@@ -43,6 +49,21 @@
   </div>
   <!-- mobile menu -->
   <div class="menu-container js-menu-container" id="mobile-menu">
+    <a href="./index.html" class="mobile_logo">
+      <img
+        srcset="
+          ./images/logo/logo_sm1x.png 1x,
+          ./images/logo/logo_sm2x.png 2x,
+          ./images/logo/logo_md1x.png 1x,
+          ./images/logo/logo_md2x.png 2x
+        "
+        src="./images/logo/logo_sm1x.png"
+        sizes="(min-width: 768px) 48px, (min-width: 480px) 40px, 100vw"
+        alt="company logo"
+        width="48"
+        height="44"
+      />
+    </a>
     <button class="menu-toggle js-close-menu">
       <svg
         fill="currentColor"
@@ -59,11 +80,20 @@
       </svg>
     </button>
 
-    <ul class="mobile-menu">
-      <li><a href="" class="link">About</a></li>
-      <li><a href="" class="link">Products</a></li>
-      <li><a href="" class="link">Contacts</a></li>
-      <li><a href="" class="link">Career</a></li>
+    <ul class="mobile_menu">
+      <li class="mobile_menu_item">
+        <a href="#hero" class="mobile_menu_link">Home</a>
+      </li>
+      <li class="mobile_menu_item">
+        <a href="#about" class="mobile_menu_link">How it’s made?</a>
+      </li>
+      <li class="mobile_menu_item">
+        <a href="#products" class="mobile_menu_link">Our products</a>
+      </li>
+      <li class="mobile_menu_item">
+        <a href="#contacts" class="mobile_menu_link">Contact</a>
+      </li>
     </ul>
+    <button type="button" class="button mobile_button">Buy now</button>
   </div>
 </header>
