@@ -1,0 +1,74 @@
+.contacts__container {
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+// .contacts__wrap {
+// }
+.contacts__list {
+  @extend%list;
+  gap: 16px;
+  display: flex;
+}
+.contacts__item {
+  width: 100%;
+  padding: 40px 32px 24px 32px;
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  background: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+.contacts__item-upertitle {
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.2;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+.contacts__adress-wrap {
+  max-width: 262px;
+  margin-bottom: 24px;
+}
+.contacts__adress-upertitle {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+
+  color: var(--secondary-text-color);
+}
+.contacts__adress-link {
+  @extend%link;
+
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+
+  color: var(--second-accent-color);
+}
+.contacts__schedule {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 24px;
+}
+.contacts__schedule-day {
+  font-size: 12px;
+  line-height: 1, 86;
+
+  color: var(--secondary-text-color);
+}
+.contacts__schedule-time {
+  font-size: 12px;
+  line-height: 1.86;
+
+  color: var(--third-text-color);
+}
+// .contacts__link-wrap {
+// }
+.conracts__link-item {
+  @extend%link;
+}
