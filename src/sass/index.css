@@ -183,4 +183,10 @@ img {
   line-height: 1.85;
   text-align: center;
   color: var(--secondary-text-color);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--main-bg-color);
+  width: 12px;
+  height: 12px;
 }/*# sourceMappingURL=index.css.map */

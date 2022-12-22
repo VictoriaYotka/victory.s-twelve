@@ -1,26 +1,28 @@
 .reviews {
   background-image: url('../images/background/bg_mobile@1x.jpg');
   background-size: contain;
+  background-repeat: repeat;
+  padding-top: 178px;
 
   &__list {
-  }
-  &__card {
+    @extend %list;
   }
   &__picture {
     display: block;
     margin-bottom: 32px;
   }
   &__thumb {
-    background: #84a178;
+    background: var(--main-bg-color);
     border-radius: 10px;
 
     padding: 35px 39px;
     text-align: center;
-
+    height: 256px;
     margin-bottom: 32px;
 
     @include tablet {
       padding: 28px 80px;
+      height: 138px;
     }
 
     @include desktop {
@@ -33,13 +35,15 @@
 
     margin: 0 auto;
   }
+
   &__text {
+    @extend %text;
     display: inline-block;
 
     font-style: regular;
     font-weight: 400;
     font-size: 12px;
-    line-height: calc(31 / 12);
+    line-height: 2.58;
     letter-spacing: 0.04em;
     color: var(--main-text-color);
 
@@ -48,8 +52,7 @@
     @include tablet {
       font-weight: 500;
       font-size: 14px;
-      line-height: calc(26 / 14);
-
+      line-height: 1.86;
       letter-spacing: 0.04em;
 
       width: 485px;
@@ -57,19 +60,44 @@
     @include desktop {
       font-weight: 500;
       font-size: 16px;
-      line-height: calc(30 / 16);
-
+      line-height: 1.88;
       letter-spacing: 0.04em;
+
       width: 700px;
     }
   }
+
   &__name-town {
+    @extend %text;
     font-weight: 500;
     font-size: 20px;
-    line-height: calc(37 / 20);
+    line-height: 1.85;
 
     text-align: center;
-
     color: var(--secondary-text-color);
   }
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--main-bg-color);
+}
+
+.slick-dots {
+  bottom: -32px;
+}
+
+.slick-dots li button:before {
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  content: '';
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
 }
