@@ -48,6 +48,10 @@
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
   color: var(--main-text-color);
 
   transition: color 250ms ease-in-out;
@@ -62,5 +66,11 @@
   display: none;
   @include tablet {
     display: inline-flex;
+    width: 152px;
+    line-height: calc(17 / 14);
+    gap: 4px;
+  }
+  &_icon {
+    fill: currentColor;
   }
 }
