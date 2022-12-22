@@ -1,11 +1,4 @@
 .backdrop {
-  background-color: #817c7c;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: scroll;
-
   opacity: 1;
 
   visibility: visible;
@@ -35,11 +28,11 @@
   border-radius: 10px;
   padding: 28px;
 
-  @media screen and (min-width: 1199px) {
-    min-width: 280px;
+  @include desktop {
+    min-width: 568px;
   }
 
-  @media screen and (min-width: 479px) {
+  @include mobile {
     min-width: 280px;
   }
 }
@@ -51,13 +44,15 @@
   font-size: 16px;
   line-height: calc(24 / 16);
 
-  display: block;
+  display: flex;
   align-items: center;
   text-align: center;
 
   color: var(--secondary-text-color);
   margin-bottom: 20px;
   margin-top: 0ch;
+  text-decoration: none;
+  vertical-align: middle;
 }
 
 .send-form {
