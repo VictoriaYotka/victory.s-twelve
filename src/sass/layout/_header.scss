@@ -12,9 +12,27 @@
 }
 
 .logo {
+  color: var(--primary-accent-color);
   margin-right: auto;
   padding-top: 12px;
   padding-bottom: 12px;
+
+  &_icon {
+    width: 40px;
+    height: 37px;
+    fill: currentColor;
+
+    @include tablet {
+      width: 44px;
+      height: 48px;
+    }
+
+    @include desktop {
+      width: 60px;
+      height: 65px;
+    }
+  }
+
   @include desktop {
     margin-right: 308px;
     padding: 0;

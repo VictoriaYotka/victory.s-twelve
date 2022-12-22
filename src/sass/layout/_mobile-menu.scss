@@ -85,6 +85,13 @@
   position: absolute;
   top: 12px;
   left: 32px;
+  color: var(--primary-accent-color);
+
+  &_icon {
+    width: 40px;
+    height: 37px;
+    fill: currentColor;
+  }
 
   @include tablet {
     top: 20px;
