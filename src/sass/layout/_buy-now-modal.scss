@@ -199,9 +199,13 @@
   outline:none;
   border-radius: 10px;
   font-weight: 400;
-  padding-left:16px;
 }
 .modal__field::placeholder{
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
   color: var(--secondary-text-color);
 }
 
@@ -224,9 +228,22 @@
   width: 368px;
   height: 84px;
 }
+.modal__field-comment::placeholder{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+}
 
 .modal__form-group {
   margin-bottom: 32px;
+}
+.img-1 {
+  background-image: url(../images/buy-naw-modal/img_large-cream@1x.png);
+
+   @include retina {
+  background-image: url(../images/buy-naw-modal/img_large-cream@2x.png) ;
+ }
 }
 
 
