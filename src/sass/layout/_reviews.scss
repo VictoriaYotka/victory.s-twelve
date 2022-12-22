@@ -1,8 +1,38 @@
 .reviews {
-  background-image: url('../images/background/bg_mobile@1x.jpg');
+  background-image: url('../images/background/background_s.png');
+
   background-size: contain;
   background-repeat: repeat;
   padding-top: 178px;
+  padding-bottom: 40px;
+  width: 100vw;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/background/background_s@2x.png');
+  }
+
+  @include tablet {
+    background-image: url('../images/background/background_md.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/background/background_md@2x.png');
+    }
+    padding-top: 399px;
+    padding-bottom: 80px;
+  }
+
+  @include desktop {
+    background-image: url('../images/background/background_lg.png');
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/background/background_lg@2x.png');
+    }
+    padding-top: 464px;
+    padding-bottom: 100px;
+  }
 
   &__list {
     @extend %list;
@@ -47,7 +77,7 @@
     letter-spacing: 0.04em;
     color: var(--main-text-color);
 
-    width: 162px;
+    width: 190px;
 
     @include tablet {
       font-weight: 500;
@@ -55,7 +85,7 @@
       line-height: 1.86;
       letter-spacing: 0.04em;
 
-      width: 485px;
+      width: 537px;
     }
     @include desktop {
       font-weight: 500;
@@ -63,7 +93,7 @@
       line-height: 1.88;
       letter-spacing: 0.04em;
 
-      width: 700px;
+      width: 750px;
     }
   }
 
@@ -100,4 +130,9 @@
   border-radius: 50%;
   width: 12px;
   height: 12px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: transparent;
 }
