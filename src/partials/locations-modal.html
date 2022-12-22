@@ -10,20 +10,45 @@
 
     <picture>
       <source
+        media="(min-width: 768px)"
         srcset="
-          ./images/moldal_location/mapmob@1.jpg      224w,
-          ./images/moldal_location/mapmob@2x.jpg     448w,
-          ./images/moldal_location/mapmob@1x.webp    224w,
-          ./images/moldal_location/mapmob@2x.webp    448w,
-          ./images/moldal_location/maptab@1x.jpg     448w,
-          ./images/moldal_location/maptab@2x.jpg     896w,
-          ./images/moldal_location/mapwptab1@1x.webp 448w,
-          ./images/moldal_location/mapwptab2@2x.webp 896w
+          ./images/moldal_location/mapwptab1@1x.webp 1x,
+          ./images/moldal_location/mapwptab2@2x.webp 2x
         "
-        sizes="(min-width: 768px) 448px, (min-width: 480px) 224px"
-        width="224"
+        type="image/webp"
       />
-      <img src="./images/moldal_location/maptab@2x.jpg" alt="" />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/moldal_location/maptab@1x.jpg 1x,
+          ./images/moldal_location/maptab@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/moldal_location/mapmob@1x.webp 1x,
+          ./images/moldal_location/mapmob@2x.webp 2x
+        "
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/moldal_location/mapmob@1.jpg  1x,
+          ./images/moldal_location/mapmob@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+      <img
+        class="card-img"
+        src="./images/moldal_location/mapmob@1.jpg"
+        alt=""
+        width="224"
+        height="199"
+      />
     </picture>
 
     <a class="send-form" href="">Open map</a>

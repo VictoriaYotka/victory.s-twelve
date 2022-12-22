@@ -26,10 +26,10 @@
   border: 2px solid var(--icon-bg-color);
   background-color: var(--modal-bg-color);
   border-radius: 10px;
-  // padding: 28px;
+  padding: 28px;
 
   @include desktop {
-    min-width: 568px;
+    width: 568px;
   }
 
   @include mobile {
