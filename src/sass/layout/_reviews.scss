@@ -1,111 +1,89 @@
 .reviews {
-  background-image: url('../images/background/background_s.png');
-
-  background-size: contain;
-  background-repeat: repeat;
   padding-top: 178px;
   padding-bottom: 40px;
   width: 100vw;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/background/background_s@2x.png');
-  }
 
   @include tablet {
-    background-image: url('../images/background/background_md.png');
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/background/background_md@2x.png');
-    }
     padding-top: 399px;
     padding-bottom: 80px;
   }
 
   @include desktop {
-    background-image: url('../images/background/background_lg.png');
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/background/background_lg@2x.png');
-    }
     padding-top: 464px;
     padding-bottom: 100px;
   }
+}
 
-  &__list {
-    @extend %list;
-  }
-  &__picture {
-    display: block;
-    margin-bottom: 32px;
-  }
-  &__thumb {
-    background: var(--main-bg-color);
-    border-radius: 10px;
+.reviews__list {
+  @extend %list;
+}
+.reviews__picture {
+  margin-bottom: 32px;
+}
+.reviews__thumb {
+  background: var(--main-bg-color);
+  border-radius: 10px;
 
-    padding: 35px 39px;
-    text-align: center;
-    height: 256px;
-    margin-bottom: 32px;
+  padding: 35px 39px;
+  text-align: center;
+  height: 256px;
+  margin-bottom: 32px;
 
-    @include tablet {
-      padding: 28px 80px;
-      height: 138px;
-    }
-
-    @include desktop {
-      padding: 43px 109px;
-    }
-  }
-  .round {
-    border-radius: 100px;
-    border: 1px solid transparent;
-
-    margin: 0 auto;
+  @include tablet {
+    padding: 28px 80px;
+    height: 138px;
   }
 
-  &__text {
-    @extend %text;
-    display: inline-block;
-
-    font-style: regular;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 2.58;
-    letter-spacing: 0.04em;
-    color: var(--main-text-color);
-
-    width: 190px;
-
-    @include tablet {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.86;
-      letter-spacing: 0.04em;
-
-      width: 537px;
-    }
-    @include desktop {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.88;
-      letter-spacing: 0.04em;
-
-      width: 750px;
-    }
+  @include desktop {
+    padding: 43px 109px;
   }
+}
+.round {
+  border-radius: 100px;
+  border: 1px solid transparent;
 
-  &__name-town {
-    @extend %text;
+  margin: 0 auto;
+}
+
+.reviews__text {
+  @extend %text;
+  display: inline-block;
+
+  font-style: regular;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.58;
+  letter-spacing: 0.04em;
+  color: var(--main-text-color);
+
+  width: 190px;
+
+  @include tablet {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 1.85;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
 
-    text-align: center;
-    color: var(--secondary-text-color);
+    width: 537px;
   }
+  @include desktop {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.04em;
+
+    width: 750px;
+  }
+}
+
+.reviews__name-town {
+  @extend %text;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.85;
+
+  text-align: center;
+  color: var(--secondary-text-color);
 }
 
 .slick-dots li.slick-active button:before {
