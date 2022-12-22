@@ -1,32 +1,47 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 :root {
   /* Fonts */
-  --main-font: "Montserrat", sans-serif;
-  --secondary-font: "Seymour One", sans-serif;
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Seymour One', sans-serif;
   /* Text colors */
-  --main-text-color:#FCFCFC;
-  --secondary-text-color:#131313;
-  --third-text-color:#ABABAB;
-  --primary-accent-color:#F8D24E;
-  --second-accent-color:#D6936D;
+  --main-text-color: #fcfcfc;
+  --secondary-text-color: #131313;
+  --third-text-color: #ababab;
+  --primary-accent-color: #f8d24e;
+  --second-accent-color: #d6936d;
   /* BG colors */
-  --main-bg-color:#84A178;
-  --modal-bg-color:#FCFCFC;
+  --main-bg-color: #84a178;
+  --modal-bg-color: #fcfcfc;
   /*Icons bg*/
-  --icon-bg-color: #F8D24E;
+  --icon-bg-color: #f8d24e;
   /*input bg*/
   --input-bg-color: rgba(248, 210, 78, 0.1);
   /*Products bg-color*/
-  --product-bg-cream: #AEC6A5;
-  --pruduct-bg-coffe: #EFD478;
-  --product-bg-milkshakes: #D6936D;
+  --product-bg-cream: #aec6a5;
+  --pruduct-bg-coffe: #efd478;
+  --product-bg-milkshakes: #d6936d;
   /*Product picture-gradient*/
-  --product-grad-cream:linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
-  --product-grad-coffe:linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
-  --product-grad-milkshake:linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+  --product-grad-cream: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-coffe: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-milkshake: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
   /*Product picture-shadow*/
   --product-shadow-cream: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-  --product-shadow-coffe:0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  --product-shadow-coffe: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
   --product-shadow-milkshake: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
 }
 
@@ -39,23 +54,13 @@
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-.text {
-  margin: 0;
-}
-
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -120,7 +125,7 @@ img {
 }
 
 .reviews {
-  background-image: url("../images/background/bg_mobile@1x.jpg");
+  background-image: url('../images/background/bg_mobile@1x.jpg');
   background-size: contain;
 }
 .reviews__picture {
@@ -189,4 +194,4 @@ img {
   color: var(--main-bg-color);
   width: 12px;
   height: 12px;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
