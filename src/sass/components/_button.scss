@@ -10,13 +10,19 @@
   padding-right: 35px;
 
   text-align: center;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  overflow: hidden;
 
   border: none;
   border-radius: 10px;
-  color: var(--button-text-color);
+  color: var(--button-text-color-first);
   background-color: var(--icon-bg-color);
 
-  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
 .button:hover,
