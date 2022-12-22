@@ -279,7 +279,7 @@ img {
   padding-top: 165px;
   padding-left: 64px;
   padding-right: 64px;
-  padding-bottom: 106px;
+  padding-bottom: 38px;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 }
@@ -299,7 +299,7 @@ img {
 .product__img {
   position: absolute;
   left: calc(50% - 151px);
-  top: -197px;
+  top: -183px;
   display: flex;
   height: 302px;
   width: 302px;
@@ -369,7 +369,7 @@ img {
 .product__gradient {
   position: absolute;
   left: calc(50% - 151px);
-  top: -181px;
+  top: -167px;
   display: flex;
   height: 302px;
   width: 302px;
@@ -404,7 +404,7 @@ img {
 
 .product__descr {
   min-height: 142px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   font-size: 16px;
   line-height: 1.76;
   text-align: center;
@@ -413,26 +413,20 @@ img {
 }
 
 .product__btn {
-  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
   width: 120px;
   height: 60px;
-  padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
 }
 
-.product__arrow {
-  position: absolute;
-  right: calc(50% - 20px);
-  top: calc(50% - 8px);
-}
-
-.product__arrow:hover,
-.product__arrow:focus {
+.product__btn:hover,
+.product__btn:focus {
   fill: var(--main-text-color);
 }
 
