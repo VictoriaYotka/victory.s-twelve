@@ -155,7 +155,7 @@
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
-.product__img {
+.buy-now__img {
   position: absolute;
   top: -71px;
   display: flex;
@@ -238,12 +238,52 @@
 .modal__form-group {
   margin-bottom: 32px;
 }
+
 .img-1 {
-  background-image: url(../images/buy-naw-modal/img_large-cream@1x.png);
+  background-image: url(../images/buy-naw-modal/img_small-cream@1x.png);
 
    @include retina {
-  background-image: url(../images/buy-naw-modal/img_large-cream@2x.png) ;
+  background-image: url(../images/buy-naw-modal/img_small-cream@2x.png) ;
  }
+
+  @include tablet {
+    background-image: url(../images/buy-naw-modal/img_large-cream@1x.png);
+  }
+
+  @include retina{
+    background-image:url(../images/buy-naw-modal/img_large-cream@2x.png)
+  }
+}
+.img-2 {
+  background-image: url(../images/buy-naw-modal/img_small-coffe@1x.png);
+
+   @include retina {
+  background-image: url(../images/buy-naw-modal/img_small-coffe@2x.png) ;
+ }
+
+  @include tablet {
+    background-image: url(../images/buy-naw-modal/img_large-coffe@1x.png);
+  }
+
+  @include retina{
+    background-image:url(../images/buy-naw-modal/img_large-coffe@2x.png);
+  }
+}
+
+.img-3 {
+  background-image: url(../images/buy-naw-modal/img_small-milkshake@1x.png);
+
+   @include retina {
+  background-image: url(../images/buy-naw-modal/img_small-milkshake@2x.png) ;
+ }
+
+  @include tablet {
+    background-image: url(../images/buy-naw-modal/img_large-milkshake@1x.png);
+  }
+
+  @include retina{
+    background-image:url(../images/buy-naw-modal/img_large-milkshake@2x.png);
+  }
 }
 
 
