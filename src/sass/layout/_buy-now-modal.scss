@@ -1,0 +1,248 @@
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+  /*  Установаем ширину окна  */
+  width: 568px;
+  height: 644px;
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background: #fcfcfc;
+  transition: 0.3s all;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+//Картки
+.buy-now-title {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+  margin-bottom: 40px;
+  @extend %title;
+  margin-bottom: 40px;
+}
+
+/* Стили для активных классов подложки и окна */
+.buy-now{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.buy-now__list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  position: relative;
+}
+
+.buy-now__item {
+  width: 132px;
+  height: 132px;
+  border-radius: 15px;
+  @extend %list;
+  border-radius: 15px;
+}
+.buy-now__card-1 {
+  border: 2px solid #96af8c;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+.buy-now__card-2 {
+  background: #efd478;
+  border: 2px solid #efd478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+}
+.buy-now__card-3 {
+  border: 2px solid #d6936d;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+
+.buy-now__gradient {
+  position: absolute;
+  top: -61px;
+  display: flex;
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+}
+.card-gradient-1 {
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+.card-gradient-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+}
+
+.card-gradient-3 {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+
+.buy-now__name {
+  text-align: center;
+  justify-content: center;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+.product__img {
+  position: absolute;
+  top: -71px;
+  display: flex;
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+}
+
+/* Стили для активных классов подложки и окна */
+.modal-buy-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__form-btn {
+  width: 121px;
+  height: 42px;
+  background: #f8d24e;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.modal__label {
+  display: block;
+  margin-bottom: 16px;
+}
+.modal__field {
+  width: 368px;
+  height: 42px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  outline:none;
+  border-radius: 10px;
+  font-weight: 400;
+  padding-left:16px;
+}
+.modal__field::placeholder{
+  color: var(--secondary-text-color);
+}
+
+.modal__field:hover{
+  outline:#96af8c;
+}
+
+.modal__label {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  color: #131313;
+}
+
+.modal__field-comment {
+  width: 368px;
+  height: 84px;
+}
+
+.modal__form-group {
+  margin-bottom: 32px;
+}
+
+
+/* --Картки
+--валідація
+--спробувати все в VScode
+--fonts */
+
+/* 1. Переносимо усе  у вс код
+2. налаштовуємо шрифт
+3. Кнопка
+3. ширини рамок і падінги на рамках
+4. Картинки
+5. адаптивність
+6. Валідація
+
+до 6 год вечора зробити  */

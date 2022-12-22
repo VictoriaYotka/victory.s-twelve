@@ -1,0 +1,52 @@
+<!---Product-modal window-->
+<div class="modal" data-modal="1">
+  
+<!--   Svg иконка для закрытия окна  -->
+  <svg class="modal__cross js-modal-close" width="11" height="11">
+        <use href="./images/icons.svg#close-btn"></use>
+  </svg>
+
+  <!---------------Картки--------------->
+ <h2 class="buy-now-title">Buy now</h2>
+ <div class="buy-now">
+ <ul class="buy-now__list">
+ <li class="buy-now__item buy-now__card-1">
+ <img class="product__img" src="./images/buy-naw-modal/img_large-cream@1x.png" alt="">
+ <span class="buy-now__gradient card-gradient-1"></span>
+    <span class="buy-now__img"></span>
+      <h3 class="buy-now__name">ice cream</h3>
+      </li>
+  <li class="buy-now__item buy-now__card-2">
+    <img class="product__img" src="./images/buy-naw-modal/img_large-coffe@1x.png" alt="">
+      <span class="buy-now__gradient card-gradient-2"></span>
+      <span class="buy-now__img"></span>
+      <h3 class="buy-now__name">ice coffee</h3>
+    </li>
+  <li class="buy-now__item buy-now__card-3">
+    <img class="product__img" src="./images/buy-naw-modal/img_large-milkshake@1x.png" alt="">
+    <span class="buy-now__gradient card-gradient-3"></span>
+        <span class="buy-now__img"></span>
+       <h3 class="buy-now__name">milkshake</h3>
+      </li>
+  </ul>
+</div>
+
+<form class="modal-form" name="modal_form">
+<div class="modal__form-group" role="group">
+            
+<label class="modal__label" for="user_name"></label>
+<input class="modal__field" type="text" name="user_name" id="user_name" placeholder="Phone" class="placeholder"/>
+      
+ <label class="modal__label" for="user_phone"></label>
+ <input class="modal__field" type="tel" name="user_phone" id="user_phone" placeholder="Name"/>
+             
+ <label class="modal__label" for="user_mail"></label>
+            
+ <input class="modal__field modal__field-comment" type="email" name="user_mail" id="user_mail" placeholder="Comment"/>
+            
+</div>
+            
+<div class="modal-buy-button-container">
+<button class="modal__form-btn button" type="submit">Submit</button>
+</div>
+</form>
