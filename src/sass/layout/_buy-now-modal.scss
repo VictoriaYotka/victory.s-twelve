@@ -61,7 +61,7 @@
 }
 
 //Картки
-.buy-now-title {
+.buy-now__title {
   display: inline-block;
   font-family: var(--secondary-font);
   font-style: normal;
@@ -71,12 +71,10 @@
   color: var(--secondary-text-color);
   margin-bottom: 40px;
   @extend %title;
-  margin-bottom: 40px;
 }
 
 /* Стили для активных классов подложки и окна */
 .buy-now{
-  margin-top: 40px;
   margin-bottom: 40px;
 }
 
