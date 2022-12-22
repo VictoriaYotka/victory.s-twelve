@@ -1,4 +1,4 @@
-<div class="backdrop" data-modal>
+<div class="backdrop is hidden" data-modal>
   <div class="modal">
     <button type="button" class="button-modal-close" data-modal-close>
       <!-- <svg class="closes" width="11" height="11">
@@ -6,13 +6,21 @@
       </svg> -->
     </button>
 
-    <h2 class="modal-title"></h2>
+    <h1 class="modal-title">Our Locations</h1>
 
-    <!-- <img class="map" src="" alt=""> -->
+    <img
+    srcset="
+      ./images/map-modal1@1x.png 1x,
+      ./images/map-modal2@2x.png 2x
+    "
+    src="./images/map-modal2@2x.png"
+    alt="map poltava"
+    
+  />
 
 
 
-        <button type="submit" class="send-form"></button>
+        <button type="submit" class="send-form">Open map</button>
       </div>
     </form>
   </div>
