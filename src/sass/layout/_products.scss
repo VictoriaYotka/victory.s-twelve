@@ -4,17 +4,19 @@
   @extend %list;
 }
 
-.label {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-}
+//
+// .label {
+//   display: block;
+//   text-align: center;
+//   text-transform: uppercase;
+// }
 
-.section__title {
-  @extend %title;
-  text-align: center;
-  text-transform: uppercase;
-}
+// .section__title {
+//   @extend %title;
+//   text-align: center;
+//   text-transform: uppercase;
+// }
+//
 
 .product__field {
   position: relative;
@@ -25,17 +27,30 @@
   padding-top: 165px;
   padding-left: 64px;
   padding-right: 64px;
-  padding-bottom: 126px;
+  padding-bottom: 106px;
 
-  background: #aec6a5;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 }
 
+.product__field:nth-child(2n) {
+  background: var(--product-bg-coffe);
+}
+
+.product__field:nth-child(2n + 1) {
+  background: var(--product-bg-milkshakes);
+}
+
+.product__field:first-child {
+  background: var(--product-bg-cream);
+}
+
+// PRODUCT IMAGES //
+
 .product__img {
   position: absolute;
   left: calc(50% - 151px);
-  top: calc(-50% + 46px);
+  top: -197px;
 
   display: flex;
   height: 302px;
@@ -45,19 +60,156 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../images/products/cream-lg@1x.png);
-  background-color: #fff;
+
+  // background-color: var(--product-bg-cream);
 }
+
+.img-1 {
+  background-image: url(../images/products/cream-md@1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/products/cream-md@2x.png);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/products/cream-lg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/cream-lg@2x.png);
+    }
+  }
+}
+
+.img-2 {
+  background-image: url(../images/products/coffee-md@1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/products/coffee-md@2x.png);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/products/coffee-lg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/coffee-lg@2x.png);
+    }
+  }
+}
+
+.img-3 {
+  background-image: url(../images/products/milkshakes-md@1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/products/milkshakes-md@2x.png);
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/products/milkshakes-lg@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/milkshakes-lg@2x.png);
+    }
+  }
+}
+
+// PRODUCT BG`S //
+
+.product__gradient {
+  position: absolute;
+  left: calc(50% - 151px);
+  top: -181px;
+
+  display: flex;
+  height: 302px;
+  width: 302px;
+  border-radius: 50%;
+}
+
+.grad-2 {
+  background: var(--product-grad-coffe);
+  box-shadow: var(--product-shadow-coffe);
+}
+
+.grad-3 {
+  background: var(--product-grad-milkshake);
+  box-shadow: var(--product-shadow-milkshake);
+}
+
+.grad-1 {
+  background: var(--product-grad-cream);
+  box-shadow: var(--product-shadow-cream);
+}
+
+// PRODUCT DESCRIPTIONS //
 
 .product__name {
   @extend %title;
-  text-align: center;
-  text-transform: uppercase;
+
   margin-bottom: 66px;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.23;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--secondary-text-color);
 }
 
 .product__descr {
   @extend %text;
+
+  min-height: 142px;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 1.76;
   text-align: center;
-  min-width: 142px;
+  letter-spacing: 0.04em;
+
+  color: var(--secondary-text-color);
+}
+
+// PRODUCT BTN //
+
+.product__btn {
+  position: relative;
+
+  display: flex;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  width: 120px;
+  height: 60px;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.product__arrow {
+  position: absolute;
+  right: calc(50% - 20px);
+  top: calc(50% - 8px);
+}
+
+.product__arrow:hover,
+.product__arrow:focus {
+  fill: var(--main-text-color);
 }
