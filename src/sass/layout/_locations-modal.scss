@@ -26,7 +26,7 @@
   border: 2px solid var(--icon-bg-color);
   background-color: var(--modal-bg-color);
   border-radius: 10px;
-  padding: 28px;
+  // padding: 28px;
 
   @include desktop {
     min-width: 568px;
@@ -44,15 +44,13 @@
   font-size: 16px;
   line-height: calc(24 / 16);
 
-  display: flex;
+  display: block;
   align-items: center;
   text-align: center;
 
   color: var(--secondary-text-color);
   margin-bottom: 20px;
   margin-top: 0ch;
-  text-decoration: none;
-  vertical-align: middle;
 }
 
 .send-form {
@@ -70,8 +68,9 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
-
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-family: var(--main-font);
   font-style: normal;
@@ -81,6 +80,7 @@
 
   margin-left: auto;
   margin-right: auto;
+  text-decoration: none;
 }
 
 .button-modal-close {
