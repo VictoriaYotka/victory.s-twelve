@@ -2,43 +2,120 @@
     background-color: var(--main-bg-color);
 }
 
+.about_image_container {
+    position: relative;
+}
 
+.about_title {
+    margin-bottom: 32px;
 
-.about_undertitle {
-    @extend %title;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.22;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--main-text-color);
+    @include tablet {
+        margin-bottom: 72px;
+    }
+
+        @include desktop {
+            margin-bottom: 82px;
+        }
+}
+
+.about_uppertitle {
     margin-bottom: 12px;
 }
 
-.about_text {
+.about_image {
+    position: absolute;
+    top: 22px;
+    left: calc(50% - 140px);
+    width: 279px;
+    height: 278px;
+    border-radius: 50%;
+    background-image: url(../images/about/s@1x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    @include retina {
+        background-image: url(../images/about/s@2x.jpg);
+    }
+
+    @include tablet {
+        left: auto;
+        width: 330px;
+        height: 356px;
+        background-image: url(../images/about/m@1x.jpg);
+        
+        @include retina {
+            background-image: url(../images/about/m@2x.jpg);
+    }
+    }
+
+    @include desktop {
+        background-image: url(../images/about/l@1x.jpg);
+        width: 491px;
+        height: 490px;
+
+            @include retina {
+                background-image: url(../images/about/l@2x.jpg);
+    }
+    }
+}
+
+.about_gradient {
+    position: absolute;
+    left: calc(50% - 140px);
+    width: 279px;
+    height: 278px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(0deg,
+            rgba(248, 210, 78, 0.7),
+            rgba(248, 210, 78, 0.7));
+    box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+    z-index: 1;
+
+    @include tablet {
+        left: auto;
+        width: 330px;
+        height: 356px;
+    }
+
+        @include desktop {
+            width: 491px;
+                height: 490px;
+        }
+}
+
+.about_text_container {
     @extend %text;
-    font-size: 12px;
-    line-height: 1.76;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: var(--main-text-color);
+        font-size: 12px;
+        line-height: 1.76;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: var(--main-text-color);
     padding-left: 30px;
     padding-right: 30px;
+    margin-top: 360px;
+
+    @include tablet {
+        text-align: left;
+        padding-left: 400px;
+        margin-top: 80px;
+        margin-bottom: 32px;
+    }
+
+        @include desktop {
+            font-size: 16px;
+            padding-left: 616px;
+            margin-top: 172px;
+            margin-bottom: 54px;
+        }
 }
 
 .about_text_first {
     margin-bottom: 4px;
-    position: relative;
-}
-
-.about_text_first::before {
-    content: "";
-    position: absolute;
-    background-image: url("../images/about/s@1x.jpg");
-
-    @include retina {
-        background-image: url("../images/about/s@2x.jpg");
-    }
 }
 
 .about_text_second {
@@ -50,13 +127,16 @@
     display: none;
 
     @include tablet {
-        display: inline;
+        display: block;
     }
 }
 
 .about_btn_container {
     display: flex;
     justify-content: center;
+    @include tablet {
+            padding-left: 225px;
+        }
 }
 
 .about_btn {
