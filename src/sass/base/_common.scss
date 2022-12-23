@@ -2,6 +2,28 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-image: url('../images/background/background_s.png');
+  background-size: contain;
+  background-repeat: repeat;
+
+  @include retina {
+    background-image: url('../images/background/background_s@2x.png');
+  }
+
+  @include tablet {
+    background-image: url('../images/background/background_md.png');
+
+    @include retina {
+      background-image: url('../images/background/background_md@2x.png');
+    }
+  }
+
+  @include desktop {
+    background-image: url('../images/background/background_lg.png');
+    @include retina {
+      background-image: url('../images/background/background_lg@2x.png');
+    }
+  }
 
   .container {
     margin-right: auto;
@@ -10,35 +32,16 @@ body {
     padding-left: 20px;
     max-width: 480px;
 
-    background-image: url('../images/background/background_s.png');
-    background-size: contain;
-    background-repeat: repeat;
-
-    @include retina {
-      background-image: url('../images/background/background_s@2x.png');
-    }
-
     @include tablet {
       padding-right: 32px;
       padding-left: 32px;
       max-width: 768px;
-
-      background-image: url('../images/background/background_md.png');
-
-      @include retina {
-        background-image: url('../images/background/background_md@2x.png');
-      }
     }
 
     @include desktop {
       padding-right: 16px;
       padding-left: 16px;
       max-width: 1200px;
-
-      background-image: url('../images/background/background_lg.png');
-      @include retina {
-        background-image: url('../images/background/background_lg@2x.png');
-      }
     }
   }
 }

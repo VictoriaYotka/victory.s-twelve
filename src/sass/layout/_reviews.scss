@@ -1,16 +1,20 @@
 .reviews {
-  padding-top: 178px;
+  padding-top: 0px;
   padding-bottom: 40px;
   width: 100vw;
 
   @include tablet {
-    padding-top: 399px;
+    padding-top: 0px;
     padding-bottom: 80px;
+    padding-right: 31px;
+    padding-left: 32px;
   }
 
   @include desktop {
-    padding-top: 464px;
+    padding-top: 0px;
     padding-bottom: 100px;
+    padding-left: 116px;
+    padding-right: 116px;
   }
 }
 
@@ -21,21 +25,33 @@
   margin-bottom: 32px;
 }
 .reviews__thumb {
+  display: flex;
+  align-items: center;
   background: var(--main-bg-color);
   border-radius: 10px;
 
-  padding: 35px 39px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 39px;
+  padding-right: 39px;
+
   text-align: center;
   height: 256px;
   margin-bottom: 32px;
 
   @include tablet {
-    padding: 28px 80px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 80px;
+    padding-right: 80px;
     height: 138px;
   }
 
   @include desktop {
-    padding: 43px 109px;
+    padding-top: 43px;
+    padding-bottom: 43px;
+    padding-left: 109px;
+    padding-right: 109px;
   }
 }
 .round {
@@ -91,7 +107,12 @@
 }
 
 .slick-dots {
-  bottom: -32px;
+  position: relative;
+  bottom: -12px;
+
+  @include tablet {
+    bottom: -32px;
+  }
 }
 
 .slick-dots li button:before {
@@ -101,6 +122,7 @@
   height: 12px;
   opacity: 1;
   content: '';
+  // top: 12px;
 }
 
 .slick-dots li.slick-active button:before {

@@ -1,0 +1,124 @@
+.advantages {
+  padding-top: 50px;
+  background: var(--main-bg-color);
+  padding-bottom: 64px;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 204px;
+  }
+  @include desktop {
+    padding-bottom: 178px;
+  }
+}
+
+.advantages__list {
+  @extend %list;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 44px;
+  text-align: center;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  @include desktop {
+    gap: 32px;
+  }
+}
+
+.advantages__quantity {
+  @extend %text;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+
+  margin-bottom: 16px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.23;
+    text-transform: none;
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    font-size: 58px;
+  }
+}
+.advantages__quantity-one::before {
+  @extend %text;
+  @extend %before;
+  content: url('../images/advantages/img1@1x.png');
+
+  bottom: 16px;
+
+  @include tablet {
+    bottom: 32px;
+  }
+
+  @include desktop {
+    bottom: 40px;
+  }
+}
+
+.advantages__quantity-two::before {
+  @extend %text;
+  @extend %before;
+  content: url('../images/advantages/img2@1x.png');
+
+  bottom: 16px;
+
+  @include tablet {
+    bottom: 32px;
+  }
+
+  @include desktop {
+    bottom: 40px;
+  }
+}
+
+.advantages__quantity-three::before {
+  @extend %text;
+  @extend %before;
+  content: url('../images/advantages/img3@1x.png');
+
+  bottom: 16px;
+
+  @include tablet {
+    bottom: 32px;
+  }
+
+  @include desktop {
+    bottom: 40px;
+  }
+}
+
+.advantages__text {
+  @extend %text;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+
+  @include tablet {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.74;
+    max-width: 152px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.76;
+    max-width: 368px;
+  }
+}

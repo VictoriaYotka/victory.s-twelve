@@ -15,13 +15,17 @@
   padding: 0;
 }
 
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 // reset a
 %link {
   text-decoration: none;
+}
+
+// Псевдоелемент
+%before {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 50%;
+  margin-left: -25px;
 }
