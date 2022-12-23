@@ -23,21 +23,16 @@
 
   min-width: 95%;
 
-  border: 2px solid var(--icon-bg-color);
+  outline: 2px solid var(--icon-bg-color);
   background-color: var(--modal-bg-color);
   border-radius: 10px;
-  padding: 28px;
-
-  @include tablet {
-    min-width: 568px;
-    padding-top: 32px;
-    padding-right: 60px;
-    padding-bottom: 32px;
-    padding-left: 60px;
-  }
 
   @include mobile {
     min-width: 280px;
+  }
+
+  @include tablet {
+    min-width: 568px;
   }
 }
 
@@ -71,8 +66,8 @@
   justify-content: center;
   padding: 0;
 
-  top: 8px;
-  right: 8px;
+  top: 12px;
+  right: 12px;
 
   border: none;
   background-color: transparent;
