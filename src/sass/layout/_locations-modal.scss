@@ -23,7 +23,7 @@
 
   min-width: 95%;
 
-  border: 2px solid var(--icon-bg-color);
+  outline: 2px solid var(--icon-bg-color);
   background-color: var(--modal-bg-color);
   border-radius: 10px;
 
@@ -54,7 +54,7 @@
   margin-top: 0ch;
 
   @include tablet {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     font-size: 20px;
     line-height: calc(28 / 20);
   }
@@ -82,7 +82,7 @@
   text-decoration: none;
 
   @include tablet {
-    margin-top: 30px;
+    margin-top: 32px;
     width: 145px;
     font-size: 14px;
     line-height: calc(17 / 14);
