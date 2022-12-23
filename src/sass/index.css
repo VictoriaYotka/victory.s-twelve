@@ -74,7 +74,7 @@
   margin: 0;
 }
 
-.mobile_menu, .products, .site-nav_list {
+.mobile_menu, .products__list, .site-nav_list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -200,6 +200,69 @@ img {
   background-color: var(--backdrop-colour);
 }
 
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+@media screen and (min-width: 1200px) {
+  .card-set {
+    gap: 32px;
+  }
+}
+
+.card-set__item {
+  flex-basis: 280px;
+}
+@media screen and (min-width: 768px) {
+  .card-set__item {
+    flex-basis: calc((100% - 32px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-set__item {
+    flex-basis: calc((100% - 64px) / 3);
+  }
+}
+
+.gallery {
+  padding-bottom: 0;
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    margin-bottom: 42px;
+  }
+}
+
+.gallery_slider {
+  position: relative;
+  transform: translateY(-32px);
+}
+@media screen and (min-width: 768px) {
+  .gallery_slider {
+    transform: translateY(-144px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery_slider {
+    transform: translateY(-98px);
+  }
+}
+
+.gallery_slide {
+  margin: 0 auto;
+  width: 1013px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -270,31 +333,39 @@ img {
   }
 }
 
+.products__list {
+  gap: 168px;
+  margin-top: 148px;
+}
 @media screen and (min-width: 768px) {
-  .products {
-    display: flex;
+  .products__list {
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-top: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__list {
     gap: 29px;
+    margin-top: 303px;
   }
 }
 
-.product__field {
+.products__item {
   position: relative;
-  min-width: 280px;
-  margin-top: 168px;
+  flex-basis: 440px;
   padding-top: 123px;
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 24px;
 }
 @media screen and (min-width: 480px) {
-  .product__field {
-    padding-bottom: 74px;
+  .products__item {
+    padding-bottom: 64px;
   }
 }
 @media screen and (min-width: 768px) {
-  .product__field {
-    min-width: 224px;
-    margin-top: 200px;
+  .products__item {
     padding-top: 108px;
     padding-left: 26px;
     padding-right: 26px;
@@ -303,9 +374,8 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .product__field {
-    min-width: 370px;
-    margin-top: 303px;
+  .products__item {
+    flex-basis: calc((100% - 58px) / 3);
     padding-top: 165px;
     padding-left: 64px;
     padding-right: 64px;
@@ -314,22 +384,14 @@ img {
     border-radius: 24px;
   }
 }
-
-.product__field:nth-child(2n) {
+.products__item:nth-child(2n) {
   background: var(--product-bg-coffe);
 }
-
-.product__field:nth-child(2n+1) {
+.products__item:nth-child(2n+1) {
   background: var(--product-bg-milkshakes);
 }
-
-.product__field:first-child {
+.products__item:first-child {
   background: var(--product-bg-cream);
-}
-@media screen and (max-width: 767.98px) {
-  .product__field:first-child {
-    margin-top: 148px;
-  }
 }
 
 .product__img {
@@ -360,59 +422,59 @@ img {
 }
 
 .img-1 {
-  background-image: url(../images/products/cream-md@1x.png);
+  background-image: url(../images/products/cream_md@1x.png);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .img-1 {
-    background-image: url(../images/products/cream-md@2x.png);
+    background-image: url(../images/products/cream_md@2x.png);
   }
 }
 @media screen and (min-width: 1200px) {
   .img-1 {
-    background-image: url(../images/products/cream-lg@1x.png);
+    background-image: url(../images/products/cream_lg@1x.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .img-1 {
-    background-image: url(../images/products/cream-lg@2x.png);
+    background-image: url(../images/products/cream_lg@2x.png);
   }
 }
 
 .img-2 {
-  background-image: url(../images/products/coffee-md@1x.png);
+  background-image: url(../images/products/coffee_md@1x.png);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .img-2 {
-    background-image: url(../images/products/coffee-md@2x.png);
+    background-image: url(../images/products/coffee_md@2x.png);
   }
 }
 @media screen and (min-width: 1200px) {
   .img-2 {
-    background-image: url(../images/products/coffee-lg@1x.png);
+    background-image: url(../images/products/coffee_lg@1x.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .img-2 {
-    background-image: url(../images/products/coffee-lg@2x.png);
+    background-image: url(../images/products/coffee_lg@2x.png);
   }
 }
 
 .img-3 {
-  background-image: url(../images/products/milkshakes-md@1x.png);
+  background-image: url(../images/products/milkshakes_md@1x.png);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .img-3 {
-    background-image: url(../images/products/milkshakes-md@2x.png);
+    background-image: url(../images/products/milkshakes_md@2x.png);
   }
 }
 @media screen and (min-width: 1200px) {
   .img-3 {
-    background-image: url(../images/products/milkshakes-lg@1x.png);
+    background-image: url(../images/products/milkshakes_lg@1x.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .img-3 {
-    background-image: url(../images/products/milkshakes-lg@2x.png);
+    background-image: url(../images/products/milkshakes_lg@2x.png);
   }
 }
 
@@ -427,7 +489,6 @@ img {
 }
 @media screen and (min-width: 768px) {
   .product__gradient {
-    left: calc(50% - 100px);
     top: -108px;
   }
 }
@@ -490,6 +551,7 @@ img {
 @media screen and (min-width: 480px) {
   .product__descr {
     min-height: 74px;
+    margin-bottom: 47px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -514,9 +576,15 @@ img {
   margin-left: auto;
   width: 160px;
   height: 48px;
-  border: 0;
+  border: none;
   background: transparent;
   cursor: pointer;
+}
+@media screen and (min-width: 480px) {
+  .product__btn {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .product__btn {
@@ -529,9 +597,7 @@ img {
     height: 60px;
   }
 }
-
-.product__btn:hover,
-.product__btn:focus {
+.product__btn:hover, .product__btn:focus {
   fill: var(--main-text-color);
 }
 

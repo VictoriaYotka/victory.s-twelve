@@ -1,18 +1,25 @@
-.products {
+.products__list {
   @extend %list;
+  gap: 168px;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
+  margin-top: 148px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-top: 200px;
+  }
+
+  @include desktop {
     gap: 29px;
+    margin-top: 303px;
   }
 }
 
-.product__field {
+.products__item {
   position: relative;
 
-  min-width: 280px;
-
-  margin-top: 168px;
+  flex-basis: 440px;
 
   padding-top: 123px;
   padding-left: 40px;
@@ -20,14 +27,11 @@
 
   border-radius: 24px;
 
-  @media screen and (min-width: 480px) {
-    padding-bottom: 74px;
+  @include mobile {
+    padding-bottom: 64px;
   }
 
-  @media screen and (min-width: 768px) {
-    min-width: 224px;
-
-    margin-top: 200px;
+  @include tablet {
     padding-top: 108px;
     padding-left: 26px;
     padding-right: 26px;
@@ -36,10 +40,9 @@
     border-radius: 16px;
   }
 
-  @media screen and (min-width: 1200px) {
-    min-width: 370px;
+  @include desktop {
+    flex-basis: calc((100% - 2 * 29px) / 3);
 
-    margin-top: 303px;
     padding-top: 165px;
     padding-left: 64px;
     padding-right: 64px;
@@ -48,21 +51,17 @@
     box-shadow: var(--product-field-shadow-large);
     border-radius: 24px;
   }
-}
 
-.product__field:nth-child(2n) {
-  background: var(--product-bg-coffe);
-}
+  &:nth-child(2n) {
+    background: var(--product-bg-coffe);
+  }
 
-.product__field:nth-child(2n + 1) {
-  background: var(--product-bg-milkshakes);
-}
+  &:nth-child(2n + 1) {
+    background: var(--product-bg-milkshakes);
+  }
 
-.product__field:first-child {
-  background: var(--product-bg-cream);
-
-  @media screen and (max-width: 767.98px) {
-    margin-top: 148px;
+  &:first-child {
+    background: var(--product-bg-cream);
   }
 }
 
@@ -85,12 +84,12 @@
 
   // background-color: var(--product-bg-cream);
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     left: calc(50% - 100px);
     top: -120px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     left: calc(50% - 151px);
     top: -183px;
 
@@ -100,61 +99,49 @@
 }
 
 .img-1 {
-  background-image: url(../images/products/cream-md@1x.png);
+  background-image: url(../images/products/cream_md@1x.png);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/products/cream-md@2x.png);
+  @include retina {
+    background-image: url(../images/products/cream_md@2x.png);
   }
 
-  @media screen and (min-width: 1200px) {
-    background-image: url(../images/products/cream-lg@1x.png);
+  @include desktop {
+    background-image: url(../images/products/cream_lg@1x.png);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/products/cream-lg@2x.png);
+    @include retina {
+      background-image: url(../images/products/cream_lg@2x.png);
     }
   }
 }
 
 .img-2 {
-  background-image: url(../images/products/coffee-md@1x.png);
+  background-image: url(../images/products/coffee_md@1x.png);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/products/coffee-md@2x.png);
+  @include retina {
+    background-image: url(../images/products/coffee_md@2x.png);
   }
 
-  @media screen and (min-width: 1200px) {
-    background-image: url(../images/products/coffee-lg@1x.png);
+  @include desktop {
+    background-image: url(../images/products/coffee_lg@1x.png);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/products/coffee-lg@2x.png);
+    @include retina {
+      background-image: url(../images/products/coffee_lg@2x.png);
     }
   }
 }
 
 .img-3 {
-  background-image: url(../images/products/milkshakes-md@1x.png);
+  background-image: url(../images/products/milkshakes_md@1x.png);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/products/milkshakes-md@2x.png);
+  @include retina {
+    background-image: url(../images/products/milkshakes_md@2x.png);
   }
 
-  @media screen and (min-width: 1200px) {
-    background-image: url(../images/products/milkshakes-lg@1x.png);
+  @include desktop {
+    background-image: url(../images/products/milkshakes_lg@1x.png);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/products/milkshakes-lg@2x.png);
+    @include retina {
+      background-image: url(../images/products/milkshakes_lg@2x.png);
     }
   }
 }
@@ -172,12 +159,11 @@
   width: 200px;
   border-radius: 50%;
 
-  @media screen and (min-width: 768px) {
-    left: calc(50% - 100px);
+  @include tablet {
     top: -108px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     left: calc(50% - 151px);
     top: -167px;
 
@@ -217,12 +203,12 @@
 
   color: var(--secondary-text-color);
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-size: 22px;
     line-height: 1.23;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-bottom: 66px;
 
     font-size: 30px;
@@ -242,16 +228,17 @@
 
   color: var(--secondary-text-color);
 
-  @media screen and (min-width: 480px) {
+  @include mobile {
     min-height: 74px;
+    margin-bottom: 47px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     min-height: 175px;
     margin-bottom: 37px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     min-height: 142px;
     margin-bottom: 28px;
 
@@ -272,22 +259,27 @@
   width: 160px;
   height: 48px;
 
-  border: 0;
+  border: none;
   background: transparent;
 
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @include mobile {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  @include tablet {
     height: 40px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     width: 120px;
     height: 60px;
   }
-}
 
-.product__btn:hover,
-.product__btn:focus {
-  fill: var(--main-text-color);
+  &:hover,
+  &:focus {
+    fill: var(--main-text-color);
+  }
 }
