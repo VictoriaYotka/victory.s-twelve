@@ -122,4 +122,76 @@ img {
   overflow: scroll;
   display: flex;
   justify-content: center;
+}
+
+.reviews {
+  background-image: url('../images/background/bg_mobile@1x.jpg');
+  background-size: contain;
+}
+.reviews__picture {
+  display: block;
+  margin-bottom: 32px;
+}
+.reviews__thumb {
+  background: #84a178;
+  border-radius: 10px;
+  padding: 35px 39px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .reviews__thumb {
+    padding: 28px 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews__thumb {
+    padding: 43px 109px;
+  }
+}
+.reviews .round {
+  border-radius: 100px;
+  border: 1px solid transparent;
+  margin: 0 auto;
+}
+.reviews__text {
+  display: inline-block;
+  font-style: regular;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.5833333333;
+  letter-spacing: 0.04em;
+  color: var(--main-text-color);
+  width: 162px;
+}
+@media screen and (min-width: 768px) {
+  .reviews__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.8571428571;
+    letter-spacing: 0.04em;
+    width: 485px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.04em;
+    width: 700px;
+  }
+}
+.reviews__name-town {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.85;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--main-bg-color);
+  width: 12px;
+  height: 12px;
 } /*# sourceMappingURL=index.css.map */
