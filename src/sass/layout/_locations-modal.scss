@@ -59,7 +59,7 @@
   margin-top: 0ch;
 
   @include tablet {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     font-size: 20px;
     line-height: calc(28 / 20);
   }
@@ -67,22 +67,17 @@
 
 .send-form {
   width: 134px;
-  height: 42px;
-  margin-top: 24px;
 
-  background-color: var(--icon-bg-color);
-  border: transparent;
-  color: rgba(19, 19, 19, 100%);
-  border-radius: 10px;
+  margin-top: 24px;
+  padding-left: 0px;
+  padding-right: 0px;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   font-family: var(--main-font);
   font-style: normal;
@@ -92,7 +87,7 @@
   text-decoration: none;
 
   @include tablet {
-    margin-top: 32px;
+    margin-top: 30px;
     width: 145px;
     font-size: 14px;
     line-height: calc(17 / 14);
@@ -107,8 +102,8 @@
   justify-content: center;
   padding: 0;
 
-  top: 8px;
-  right: 8px;
+  top: 12px;
+  right: 12px;
 
   border: none;
   background-color: transparent;
@@ -134,4 +129,8 @@
     width: 24px;
     height: 24px;
   }
+}
+
+.img-location {
+  width: 100%;
 }
