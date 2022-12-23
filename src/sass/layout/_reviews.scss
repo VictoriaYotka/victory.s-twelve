@@ -42,16 +42,14 @@
   @include tablet {
     padding-top: 28px;
     padding-bottom: 28px;
-    padding-left: 80px;
-    padding-right: 80px;
     height: 138px;
   }
 
   @include desktop {
     padding-top: 43px;
     padding-bottom: 43px;
-    padding-left: 109px;
-    padding-right: 109px;
+    padding-left: 89px;
+    padding-right: 89px;
   }
 }
 .round {
@@ -68,11 +66,11 @@
   font-style: regular;
   font-weight: 400;
   font-size: 12px;
-  line-height: 2.58;
+  line-height: 2.55;
   letter-spacing: 0.04em;
   color: var(--main-text-color);
 
-  width: 190px;
+  width: 202px;
 
   @include tablet {
     font-weight: 500;
@@ -80,18 +78,31 @@
     line-height: 1.86;
     letter-spacing: 0.04em;
 
-    width: 537px;
+    width: 545px;
   }
   @include desktop {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.04em;
+    text-align: center;
 
-    width: 750px;
+    width: 790px;
   }
 }
+.sentences {
+  padding-left: 20px;
+  padding-right: 17px;
 
+  @include tablet {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .second-sentences {
+    padding-left: 20px;
+  }
+}
 .reviews__name-town {
   @extend %text;
   font-weight: 500;
