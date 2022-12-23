@@ -29,7 +29,7 @@
     position: absolute;
     top: 22px;
     left: calc(50% - 140px);
-    width: 279px;
+    width: 278px;
     height: 278px;
     border-radius: 50%;
     background-image: url(../images/about/cow_s@1x.jpg);
@@ -45,7 +45,7 @@
     @include tablet {
         left: auto;
         width: 330px;
-        height: 356px;
+        height: 330px;
         background-image: url(../images/about/cow_m@1x.jpg);
         
         @include retina {
@@ -55,7 +55,7 @@
 
     @include desktop {
         background-image: url(../images/about/cow_l@1x.jpg);
-        width: 491px;
+        width: 490px;
         height: 490px;
 
             @include retina {
