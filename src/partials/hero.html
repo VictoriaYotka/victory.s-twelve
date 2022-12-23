@@ -9,12 +9,48 @@
         </button>
       </div>
       <div class="hero_description">
-        <img
-          src="./images/hero/img1_lg.jpg"
-          alt="ice-cream"
-          width="225px"
-          height="225px"
-        />
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/img1_lg.webp    1x,
+              ./images/hero/img1_lg@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/img1_lg.jpg    1x,
+              ./images/hero/img1_lg@2x.jpg 2x
+            "
+            type="image/jpg"
+          />
+
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/hero/img1_md.webp    1x,
+              ./images/hero/img1_md@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./images/hero/img1_md.jpg    1x,
+              ./images/hero/img1_md@2x.jpg 2x
+            "
+            type="image/jpg"
+          />
+
+          <img
+            class="hero_image"
+            src="./images/hero/img1_md.jpg"
+            width="152px"
+            alt="many ice-cream"
+          />
+        </picture>
         <p class="hero_text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
