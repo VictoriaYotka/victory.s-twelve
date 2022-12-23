@@ -1,31 +1,16 @@
-.overlay {
-
-  opacity: 0;
-  visibility: hidden;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 20;
-  transition: 0.3s all;
-}
-
 .modal-buy-now {
   opacity: 0;
   visibility: hidden;
-  width: 288px;
-  min-height: 991px;
   position: fixed;
+  min-width: 280px;
+  min-height: 991px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 30px;
+  padding: 28px;
   border-radius: 3px;
   background: #fcfcfc;
   transition: 0.3s all;
@@ -72,21 +57,35 @@
 
 /* Стили для активных классов подложки и окна */
 .buy-now {
+  margin-top: 40px;
   margin-bottom: 40px;
+}
+.modal-wrapper{
+  position: relative;
 }
 
 .buy-now__list {
-  position: relative;
+  display: flex;
+  gap:80px;
+  flex-direction: column;
 
   @include tablet {
-    display: flex;
     gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    flex-direction: row;
+}
+}
+.buy-now__card-1:focus-within {
+  background-color: var(--product-bg-cream);
+}
+.buy-now__card-2:focus-within {
+  background-color: var(--pruduct-bg-coffe);
+}
+.buy-now__card-3:focus-within {
+  background-color: var(--product-bg-milkshakes);
 }
 
 .buy-now__item {
+  position: relative;
   width: 132px;
   height: 132px;
   border-radius: 15px;
@@ -108,19 +107,6 @@
 .buy-now__card-3 {
   border: 2px solid #d6936d;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-}
-
-.buy-now__card-1:hover,
-.buy-now__card-1:focus {
-  background-color: var(--product-bg-cream);
-}
-.buy-now__card-2:hover,
-.buy-now__card-2:focus{
-  background-color: var(--pruduct-bg-coffe);
-}
-.buy-now__card-3:hover,
-.buy-now__card-3:focus{
-  background-color: var(--product-bg-milkshakes);
 }
 
 .buy-now__gradient {
@@ -159,9 +145,11 @@
     #d9d9d9;
   box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
 }
+.modal__form-checkbox {
+  appearance: none;
+}
 
 .buy-now__name {
-  position: relative;
   text-align: center;
   justify-content: center;
   font-family: var(--main-font);
@@ -171,10 +159,9 @@
   line-height: 1.25;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  z-index: 999;
   color: var(--secondary-text-color);
-  margin-bottom: auto;
 }
+
 .buy-now__img {
   position: absolute;
   top: -71px;
@@ -234,9 +221,8 @@
   line-height: 1.4;
   color: var(--secondary-text-color);
 }
-
-.modal__field:hover {
-  outline: #96af8c;
+.modal__field:focus-within {
+  outline: 3px solid rgb(171, 218, 171);
 }
 
 .modal__label {
@@ -259,10 +245,12 @@
     height: 84px;
   }
 }
-.modal__field-comment::placeholder {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+.modal__checkbox {
+  width: 65%;
+  height: 65%;
+}
+.modal__checkbox {
+  appearance: none;
 }
 
 .modal__form-group {
@@ -316,6 +304,6 @@
   }
 }
 
-input:invalid{
-  border: rgb(246, 0, 0) solid 3px;
+input:invalid {
+  border: 3px solid rgb(172, 48, 48);
 }
