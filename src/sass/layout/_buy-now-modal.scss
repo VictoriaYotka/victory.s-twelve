@@ -1,5 +1,5 @@
 .overlay {
-  /* Скрываем подложку  */
+
   opacity: 0;
   visibility: hidden;
 
@@ -13,25 +13,16 @@
   transition: 0.3s all;
 }
 
-/* Стили для модальных окон */
-
-.modal {
-  /* Скрываем окна  */
+.modal-buy-now {
   opacity: 0;
   visibility: hidden;
-
-  /*  Установаем ширину окна  */
-  width: 568px;
-  height: 644px;
-
-  /*  Центрируем и задаем z-index */
+  width: 288px;
+  min-height: 991px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 30; /* Должен быть выше чем у подложки*/
-
-  /*  Побочные стили   */
+  z-index: 30;
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
   padding: 30px;
@@ -40,6 +31,12 @@
   transition: 0.3s all;
   border: 2px solid #f8d24e;
   border-radius: 10px;
+  overflow-y: scroll;
+
+  @include tablet {
+    min-width: 568px;
+    min-height: 664px;
+  }
 }
 
 .modal.active,
@@ -74,15 +71,19 @@
 }
 
 /* Стили для активных классов подложки и окна */
-.buy-now{
+.buy-now {
   margin-bottom: 40px;
 }
 
 .buy-now__list {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
   position: relative;
+
+  @include tablet {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .buy-now__item {
@@ -91,19 +92,35 @@
   border-radius: 15px;
   @extend %list;
   border-radius: 15px;
+
+  @include tablet {
+    flex-basis: calc((100% - 2 * 32px) / 3);
+  }
 }
 .buy-now__card-1 {
   border: 2px solid #96af8c;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
 }
 .buy-now__card-2 {
-  background: #efd478;
   border: 2px solid #efd478;
   box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
 }
 .buy-now__card-3 {
   border: 2px solid #d6936d;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+
+.buy-now__card-1:hover,
+.buy-now__card-1:focus {
+  background-color: var(--product-bg-cream);
+}
+.buy-now__card-2:hover,
+.buy-now__card-2:focus{
+  background-color: var(--pruduct-bg-coffe);
+}
+.buy-now__card-3:hover,
+.buy-now__card-3:focus{
+  background-color: var(--product-bg-milkshakes);
 }
 
 .buy-now__gradient {
@@ -144,6 +161,7 @@
 }
 
 .buy-now__name {
+  position: relative;
   text-align: center;
   justify-content: center;
   font-family: var(--main-font);
@@ -153,7 +171,9 @@
   line-height: 1.25;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  z-index: 999;
   color: var(--secondary-text-color);
+  margin-bottom: auto;
 }
 .buy-now__img {
   position: absolute;
@@ -192,15 +212,21 @@
   margin-bottom: 16px;
 }
 .modal__field {
-  width: 368px;
-  height: 42px;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
-  outline:none;
+  outline: none;
   border-radius: 10px;
   font-weight: 400;
+  width: 224;
+  height: 32px;
+  padding-left: 16px;
+
+  @include tablet {
+    width: 368px;
+    height: 42px;
+  }
 }
-.modal__field::placeholder{
+.modal__field::placeholder {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 400;
@@ -209,8 +235,8 @@
   color: var(--secondary-text-color);
 }
 
-.modal__field:hover{
-  outline:#96af8c;
+.modal__field:hover {
+  outline: #96af8c;
 }
 
 .modal__label {
@@ -225,14 +251,18 @@
 }
 
 .modal__field-comment {
-  width: 368px;
-  height: 84px;
+  width: 224px;
+  height: 65px;
+
+  @include tablet {
+    width: 368px;
+    height: 84px;
+  }
 }
-.modal__field-comment::placeholder{
+.modal__field-comment::placeholder {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  
 }
 
 .modal__form-group {
@@ -242,62 +272,50 @@
 .img-1 {
   background-image: url(../images/buy-naw-modal/img_small-cream@1x.png);
 
-   @include retina {
-  background-image: url(../images/buy-naw-modal/img_small-cream@2x.png) ;
- }
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-cream@2x.png);
+  }
 
   @include tablet {
     background-image: url(../images/buy-naw-modal/img_large-cream@1x.png);
   }
 
-  @include retina{
-    background-image:url(../images/buy-naw-modal/img_large-cream@2x.png)
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_large-cream@2x.png);
   }
 }
 .img-2 {
   background-image: url(../images/buy-naw-modal/img_small-coffe@1x.png);
 
-   @include retina {
-  background-image: url(../images/buy-naw-modal/img_small-coffe@2x.png) ;
- }
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-coffe@2x.png);
+  }
 
   @include tablet {
     background-image: url(../images/buy-naw-modal/img_large-coffe@1x.png);
   }
 
-  @include retina{
-    background-image:url(../images/buy-naw-modal/img_large-coffe@2x.png);
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_large-coffe@2x.png);
   }
 }
 
 .img-3 {
   background-image: url(../images/buy-naw-modal/img_small-milkshake@1x.png);
 
-   @include retina {
-  background-image: url(../images/buy-naw-modal/img_small-milkshake@2x.png) ;
- }
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-milkshake@2x.png);
+  }
 
   @include tablet {
     background-image: url(../images/buy-naw-modal/img_large-milkshake@1x.png);
   }
 
-  @include retina{
-    background-image:url(../images/buy-naw-modal/img_large-milkshake@2x.png);
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_large-milkshake@2x.png);
   }
 }
 
-
-/* --Картки
---валідація
---спробувати все в VScode
---fonts */
-
-/* 1. Переносимо усе  у вс код
-2. налаштовуємо шрифт
-3. Кнопка
-3. ширини рамок і падінги на рамках
-4. Картинки
-5. адаптивність
-6. Валідація
-
-до 6 год вечора зробити  */
+input:invalid{
+  border: rgb(246, 0, 0) solid 3px;
+}

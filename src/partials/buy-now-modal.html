@@ -1,9 +1,9 @@
 <!---Product-modal window-->
-<div class="modal" data-modal="1">
+<div class="modal modal-buy-now" data-modal="1">
   
 <!--   Svg иконка для закрытия окна  -->
-  <svg class="modal__cross js-modal-close" width="11" height="11">
-        <use href="./images/icons.svg#close-btn"></use>
+  <svg class="modal__cross" width="11" height="11">
+    <use href="./images/icons.svg#close-btn"></use>
   </svg>
 
   <!---------------Картки--------------->
@@ -32,13 +32,16 @@
 <div class="modal__form-group" role="group">
             
 <label class="modal__label" for="user_name"></label>
-<input class="modal__field" type="text" name="user_name" id="user_name" placeholder="Phone" class="placeholder"/>
+<input class="modal__field" type="text" name="user_name" id="user_name" placeholder="Name" class="placeholder"
+pattern="[a-z]"/>
       
  <label class="modal__label" for="user_phone"></label>
- <input class="modal__field" type="tel" name="user_phone" id="user_phone" placeholder="Name"/>
+ <input class="modal__field" type="tel" name="user_phone" id="user_phone" placeholder="Phone"
+ pattern="[0-9]" {13}/>
              
  <label class="modal__label" for="user_mail"></label>
- <input class="modal__field modal__field-comment" type="email" name="user_mail" id="user_mail" placeholder="Comment"/>
+ <input class="modal__field modal__field-comment" type="email" name="user_mail" id="user_mail" placeholder="Comment"
+ pattern="[a-z]"/>
             
 </div>
             
