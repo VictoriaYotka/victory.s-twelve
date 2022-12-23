@@ -1,0 +1,19 @@
+.section_uppertitle {
+    @extend %title;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+
+    @include tablet {
+        font-weight: 800;
+        font-size: 22px;
+        letter-spacing: 0.04em;
+    }
+
+    @include desktop {
+        font-size: 30px;
+    }
+}
