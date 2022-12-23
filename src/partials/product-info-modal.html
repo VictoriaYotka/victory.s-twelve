@@ -1,45 +1,218 @@
-<div class="backdrop">
-  <div class="modal">
+<div class="backdrop is-hidden" data-iceCream>
+  <!-- ICE CREAM MODAL -->
+  <div class="modal modal-product">
+    <button class="modal_close-button" data-iceCream-close>
+      <svg class="modal_close-icon" width="20" height="20">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+
     <strong class="modal_title">Chololate icecream</strong>
 
-    <img
-      src="./images/product-info-modal/mobile-modal-product.png"
-      alt="icecream"
-    />
+    <picture class="modal_picture">
+      <img
+        class="modal_image"
+        srcset="./images/products/cream-lg@2x.png 2x"
+        src="./images/products/cream-lg@1x.png"
+        alt="icecream"
+        width="132"
+        height="139"
+      />
+    </picture>
 
     <ul class="modal_nutrition">
-      <li>320 kcal</li>
-      <li>4g Protein</li>
-      <li>8,2g Fats</li>
-      <li>40,4g Carbs</li>
+      <li class="modal_item-elipse"><span>320</span> kcal</li>
+      <li class="modal_item-elipse"><span>4g</span>Protein</li>
+      <li class="modal_item-elipse"><span>8,2g</span>Fats</li>
+      <li class="modal_item-elipse"><span>40,4g</span>Carbs</li>
     </ul>
 
-    <span>Ingredients</span>
+    <span class="span_ingredients">Ingredients</span>
     <ul class="modal_ingredients">
-      <li>Milk 100ml</li>
-      <li>Belgian chocolate 20g</li>
-      <li>Cream 150 ml</li>
-      <li>Cocoa powder 30g</li>
-      <li>Sugar 40g</li>
-      <li>Vanilla sugar 10g</li>
+      <li class="modal_item">Milk <span>100ml</span></li>
+      <li class="modal_item">Belgian chocolate<span>20g</span></li>
+      <li class="modal_item">Cream <span>150 ml</span></li>
+      <li class="modal_item">Cocoa powder<span>30g</span></li>
+      <li class="modal_item">Sugar <span>40g</span></li>
+      <li class="modal_item">Vanilla sugar<span>10g</span></li>
     </ul>
 
     <form class="modal_form">
-      <ul>
+      <ul class="modal_form-list">
         <li>
-          <label for="name">Name</label>
-          <input type="text" name="name" />
+          <input
+            class="modal_input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+          />
         </li>
         <li>
-          <label for="phone">Phone</label>
-          <input type="text" name="text" />
+          <input
+            class="modal_input"
+            type="text"
+            name="text"
+            id="phone"
+            placeholder="Phone"
+          />
         </li>
         <li>
-          <label for="comment">Comment</label>
-          <textarea type="textarea" name="comment"></textarea>
+          <textarea
+            class="modal_input textarea"
+            name="comment"
+            id="comment"
+            placeholder="Comment"
+          ></textarea>
         </li>
       </ul>
-      <button class="modal_button" type="submit"></button>
+      <button class="modal_button button" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- ICE COFFEE MODAL -->
+<div class="backdrop is-hidden" data-iceCoffee>
+  <div class="modal modal-product">
+    <button class="modal_close-button" data-iceCoffee-close>
+      <svg class="modal_close-icon" width="20" height="20">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+
+    <strong class="modal_title">Chololate icecoffee</strong>
+
+    <picture class="modal_picture coffee">
+      <img
+        class="modal_image"
+        srcset="./images/products/coffee-lg@2x.png 2x"
+        src="./images/products/coffee-lg@1x.png"
+        alt="icecream"
+        width="132"
+        height="139"
+      />
+    </picture>
+
+    <ul class="modal_nutrition">
+      <li class="modal_item-elipse coffee"><span>320</span> kcal</li>
+      <li class="modal_item-elipse coffee"><span>4g</span>Protein</li>
+      <li class="modal_item-elipse coffee"><span>8,2g</span>Fats</li>
+      <li class="modal_item-elipse coffee"><span>40,4g</span>Carbs</li>
+    </ul>
+
+    <span class="span_ingredients">Ingredients</span>
+    <ul class="modal_ingredients">
+      <li class="modal_item">Milk <span>100ml</span></li>
+      <li class="modal_item">Belgian chocolate<span>20g</span></li>
+      <li class="modal_item">Cream <span>150 ml</span></li>
+      <li class="modal_item">Cocoa powder<span>30g</span></li>
+      <li class="modal_item">Sugar <span>40g</span></li>
+      <li class="modal_item">Vanilla sugar<span>10g</span></li>
+    </ul>
+
+    <form class="modal_form">
+      <ul class="modal_form-list">
+        <li>
+          <input
+            class="modal_input coffee"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+          />
+        </li>
+        <li>
+          <input
+            class="modal_input coffee"
+            type="text"
+            name="text"
+            id="phone"
+            placeholder="Phone"
+          />
+        </li>
+        <li>
+          <textarea
+            class="modal_input textarea coffee"
+            name="comment"
+            id="comment"
+            placeholder="Comment"
+          ></textarea>
+        </li>
+      </ul>
+      <button class="modal_button button" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- MILKSHAKES MODAL -->
+<div class="backdrop is-hidden" data-milkshakes>
+  <div class="modal modal-product">
+    <button class="modal_close-button" data-milkshakes-close>
+      <svg class="modal_close-icon" width="20" height="20">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+
+    <strong class="modal_title">Chololate milkshake</strong>
+
+    <picture class="modal_picture milk">
+      <img
+        class="modal_image"
+        srcset="./images/products/milkshakes-lg@2x.png 2x"
+        src="./images/products/milkshakes-lg@1x.png"
+        alt="icecream"
+        width="132"
+        height="139"
+      />
+    </picture>
+
+    <ul class="modal_nutrition">
+      <li class="modal_item-elipse milk"><span>320</span> kcal</li>
+      <li class="modal_item-elipse milk"><span>4g</span>Protein</li>
+      <li class="modal_item-elipse milk"><span>8,2g</span>Fats</li>
+      <li class="modal_item-elipse milk"><span>40,4g</span>Carbs</li>
+    </ul>
+
+    <span class="span_ingredients">Ingredients</span>
+    <ul class="modal_ingredients">
+      <li class="modal_item">Milk <span>100ml</span></li>
+      <li class="modal_item">Belgian chocolate<span>20g</span></li>
+      <li class="modal_item">Cream <span>150 ml</span></li>
+      <li class="modal_item">Cocoa powder<span>30g</span></li>
+      <li class="modal_item">Sugar <span>40g</span></li>
+      <li class="modal_item">Vanilla sugar<span>10g</span></li>
+    </ul>
+
+    <form class="modal_form">
+      <ul class="modal_form-list">
+        <li>
+          <input
+            class="modal_input milk"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+          />
+        </li>
+        <li>
+          <input
+            class="modal_input milk"
+            type="text"
+            name="text"
+            id="phone"
+            placeholder="Phone"
+          />
+        </li>
+        <li>
+          <textarea
+            class="modal_input textarea milk"
+            name="comment"
+            id="comment"
+            placeholder="Comment"
+          ></textarea>
+        </li>
+      </ul>
+      <button class="modal_button button" type="submit">Submit</button>
     </form>
   </div>
 </div>

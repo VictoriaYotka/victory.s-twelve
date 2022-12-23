@@ -12,3 +12,9 @@
     padding-left: 60px;
   }
 }
+
+.is-hidden {
+  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+}
