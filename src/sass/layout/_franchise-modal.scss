@@ -7,6 +7,8 @@
   //     visibility: hidden;
   //     pointer-events: none;
   //   }
+
+  overflow-y: scroll;
 }
 
 .modal {
@@ -16,8 +18,7 @@
 
   transform: translateX(-50%) translateY(-50%);
 
-  width: 280px;
-  max-height: 674px;
+  width: 95%;
   background: var(--modal-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -26,13 +27,14 @@
 
   transition: opacity 800ms 500ms ease;
 
-  @media screen and (min-width: 490px) {
-    width: 65%;
+  @include mobile {
+    width: 280px;
+    height: 674px;
   }
 
   @include tablet {
     width: 568px;
-    max-height: 668px;
+    height: 668px;
     padding-left: 58px;
     padding-right: 58px;
   }
@@ -93,6 +95,7 @@
 }
 
 .franchise-text {
+  @extend %text;
   display: block;
   margin-bottom: 24px;
   font-weight: 400;
