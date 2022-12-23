@@ -1,0 +1,33 @@
+.gallery {
+    padding-bottom: 0;
+    margin-bottom: 48px;
+
+    @include tablet {
+        margin-bottom: 20px;
+    }
+
+    @include desktop {
+        margin-bottom: 42px;
+    }
+}
+
+.gallery_slider {
+    position: relative;
+    transform: translateY(-32px);
+
+    @include tablet {
+        transform: translateY(-144px);
+    }
+
+    @include desktop {
+        transform: translateY(-98px);
+    }
+}
+
+.gallery_slide {
+    margin: 0 auto;
+    width: 1013px;
+    overflow: hidden;
+
+    border-radius: 24px;
+}
