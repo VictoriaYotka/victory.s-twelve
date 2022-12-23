@@ -1,24 +1,36 @@
 .advantages {
   padding-top: 50px;
-  padding-right: 45px;
-  padding-left: 45px;
   padding-bottom: 64px;
   background: var(--main-bg-color);
   margin-left: auto;
   margin-right: auto;
+
   @include tablet {
     padding-top: 60px;
+    padding-bottom: 204px;
+  }
+  @include desktop {
+    padding-bottom: 178px;
+  }
+}
+.advantages__container {
+  padding-right: 45px;
+  padding-left: 45px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
     padding-right: 76px;
     padding-left: 76px;
-    padding-bottom: 204px;
+    max-width: 768px;
   }
   @include desktop {
     padding-right: 16px;
     padding-left: 16px;
-    padding-bottom: 178px;
+    max-width: 1200px;
   }
 }
-
 .advantages__list {
   @extend %list;
   gap: 44px;
@@ -70,20 +82,10 @@
   @extend %before;
   content: '';
   background-image: url('../images/advantages/img1@1x.png');
-  bottom: 16px;
-
-  @include tablet {
-    bottom: 32px;
-  }
-
-  @include desktop {
-    bottom: 40px;
-  }
 
   @include retina {
     background-image: url('../images/advantages/img1@2x.png');
     background-size: contain;
-    bottom: 48px;
   }
 }
 
@@ -92,20 +94,10 @@
   @extend %before;
   content: '';
   background-image: url('../images/advantages/img2@1x.png');
-  bottom: 16px;
-
-  @include tablet {
-    bottom: 32px;
-  }
-
-  @include desktop {
-    bottom: 40px;
-  }
 
   @include retina {
     background-image: url('../images/advantages/img2@2x.png');
     background-size: contain;
-    bottom: 48px;
   }
 }
 
@@ -114,20 +106,23 @@
   @extend %before;
   content: '';
   background-image: url('../images/advantages/img3@1x.png');
+
+  @include retina {
+    background-image: url('../images/advantages/img3@2x.png');
+    background-size: contain;
+  }
+}
+
+.advantages__quantity-one::before,
+.advantages__quantity-two::before,
+.advantages__quantity-three::before {
   bottom: 16px;
 
   @include tablet {
     bottom: 32px;
   }
-
   @include desktop {
     bottom: 40px;
-  }
-
-  @include retina {
-    background-image: url('../images/advantages/img3@2x.png');
-    background-size: contain;
-    bottom: 48px;
   }
 }
 
