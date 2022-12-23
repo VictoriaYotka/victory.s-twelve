@@ -8,45 +8,10 @@
     margin-bottom: 60px;
   }
 }
-.contacts__list {
-  @extend %list;
-
-  @include tablet {
-    gap: 16px;
-    display: flex;
-  }
-  @include desktop {
-    gap: 32px;
-    display: flex;
-  }
-}
 
 .contacts__item {
-  margin-bottom: 16px;
-
   margin-left: auto;
   margin-right: auto;
-
-  @include mobile {
-    width: 280px;
-  }
-  @include tablet {
-    width: 224px;
-    margin-bottom: 0;
-    flex-basis: calc((100% - 2 * 16px) / 3);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-  @include desktop {
-    width: 368px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 40px;
-    padding-left: 40px;
-    flex-basis: calc((100% - 2 * 32px) / 3);
-  }
 
   padding-top: 40px;
   padding-bottom: 24px;
@@ -56,16 +21,32 @@
   background: var(--modal-bg-color);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  @include desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 .contacts__item-upertitle {
   @extend %text;
   display: inline-block;
 
-  padding: 4px 22px;
+  padding-top: 4px;
+  padding-right: 22px;
+  padding-bottom: 4px;
+  padding-left: 22px;
   margin-bottom: 20px;
+
   font-size: 12px;
   line-height: 1.2;
-  align-items: center;
   letter-spacing: 0.04em;
 
   background: var(--primary-accent-color);
@@ -76,9 +57,11 @@
     line-height: 1.4;
   }
 }
+
 .contacts__adress-wrap {
   margin-bottom: 24px;
 }
+
 .contacts__adress-upertitle {
   @extend %text;
   margin-bottom: 8px;
@@ -114,14 +97,19 @@
 }
 
 .contacts__schedule {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-size: 12px;
   line-height: 1.86;
 
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 24px;
 
   @include tablet {
     font-size: 14px;
@@ -135,9 +123,6 @@
   @extend %text;
   color: var(--secondary-text-color);
 }
-.contacts__schedule-time:not(:last-child) {
-  margin-bottom: 8px;
-}
 
 .contacts__schedule-time {
   @extend %text;
@@ -147,6 +132,7 @@
 .contacts__link-wrap {
   font-size: 12px;
   line-height: 1.6;
+
   @include tablet {
     font-size: 14px;
     line-height: 1.5;
@@ -157,37 +143,38 @@
   }
 }
 
-.conracts__link-item {
+.contacts__link-item {
   @extend %link;
   display: block;
 
   color: var(--secondary-text-color);
 }
 
-.contacts__button-wrap {
-  display: flex;
-}
-
 .contacts__button-list {
   @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   gap: 16px;
 
   @include tablet {
-    display: flex;
+    flex-direction: row;
   }
 }
-.contacts__button-item {
-  @extend %link;
-}
+
 .contacts__btn {
   min-width: 196px;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
+
 .contacts__btn-second {
   border-radius: 10px;
   color: var(--button-text-color);
@@ -196,24 +183,23 @@
   background-color: transparent;
 
   transition: border 250ms ease-in-out, color 250ms ease-in-out;
-
-  margin-top: 16px;
-  @include tablet {
-    margin-top: 0;
-  }
 }
+
 .contacts__btn-second:hover,
 .contacts__btn-second:focus {
   border: 2px solid var(--button-hover-color);
   background-color: transparent;
 }
+
 .contacts__btn-second:focus {
   color: #ffffff;
 }
+
 .contacts__btn-icon {
   fill: currentColor;
   vertical-align: middle;
 }
+
 .contacts__btn-icon:focus {
   fill: #ffffff;
 }
