@@ -1,4 +1,24 @@
-.contacts__wrap {
+.contacts {
+  margin-right: auto;
+  margin-left: auto;
+  background: linear-gradient(0deg, var(--main-bg-color) 72%, transparent 50%);
+  @include tablet {
+    background: linear-gradient(
+      0deg,
+      var(--main-bg-color) 52%,
+      transparent 50%
+    );
+    @include desktop {
+      background: linear-gradient(
+        0deg,
+        var(--main-bg-color) 76%,
+        transparent 50%
+      );
+    }
+  }
+}
+
+.contacts__card-set {
   margin-bottom: 20px;
 
   @include tablet {
@@ -23,13 +43,11 @@
   border-radius: 24px;
 
   @include tablet {
-    padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 24px;
     padding-left: 24px;
   }
   @include desktop {
-    padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 40px;
     padding-left: 40px;
@@ -192,6 +210,7 @@
 }
 
 .contacts__btn-icon {
+  margin-left: 4px;
   fill: currentColor;
   vertical-align: middle;
 }
