@@ -28,8 +28,4 @@
   position: relative;
   left: 50%;
   margin-left: -25px;
-
-  @include retina {
-    margin-left: -50px;
-  }
 }

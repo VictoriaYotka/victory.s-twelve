@@ -4,6 +4,8 @@
   padding-left: 45px;
   padding-bottom: 64px;
   background: var(--main-bg-color);
+  margin-left: auto;
+  margin-right: auto;
   @include tablet {
     padding-top: 60px;
     padding-right: 76px;
@@ -66,7 +68,8 @@
 .advantages__quantity-one::before {
   @extend %text;
   @extend %before;
-  content: url('../images/advantages/img1@1x.png');
+  content: '';
+  background-image: url('../images/advantages/img1@1x.png');
   bottom: 16px;
 
   @include tablet {
@@ -78,7 +81,8 @@
   }
 
   @include retina {
-    content: url('../images/advantages/img1@2x.png');
+    background-image: url('../images/advantages/img1@2x.png');
+    background-size: contain;
     bottom: 48px;
   }
 }
@@ -86,7 +90,8 @@
 .advantages__quantity-two::before {
   @extend %text;
   @extend %before;
-  content: url('../images/advantages/img2@1x.png');
+  content: '';
+  background-image: url('../images/advantages/img2@1x.png');
   bottom: 16px;
 
   @include tablet {
@@ -98,7 +103,8 @@
   }
 
   @include retina {
-    content: url('../images/advantages/img2@2x.png');
+    background-image: url('../images/advantages/img2@2x.png');
+    background-size: contain;
     bottom: 48px;
   }
 }
@@ -106,7 +112,8 @@
 .advantages__quantity-three::before {
   @extend %text;
   @extend %before;
-  content: url('../images/advantages/img3@1x.png');
+  content: '';
+  background-image: url('../images/advantages/img3@1x.png');
   bottom: 16px;
 
   @include tablet {
@@ -118,7 +125,8 @@
   }
 
   @include retina {
-    content: url('../images/advantages/img3@2x.png');
+    background-image: url('../images/advantages/img3@2x.png');
+    background-size: contain;
     bottom: 48px;
   }
 }
