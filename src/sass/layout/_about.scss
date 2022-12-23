@@ -131,6 +131,11 @@
     @extend %text;
     line-height: 1.62;
     margin-bottom: 10px;
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.94;
+    }
 }
  
 .about_text_third {
@@ -139,6 +144,11 @@
 
     @include tablet {
         display: block;
+    }
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 1.94;
     }
 }
 
