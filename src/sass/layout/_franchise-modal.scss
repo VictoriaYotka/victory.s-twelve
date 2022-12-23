@@ -46,7 +46,7 @@
 //   opacity: 0;
 // }
 
-.modal-btn {
+.modal_btn {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -72,7 +72,7 @@
   }
 }
 
-.franchise-title {
+.franchise_title {
   display: block;
   margin-bottom: 20px;
 
@@ -94,7 +94,7 @@
   }
 }
 
-.franchise-text {
+.franchise_text {
   @extend %text;
   display: block;
   margin-bottom: 24px;
@@ -110,14 +110,14 @@
   }
 }
 
-.franchise-form {
+.franchise_form {
   @include tablet {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 
-.franchise-wrap {
+.franchise_wrap {
   position: relative;
   margin-bottom: 12px;
 
@@ -126,7 +126,7 @@
   }
 }
 
-.franchise-textarea {
+.franchise_textarea {
   position: relative;
   margin-bottom: 24px;
   height: 64px;
@@ -137,7 +137,7 @@
   }
 }
 
-.franchise-label {
+.franchise_label {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -155,7 +155,7 @@
   }
 }
 
-.franchise-textarea .comments {
+.franchise_textarea .comments {
   top: 17px;
   left: 12px;
 
@@ -165,8 +165,8 @@
   }
 }
 
-.franchise-field,
-.franchise-comment {
+.franchise_field,
+.franchise_comment {
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 8px;
@@ -186,17 +186,17 @@
   }
 }
 
-.franchise-comment {
+.franchise_comment {
   resize: none;
 }
 
-.franchise-field:focus,
-.franchise-comment:focus {
+.franchise_field:focus,
+.franchise_comment:focus {
   border: 1px solid var(--button-hover-color);
 }
 
-.franchise-field:focus + .franchise-label,
-.franchise-field:not(:placeholder-shown) + .franchise-label {
+.franchise_field:focus + .franchise_label,
+.franchise_field:not(:placeholder-shown) + .franchise_label {
   transform: translateY(-30px);
   transition: transform 0.4s linear;
 
@@ -209,8 +209,8 @@
   }
 }
 
-.franchise-comment:focus + .franchise-label,
-.franchise-comment:not(:placeholder-shown) + .franchise-label {
+.franchise_comment:focus + .franchise_label,
+.franchise_comment:not(:placeholder-shown) + .franchise_label {
   transform: translateY(-30px);
   transition: transform 0.4s linear;
 
@@ -223,7 +223,7 @@
   }
 }
 
-.franchise-form > .franchise-btn {
+.franchise_form > .franchise_btn {
   min-width: 114px;
   display: block;
   margin-left: auto;
