@@ -19,15 +19,10 @@
 
 .advantages__list {
   @extend %list;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   gap: 44px;
   text-align: center;
 
   @include tablet {
-    flex-direction: row;
     gap: 80px;
   }
 
@@ -37,7 +32,8 @@
 }
 
 .advantages__card {
-  flex-basis: calc((100% - 88px) / 3);
+  flex-basis: 100%;
+
   @include tablet {
     flex-basis: calc((100% - 160px) / 3);
   }
