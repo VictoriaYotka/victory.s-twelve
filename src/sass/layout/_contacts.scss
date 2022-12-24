@@ -1,18 +1,14 @@
 .contacts {
   margin-right: auto;
   margin-left: auto;
-  background: linear-gradient(0deg, var(--main-bg-color) 72%, transparent 50%);
+  background: linear-gradient(0deg, var(--main-bg-color) 72%, transparent 0%);
   @include tablet {
-    background: linear-gradient(
-      0deg,
-      var(--main-bg-color) 52%,
-      transparent 50%
-    );
+    background: linear-gradient(0deg, var(--main-bg-color) 52%, transparent 0%);
     @include desktop {
       background: linear-gradient(
         0deg,
         var(--main-bg-color) 76%,
-        transparent 50%
+        transparent 0%
       );
     }
   }
