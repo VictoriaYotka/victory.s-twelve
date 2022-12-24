@@ -10,17 +10,18 @@
   z-index: 30;
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 28px;
   border-radius: 3px;
   background: #fcfcfc;
   transition: 0.3s all;
   border: 2px solid #f8d24e;
   border-radius: 10px;
+  padding: 20px;
   overflow-y: scroll;
 
   @include tablet {
     min-width: 568px;
     min-height: 664px;
+    padding: 28px;
   }
 }
 
@@ -150,6 +151,7 @@
 }
 
 .buy-now__name {
+  @extend %text;
   text-align: center;
   justify-content: center;
   font-family: var(--main-font);
