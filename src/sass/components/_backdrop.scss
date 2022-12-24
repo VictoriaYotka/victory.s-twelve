@@ -12,6 +12,9 @@
   background-color: var(--backdrop-colour);
 }
 .is-hidden {
-  opacity: 1;
-  visibility: visible;
+  //  opacity: 1;
+  //  visibility: visible;
+   visibility: hidden;
+   opacity: 0;
+   pointer-events: none;
 }
