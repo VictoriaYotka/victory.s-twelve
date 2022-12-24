@@ -1,4 +1,4 @@
-.read-more_bacdrop {
+.read-more_backdrop {
   opacity: 1;
 
   visibility: visible;
@@ -29,14 +29,18 @@
 
   @include mobile {
     min-width: 280px;
+    align-items: center;
+    justify-content: center;
   }
 
   @include tablet {
     min-width: 568px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.modal-title {
+.modal_title {
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 400;
@@ -58,7 +62,7 @@
   }
 }
 
-.button-modal-close {
+.button-modal_close {
   position: absolute;
 
   display: flex;
@@ -78,7 +82,7 @@
   padding: 0;
 }
 
-.text-thumb {
+.thumb {
   margin-top: 20px;
   @include tablet {
     margin-top: 32px;
@@ -86,6 +90,7 @@
 }
 
 .text {
+  @extend %text;
   margin: 0 auto;
   font-family: var(--main-font);
   font-style: normal;
@@ -100,14 +105,14 @@
   }
 }
 
-.video-youtube-icecream {
+.video-youtube_icecream {
   @include tablet {
     width: 448px;
     height: 205px;
   }
 }
 
-.cross-read-modal {
+.cross-read_modal {
   @include tablet {
     width: 24px;
     height: 24px;
