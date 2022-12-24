@@ -27,15 +27,14 @@
 
   transition: opacity 800ms 500ms ease;
 
-  @media screen and (max-width: 479px) {
-    overflow-y: scroll;
-  }
+  overflow-y: scroll;
 
   @media screen and (min-width: 320px) {
     width: 280px;
-    height: 674px;
+    height: 95vh;
+    max-height: 674px;
 
-    top: 52%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
   }
@@ -44,7 +43,9 @@
     top: 50%;
 
     width: 568px;
-    height: 668px;
+    height: 95vh;
+    max-height: 668px;
+
     padding-left: 58px;
     padding-right: 58px;
   }
