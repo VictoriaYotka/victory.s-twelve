@@ -1,3 +1,13 @@
+.products {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.products__uppertitle,
+.products__title {
+  color: var(--secondary-text-color);
+}
+
 .products__list {
   @extend %list;
   gap: 168px;
@@ -85,7 +95,6 @@
   // background-color: var(--product-bg-cream);
 
   @include tablet {
-    left: calc(50% - 100px);
     top: -120px;
   }
 
