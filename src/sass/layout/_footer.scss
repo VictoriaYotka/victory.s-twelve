@@ -1,6 +1,11 @@
 .footer{
         width: 100vw;
-        background-color: #84a278;
+        background-color:var(--main-bg-color);
+        padding-bottom: 20px;
+
+        @include tablet{
+            padding-bottom: 12px;
+        }
         
     
 }
@@ -14,8 +19,6 @@
     @include tablet {
             padding-right: 32px;
             padding-left: 32px;
-            // max-width: 768px;
-            // margin-bottom: 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -27,54 +30,42 @@
             padding-left: 16px;
             padding-right: 16px;
             max-width: 1200px;
-            // display: flex;
-            // align-items: center;
-            // justify-content: space-between;
+           
     
         }
 }
 
 .footer__upper-title {
-    
     @extend %text;
     width: 232px;
         display: block;
         text-align: start;
-
-    font-style: normal;
-    
+        font-style: normal;
+        letter-spacing: 0.04em;
         font-weight: 700;
         font-size: 18px;
-        line-height: 1.2;
+        line-height: 1.23;
         text-transform: uppercase;
         
         color: var(--main-text-color);
 
         @include tablet {
-            @extend %text;
             width: 352px;
             font-size: 26px;
-                line-height: 1.23;
-                letter-spacing: 0.04em;
-                text-transform: uppercase;
-
+              
         }
 
          @include desktop {
-           
                 width: 504px;
                 font-weight: 400;
                      font-size: 30px;
-                    line-height: 1.23;
-                
-                    letter-spacing: 0.04em;
-                    text-transform: uppercase;
-        
+                  
             }
             
         }
 
 .footer__title{
+    @extend %text;
     margin-bottom: 60px;
     display: block;
     font-weight: 700;
@@ -96,11 +87,8 @@
         }
 
 @include desktop {
-    //  margin-top: 14px;
     font-size: 58px;
-    line-height: 1.23;
-    letter-spacing: 0.06em;
-    display: block;
+     
     }
 
 }
@@ -117,7 +105,6 @@
 }
 
 .socials-networks{
-
 @extend %list;
 display: flex;
 gap: 20px;
@@ -129,8 +116,6 @@ margin-bottom: 34px;
     }
 
 @include desktop {
-            display: flex;
-            gap: 30px;
             margin-bottom: 40px;
     }
 
@@ -152,7 +137,7 @@ background-color: var(--icon-bg-color);
 
 .socials-networks__link:hover,
 .socials-networks__link:focus{
-    fill: #FCFCFC;
+fill:var(---main-text-color);
 }
 
 
@@ -163,18 +148,17 @@ background-color: var(--icon-bg-color);
     font-size: 12px;
     line-height: 1.86;
     padding: 0px;
-    
 
-    color: #131313;
+    color: var(--secondary-text-color);
 
     @include tablet {
         font-size: 14px;
-        line-height: 1.86;
+        
     }
 
         @include desktop {
         font-size: 16px;
-        line-height: 1.86;
+        
     }
 }
  .footer-contacts__address {
@@ -191,25 +175,22 @@ background-color: var(--icon-bg-color);
      font-size: 12px;
     line-height: 1.86;
     letter-spacing: 0.02em;
-    color:#FCFCFC;
+    color:var(--main-text-color);
 
     @include tablet {
             font-size: 14px;
-            line-height: 1.86;
+            
         }
-    
-                @include desktop {
+
+    @include desktop {
             font-size: 16px;
-            line-height: 1.86;
+           
         }
  }
 
  .footer-contect__text {
     @extend %text;
-    // margin-top: 0px;
-    // margin-bottom: 0px;
     padding-top: 20px;
-    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -222,17 +203,13 @@ background-color: var(--icon-bg-color);
  
 @include tablet {
     display: block;
-    font-size: 14px;
         line-height: 1.86;
         letter-spacing: 0.02em;
         padding-top: 12px;
-        padding-bottom: 12px;
+       
     }
 
                 @include desktop {
-                    @extend %text;
-            line-height: 1.86;
-                letter-spacing: 0.02em;
                 font-size: 12px;
                 text-align: center;
          }
@@ -252,52 +229,3 @@ background-color: var(--icon-bg-color);
            
  }
 }
-
-
-
-
-
-
-
-
-
-//  .footer__upper-title {
-//      width: 232px;
-//      margin-bottom: 40px;
-//      display: block;
-//      white-space: pre-line;
-//      text-align: start;
-//      font-weight: 400;
-
-//     @include tablet {
-//          margin-bottom: 0;
-//         //  width: 340px;
-//      }
-
-//        @include desktop{
-//         //  width: 474px;
-//          margin-bottom: 0;
-//      }
-
-//  }
-
-//  .footer__title {
-//      display: block;
-//      text-align: inherit;
-//      margin-top: 16px;
-//      font-weight: 400;
-//      letter-spacing: 0.04em;
-//      text-transform: uppercase;
-
-//  }
-
-//  .footer-wraper {
-//      display: flex;
-//      flex-direction: column;
-//      align-items: flex-end;
-//      margin-bottom: 40px;
-
-//      @include tablet 
-//          margin-bottom: 0;
-     
-//      }
