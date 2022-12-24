@@ -35,15 +35,17 @@
 
   @include mobile {
     min-width: 280px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.modal-title {
+.modal_title {
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: calc(24 / 16);
+  line-height: 1.5;
 
   display: block;
   align-items: center;
@@ -56,11 +58,12 @@
   @include tablet {
     margin-bottom: 32px;
     font-size: 20px;
-    line-height: calc(28 / 20);
+    line-height: 1.4;
   }
 }
 
-.send-form {
+.send_form {
+  @extend %link;
   width: 134px;
 
   margin-top: 24px;
@@ -72,24 +75,23 @@
 
   font-weight: 600;
   font-size: 12px;
-  line-height: calc(15 / 12);
+  line-height: 1.25;
 
   font-family: var(--main-font);
   font-style: normal;
 
   margin-left: auto;
   margin-right: auto;
-  text-decoration: none;
 
   @include tablet {
     margin-top: 32px;
     width: 145px;
     font-size: 14px;
-    line-height: calc(17 / 14);
+    line-height: 1.21;
   }
 }
 
-.button-modal-close {
+.button_modal_close {
   position: absolute;
 
   display: flex;
@@ -109,7 +111,7 @@
   padding: 0;
 }
 
-.card-img {
+.card_img {
   @include mobile {
     min-width: 224px;
   }
@@ -119,13 +121,16 @@
   }
 }
 
-.cross-location {
+.cross_location {
   @include tablet {
     width: 24px;
     height: 24px;
   }
 }
 
-.img-location {
+.img_location {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
