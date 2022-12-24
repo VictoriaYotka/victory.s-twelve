@@ -1,9 +1,21 @@
 <header class="header">
   <div class="container header__container">
     <a href="./index.html" class="logo">
-      <svg class="logo__icon">
-        <use href="./images/icons.svg#logo"></use>
-      </svg>
+      <img
+        class="logo__icon"
+        srcset="
+          ./images/logo/logo_sm_40.png   40w,
+          ./images/logo/logo_md_48.png   48w,
+          ./images/logo/logo_lg_60.png   60w,
+          ./images/logo/logo_sm_80.png   80w,
+          ./images/logo/logo_md_96.png   96w,
+          ./images/logo/logo_lg_120.png 120w
+        "
+        sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 320px) 40px, 100vw"
+        src="./images/logo/logo_sm_40.png"
+        alt="company logo"
+        loading="lazy"
+      />
     </a>
     <nav class="site-nav">
       <ul class="site-nav__list">
