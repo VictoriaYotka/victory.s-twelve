@@ -1,9 +1,14 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 :root {
   /* Fonts */
-  --main-font: "Montserrat", sans-serif;
-  --secondary-font: "Seymour One", sans-serif;
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Seymour One', sans-serif;
   /* Text colors */
+  --main-text-color: #fcfcfc;
+  --secondary-text-color: #131313;
+  --third-text-color: #ababab;
+  --primary-accent-color: #f8d24e;
+  --second-accent-color: #d6936d;
   --main-text-color: #fcfcfc;
   --secondary-text-color: #131313;
   --third-text-color: #ababab;
@@ -17,11 +22,20 @@
   --modal-bg-color: #fcfcfc;
   /*Icons bg*/
   --icon-bg-color: #f8d24e;
+  --main-bg-color: #84a178;
+  --modal-bg-color: #fcfcfc;
+  /*Icons bg*/
+  --icon-bg-color: #f8d24e;
+  --icon-bg-color: #f8d24e;
   /*input bg*/
   --input-bg-color: rgba(248, 210, 78, 0.1);
   /*Products bg-color*/
   --product-bg-cream: #aec6a5;
   --product-bg-coffe: #efd478;
+  --pruduct-bg-coffe: #efd478;
+  --product-bg-milkshakes: #d6936d;
+  --product-bg-cream: #aec6a5;
+  --pruduct-bg-coffe: #efd478;
   --product-bg-milkshakes: #d6936d;
   /*Product picture-gradient*/
   --product-grad-cream: linear-gradient(
@@ -49,6 +63,29 @@
   /*Product field-shadow*/
   --product-field-shadow-medium: 0px 5px 20px rgba(212, 20, 67, 0.1);
   --product-field-shadow-large: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  --product-grad-cream: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-coffe: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-milkshake: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  /*Product picture-shadow*/
+  --product-shadow-cream: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  --product-shadow-coffe: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  --product-shadow-coffe: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  --product-shadow-milkshake: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
   --backdrop-colour: rgba(19, 19, 19, 0.4);
 }
 
@@ -61,7 +98,7 @@
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -75,17 +112,33 @@
 }
 
 .mobile_menu, .products__list, .site-nav_list {
+.section_uppertitle,
+.section_title {
+  margin: 0;
+}
+
+.about_text_third,
+.about_text_second,
+.about_text_first,
+.about_text_container {
+  margin: 0;
+}
+
+.mobile_menu,
+.site-nav_list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .mobile_menu_link, .site_nav_link {
+.mobile_menu_link,
+.site_nav_link {
   text-decoration: none;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -686,3 +739,4 @@ img {
     display: none;
   }
 }/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
