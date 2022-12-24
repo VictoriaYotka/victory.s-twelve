@@ -27,7 +27,7 @@
 
   /*Products bg-color*/
   --product-bg-cream: #aec6a5;
-  --pruduct-bg-coffe: #efd478;
+  --product-bg-coffe: #efd478;
   --product-bg-milkshakes: #d6936d;
 
   /*Product picture-gradient*/
@@ -55,6 +55,10 @@
   --product-shadow-cream: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
   --product-shadow-coffe: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
   --product-shadow-milkshake: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+
+  /*Product field-shadow*/
+  --product-field-shadow-medium: 0px 5px 20px rgba(212, 20, 67, 0.1);
+  --product-field-shadow-large: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
   // Backdrop for modals
   --backdrop-colour: rgba(19, 19, 19, 0.4);
