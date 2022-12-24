@@ -1,4 +1,8 @@
-.modal_close-button {
+.backdrop {
+  z-index: 1000;
+}
+
+.modal-product_close-button {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -6,19 +10,31 @@
   border: 0;
 }
 
-.modal_close-icon {
+.modal-product_close-icon {
   cursor: pointer;
 }
 
-.modal {
+.modal-product {
   position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20px;
+  max-width: 280px;
+  padding: 28px 20px;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--modal-bg-color);
+
+  @media screen and (max-width: 479px) {
+    max-width: unset;
+    min-width: 90vw;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 568px;
+    padding: 32px 40px;
+  }
 
   &_title {
     margin-bottom: 20px;
@@ -29,6 +45,10 @@
     align-items: center;
     text-align: center;
     color: var(--secondary-text-color);
+
+    @media screen and (max-width: 767px) {
+      width: 260px;
+    }
   }
 
   &_picture {
@@ -48,6 +68,69 @@
   &_picture.milk {
     background: var(--product-grad-milkshake);
     box-shadow: var(--product-shadow-milkshake);
+  }
+
+  &_image.cream {
+    width: 132px;
+    height: 132px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/products/cream_md@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/cream_md@2x.png);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/cream_lg@1x.png);
+
+      @include retina {
+        background-image: url(../images/products/cream_lg@2x.png);
+      }
+    }
+  }
+
+  &_image.coffee {
+    width: 132px;
+    height: 132px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/products/coffee_md@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/coffee_md@2x.png);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/coffee_lg@1x.png);
+
+      @include retina {
+        background-image: url(../images/products/coffee_lg@2x.png);
+      }
+    }
+  }
+
+  &_image.milk {
+    width: 132px;
+    height: 132px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/products/milkshakes_md@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/milkshakes_md@2x.png);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/milkshakes_lg@1x.png);
+
+      @include retina {
+        background-image: url(../images/products/milkshakes_lg@2x.png);
+      }
+    }
   }
 
   &_nutrition {
@@ -195,19 +278,6 @@
   font-size: 20px;
   line-height: 1.4;
   color: var(--secondary-text-color);
-}
-
-.modal-product {
-  position: absolute;
-  max-width: 280px;
-  padding: 28px 20px;
-  border: 2px solid #f8d24e;
-  border-radius: 10px;
-
-  @media screen and (min-width: 768px) {
-    min-width: 568px;
-    padding: 32px 40px;
-  }
 }
 
 .textarea {
