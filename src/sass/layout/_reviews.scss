@@ -1,0 +1,149 @@
+.reviews {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  width: 100vw;
+
+  @include tablet {
+    padding-top: 0px;
+    padding-bottom: 80px;
+    padding-right: 31px;
+    padding-left: 32px;
+  }
+
+  @include desktop {
+    padding-top: 0px;
+    padding-bottom: 100px;
+    padding-left: 116px;
+    padding-right: 116px;
+  }
+}
+
+.reviews__list {
+  @extend %list;
+}
+.reviews__picture {
+  margin-bottom: 32px;
+}
+.reviews__thumb {
+  display: flex;
+  align-items: center;
+  background: var(--main-bg-color);
+  border-radius: 10px;
+
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 39px;
+  padding-right: 39px;
+
+  text-align: center;
+  height: 256px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    height: 138px;
+  }
+
+  @include desktop {
+    padding-top: 43px;
+    padding-bottom: 43px;
+    padding-left: 89px;
+    padding-right: 89px;
+  }
+}
+.round {
+  border-radius: 100px;
+  border: 1px solid transparent;
+
+  margin: 0 auto;
+}
+
+.reviews__text {
+  @extend %text;
+  display: inline-block;
+
+  font-style: regular;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.55;
+  letter-spacing: 0.04em;
+  color: var(--main-text-color);
+
+  width: 202px;
+
+  @include tablet {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+
+    width: 545px;
+  }
+  @include desktop {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    width: 790px;
+  }
+}
+.sentences {
+  padding-left: 20px;
+  padding-right: 17px;
+
+  @include tablet {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .second-sentences {
+    padding-left: 20px;
+  }
+}
+.reviews__name-town {
+  @extend %text;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.85;
+
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--main-bg-color);
+}
+
+.slick-dots {
+  position: relative;
+  bottom: -12px;
+
+  @include tablet {
+    bottom: -32px;
+  }
+}
+
+.slick-dots li button:before {
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  content: '';
+  // top: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: transparent;
+}
