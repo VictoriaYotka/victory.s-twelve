@@ -13,12 +13,12 @@
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
 
-  transform: translateX(-50%) translateY(-50%);
+  top: 2%;
+  left: 2%;
 
-  width: 95%;
+  width: 95vw;
+
   background: var(--modal-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -27,12 +27,22 @@
 
   transition: opacity 800ms 500ms ease;
 
-  @include mobile {
+  @media screen and (max-width: 479px) {
+    overflow-y: scroll;
+  }
+
+  @media screen and (min-width: 320px) {
     width: 280px;
     height: 674px;
+
+    top: 52%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   @include tablet {
+    top: 50%;
+
     width: 568px;
     height: 668px;
     padding-left: 58px;
@@ -229,7 +239,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-  margin-top: 12px;
 
   cursor: pointer;
 }
