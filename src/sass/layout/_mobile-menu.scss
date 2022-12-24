@@ -30,8 +30,8 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.mobile_toggle_burger,
-.mobile_toggle_close {
+.menu__icon--burger,
+.menu__icon--close {
   fill: currentColor;
 }
 
@@ -81,24 +81,7 @@
   }
 }
 
-.mobile_logo {
-  position: absolute;
-  top: 12px;
-  left: 32px;
-  color: var(--primary-accent-color);
-
-  &_icon {
-    width: 40px;
-    height: 37px;
-    fill: currentColor;
-  }
-
-  @include tablet {
-    top: 20px;
-  }
-}
-
-.mobile_menu {
+.menu__list {
   @extend %list;
   display: flex;
   flex-direction: column;
@@ -106,32 +89,26 @@
   margin-bottom: auto;
 }
 
-.mobile_menu_link {
+.menu__link {
   @extend %link;
   font-weight: 700;
   font-size: 32px;
-  line-height: calc(39 / 32);
+  line-height: 1.22;
   color: var(--main-text-color);
 
   transition: color 250ms ease-in-out;
 }
 
-.mobile_menu_link:hover,
-.mobile_menu_link:focus {
+.menu__link:hover,
+.menu__link:focus {
   color: var(--button-text-color-second);
 }
 
-.modal_button {
-  width: 152px;
-  line-height: calc(17 / 14);
-
-  color: var(--button-text-color-first);
+.menu__button {
+  min-width: 152px;
+  line-height: 1.21;
   gap: 4px;
   @include tablet {
     display: none;
-  }
-
-  &_icon {
-    fill: currentColor;
   }
 }

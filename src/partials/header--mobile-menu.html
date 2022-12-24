@@ -1,0 +1,70 @@
+<header class="header">
+  <div class="container header__container">
+    <a href="./index.html" class="logo">
+      <svg class="logo__icon">
+        <use href="./images/icons.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        <li class="site-nav__item">
+          <a href="#hero" class="site-nav__link">Home</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="#about" class="site-nav__link">How it’s made?</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="#products" class="site-nav__link">Our products</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="#contacts" class="site-nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="menu-toggle js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="menu__icon--burger" width="32" height="32">
+        <use href="./images/icons.svg#burger-btn"></use>
+      </svg>
+    </button>
+    <button type="button" class="button header__button">
+      Buy now
+      <svg class="button__icon--arrow" width="12" height="12">
+        <use href="./images/icons.svg#arrow-btn"></use>
+      </svg>
+    </button>
+  </div>
+  <!-- mobile menu -->
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle menu--close js-close-menu">
+      <svg class="menu__icon--close" width="32" height="32">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a href="#hero" class="menu__link">Home</a>
+      </li>
+      <li class="menu__item">
+        <a href="#about" class="menu__link">How it’s made?</a>
+      </li>
+      <li class="menu__item">
+        <a href="#products" class="menu__link">Our products</a>
+      </li>
+      <li class="menu__item">
+        <a href="#contacts" class="menu__link">Contact</a>
+      </li>
+    </ul>
+    <button type="button" class="button menu__button">
+      Buy now
+      <svg class="button__icon--arrow" width="12" height="12">
+        <use href="./images/icons.svg#arrow-btn"></use>
+      </svg>
+    </button>
+  </div>
+</header>
