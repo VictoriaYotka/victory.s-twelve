@@ -109,6 +109,10 @@
     font-size: 16px;
   }
 }
+.contacts__adress-link:hover,
+.contacts__adress-link:focus {
+  text-decoration: underline;
+}
 
 .contacts__schedule {
   @extend %list;
@@ -160,8 +164,11 @@
 .contacts__link-item {
   @extend %link;
   display: block;
-
+  transition: transform 250ms ease-in-out;
   color: var(--secondary-text-color);
+}
+.contacts__link-item:hover {
+  transform: scale(1.07, 1.2);
 }
 
 .contacts__button-list {
