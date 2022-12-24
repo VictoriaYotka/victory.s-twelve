@@ -84,6 +84,7 @@
 
 .thumb {
   margin-top: 20px;
+
   @include tablet {
     margin-top: 32px;
   }
@@ -107,15 +108,9 @@
 }
 
 .video-youtube_icecream {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @include mobile {
-    width: 224px;
-    height: 199px;
-  }
+  margin: 0 auto;
+  width: 224px;
+  height: 199px;
 
   @include tablet {
     width: 448px;
