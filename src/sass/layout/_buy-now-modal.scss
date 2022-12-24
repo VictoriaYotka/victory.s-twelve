@@ -93,16 +93,6 @@
     flex-basis: calc((100% - 2 * 32px) / 3);
   }
 }
-.buy-now__card-1:focus-within {
-  background-color: var(--product-bg-cream);
-}
-.buy-now__card-2:focus-within {
-  background-color: var(--product-bg-coffe);
-}
-.buy-now__card-3:focus-within {
-  background-color: var(--product-bg-milkshakes);
-}
-
 .buy-now__item {
   display: inline-block;
   position: relative;
@@ -275,11 +265,21 @@
   }
 }
 .modal__checkbox {
-  width: 100%;
-  height: 100%;
+  width: 101%;
+  height: 101%;
+  border-radius: 15px;
 }
 .modal__checkbox {
   appearance: none;
+}
+.modal__checkbox-1:checked{
+  background-color: var(--product-bg-cream);
+}
+.modal__checkbox-2:checked{
+  background-color: var(--product-bg-coffe);
+}
+.modal__checkbox-3:checked{
+  background-color: var(--product-bg-milkshakes);
 }
 
 .modal__form-group {
