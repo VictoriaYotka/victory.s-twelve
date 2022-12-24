@@ -7,6 +7,19 @@
     display: flex;
     justify-content: space-between;
   }
+
+  background-image: url(../images/points/points_sm1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+
+  @include tablet {
+    background-image: url(../images/points/points_md1x.png);
+  }
+
+  @include desktop {
+    background-image: url(../images/points/points_lg1x.png);
+  }
 }
 
 .hero_title {
@@ -102,13 +115,18 @@
 }
 
 .hero_image {
+  width: 152px;
   border-radius: 50%;
   overflow: hidden;
+
+  @include desktop {
+    width: 225px;
+  }
 }
 
 .hero_text {
   @extend %text;
-  max-width: 140px;
+  width: 140px;
   font-size: 12px;
   line-height: 140%;
 
@@ -117,8 +135,32 @@
 
   color: var(--main-text-color);
 
+  margin-top: 30px;
+  margin-bottom: 12px;
+
   @include desktop {
     font-size: 14px;
+    width: 200px;
+
+    margin-top: 70px;
+    margin-bottom: 24px;
+  }
+}
+
+.hero_arrow {
+  border: none;
+  background-color: transparent;
+
+  &-icon {
+    fill: var(--main-text-color);
+  }
+}
+
+.hero_img-big {
+  width: 177px;
+
+  @include tablet {
+    width: 268px;
   }
 }
 
