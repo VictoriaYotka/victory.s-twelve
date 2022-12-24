@@ -1,7 +1,4 @@
 .modal-buy-now {
-  // opacity: 0;
-  // visibility: hidden;
-  display: block;
   position: fixed;
   min-width: 280px;
   max-height: 991px;
@@ -21,7 +18,7 @@
   height: 95vh;
 
   @include mobile {
-    min-width:440px;
+    min-width: 440px;
   }
 
   @include tablet {
@@ -48,9 +45,6 @@
   border: none;
   background-color: transparent;
   padding: 0;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
 
   @include tablet {
     width: 24px;
@@ -103,12 +97,11 @@
   background-color: var(--product-bg-cream);
 }
 .buy-now__card-2:focus-within {
-  background-color: var(--pruduct-bg-coffe);
+  background-color: var(--product-bg-coffe);
 }
 .buy-now__card-3:focus-within {
   background-color: var(--product-bg-milkshakes);
 }
-
 
 .buy-now__item {
   display: inline-block;
@@ -255,7 +248,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 140%;
   color: var(--secondary-text-color);
 }
 .modal__field:focus-within {
@@ -268,12 +261,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  /* identical to box height, or 20px */
-
-  color: #131313;
+  color: var(--secondary-text-color);
 }
 
 .modal__field-comment {
+  padding-bottom:40px;
   width: 224px;
   height: 65px;
 
