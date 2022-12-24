@@ -1,33 +1,82 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 :root {
   /* Fonts */
-  --main-font: "Montserrat", sans-serif;
-  --secondary-font: "Seymour One", sans-serif;
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Seymour One', sans-serif;
   /* Text colors */
-  --main-text-color:#FCFCFC;
-  --secondary-text-color:#131313;
-  --third-text-color:#ABABAB;
-  --primary-accent-color:#F8D24E;
-  --second-accent-color:#D6936D;
+  --main-text-color: #fcfcfc;
+  --secondary-text-color: #131313;
+  --third-text-color: #ababab;
+  --primary-accent-color: #f8d24e;
+  --second-accent-color: #d6936d;
+  --main-text-color: #fcfcfc;
+  --secondary-text-color: #131313;
+  --third-text-color: #ababab;
+  --primary-accent-color: #f8d24e;
+  --second-accent-color: #d6936d;
+  --button-text-color-first: #000000;
+  --button-text-color-second: #131313;
+  --button-hover-color: #0a8817;
   /* BG colors */
-  --main-bg-color:#84A178;
-  --modal-bg-color:#FCFCFC;
+  --main-bg-color: #84a178;
+  --modal-bg-color: #fcfcfc;
+  --main-bg-color: #84a178;
+  --modal-bg-color: #fcfcfc;
   /*Icons bg*/
-  --icon-bg-color: #F8D24E;
+  --icon-bg-color: #f8d24e;
+  --icon-bg-color: #f8d24e;
   /*input bg*/
   --input-bg-color: rgba(248, 210, 78, 0.1);
   /*Products bg-color*/
-  --product-bg-cream: #AEC6A5;
-  --pruduct-bg-coffe: #EFD478;
-  --product-bg-milkshakes: #D6936D;
+  --product-bg-cream: #aec6a5;
+  --pruduct-bg-coffe: #efd478;
+  --product-bg-milkshakes: #d6936d;
+  --product-bg-cream: #aec6a5;
+  --pruduct-bg-coffe: #efd478;
+  --product-bg-milkshakes: #d6936d;
   /*Product picture-gradient*/
-  --product-grad-cream:linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
-  --product-grad-coffe:linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
-  --product-grad-milkshake:linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+  --product-grad-cream: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-coffe: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-milkshake: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-cream: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-coffe: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  --product-grad-milkshake: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
   /*Product picture-shadow*/
   --product-shadow-cream: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-  --product-shadow-coffe:0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  --product-shadow-coffe: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  --product-shadow-coffe: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
   --product-shadow-milkshake: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  --backdrop-colour: rgba(19, 19, 19, 0.4);
 }
 
 .visually-hidden {
@@ -39,13 +88,37 @@
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
+.section_uppertitle,
+.section_title {
+  margin: 0;
+}
+
+.about_text_third,
+.about_text_second,
+.about_text_first,
+.about_text_container {
+  margin: 0;
+}
+
+.mobile_menu,
+.site-nav_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile_menu_link,
+.site_nav_link {
+  text-decoration: none;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -82,6 +155,56 @@ img {
   max-width: 1200px;
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  color: var(--button-text-color);
+  background-color: var(--icon-bg-color);
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--button-hover-color);
+}
+
+.button:focus {
+  color: var(--main-text-color);
+}
+
+.button--transparent {
+  border: 2px solid var(--icon-bg-color);
+  background-color: transparent;
+  transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.button--transparent:hover,
+.button--transparent:focus {
+  border-color: var(--button-hover-color);
+}
+
+.button--transparent:focus {
+  color: var(--main-text-color);
+}
+
+.button--disabled {
+  background-color: var(--third-text-color);
+}
+
+.button--disabled--transparent {
+  border: 2px solid var(--third-text-color);
+  background-color: transparent;
+}
+
 .modal {
   margin: auto;
   padding-top: 28px;
@@ -107,4 +230,4 @@ img {
   overflow: scroll;
   display: flex;
   justify-content: center;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
