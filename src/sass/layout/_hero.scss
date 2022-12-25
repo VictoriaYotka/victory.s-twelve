@@ -163,6 +163,15 @@
 
 .hero__wrapper--right {
   position: relative;
+  display: flex;
+
+  @include tablet {
+    position: absolute;
+    bottom: 0;
+    right: 92px;
+    width: 268px;
+    height: 329px;
+  }
 
   @include desktop {
     position: absolute;
@@ -193,6 +202,47 @@
   }
 }
 
-.hero_info {
+.info__list {
+  @extend %list;
   display: none;
+
+  @include tablet {
+    // position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.info__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+.info__number {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+
+  @include desktop {
+    font-size: 46px;
+    line-height: 1.22;
+  }
+}
+
+.info__text {
+  font-size: 8px;
+  line-height: 1.25;
+  color: var(--main-text-color);
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.21;
+  }
 }
