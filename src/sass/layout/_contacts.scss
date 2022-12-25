@@ -44,7 +44,6 @@
     padding-left: 24px;
   }
   @include desktop {
-    padding-bottom: 40px;
     padding-right: 40px;
     padding-left: 40px;
   }
@@ -54,8 +53,8 @@
   display: inline-block;
 
   padding-top: 4px;
-  padding-right: 22px;
   padding-bottom: 4px;
+  padding-right: 22px;
   padding-left: 22px;
 
   font-size: 12px;
@@ -68,6 +67,12 @@
   @include tablet {
     font-size: 16px;
     line-height: 1.4;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  @include desktop {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 
@@ -140,6 +145,7 @@
   }
   @include desktop {
     font-size: 16px;
+    gap: 12px;
   }
 }
 
@@ -162,6 +168,7 @@
   line-height: 1.6;
 
   @include tablet {
+    gap: 4px;
     font-size: 14px;
     line-height: 1.5;
     padding-top: 32px;
