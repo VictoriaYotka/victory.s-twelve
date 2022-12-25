@@ -111,7 +111,9 @@
   margin: 0;
 }
 
-.mobile_menu, .products__list, .site-nav_list {
+.mobile_menu,
+.products__list,
+.site-nav_list,
 .section_uppertitle,
 .section_title {
   margin: 0;
@@ -131,7 +133,8 @@
   padding: 0;
 }
 
-.mobile_menu_link, .site_nav_link {
+.mobile_menu_link,
+.site_nav_link,
 .mobile_menu_link,
 .site_nav_link {
   text-decoration: none;
@@ -440,7 +443,7 @@ img {
 .products__item:nth-child(2n) {
   background: var(--product-bg-coffe);
 }
-.products__item:nth-child(2n+1) {
+.products__item:nth-child(2n + 1) {
   background: var(--product-bg-milkshakes);
 }
 .products__item:first-child {
@@ -477,7 +480,10 @@ img {
 .img-1 {
   background-image: url(../images/products/cream_md@1x.png);
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .img-1 {
     background-image: url(../images/products/cream_md@2x.png);
   }
@@ -487,7 +493,10 @@ img {
     background-image: url(../images/products/cream_lg@1x.png);
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .img-1 {
     background-image: url(../images/products/cream_lg@2x.png);
   }
@@ -496,7 +505,10 @@ img {
 .img-2 {
   background-image: url(../images/products/coffee_md@1x.png);
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .img-2 {
     background-image: url(../images/products/coffee_md@2x.png);
   }
@@ -506,7 +518,10 @@ img {
     background-image: url(../images/products/coffee_lg@1x.png);
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .img-2 {
     background-image: url(../images/products/coffee_lg@2x.png);
   }
@@ -515,7 +530,10 @@ img {
 .img-3 {
   background-image: url(../images/products/milkshakes_md@1x.png);
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .img-3 {
     background-image: url(../images/products/milkshakes_md@2x.png);
   }
@@ -525,7 +543,10 @@ img {
     background-image: url(../images/products/milkshakes_lg@1x.png);
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .img-3 {
     background-image: url(../images/products/milkshakes_lg@2x.png);
   }
@@ -650,7 +671,8 @@ img {
     height: 60px;
   }
 }
-.product__btn:hover, .product__btn:focus {
+.product__btn:hover,
+.product__btn:focus {
   fill: var(--main-text-color);
 }
 
@@ -738,5 +760,4 @@ img {
   .mobile_button {
     display: none;
   }
-}/*# sourceMappingURL=index.css.map */
 } /*# sourceMappingURL=index.css.map */
