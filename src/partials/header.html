@@ -1,73 +1,52 @@
 <header class="header">
-  <div class="container header_container">
+  <div class="container header__container">
     <a href="./index.html" class="logo">
-      <svg class="logo_icon">
-        <use href="./images/icons.svg#logo"></use>
-      </svg>
+      <img
+        class="logo__icon"
+        srcset="
+          ./images/logo/logo_sm_40.png   40w,
+          ./images/logo/logo_md_48.png   48w,
+          ./images/logo/logo_lg_60.png   60w,
+          ./images/logo/logo_sm_80.png   80w,
+          ./images/logo/logo_md_96.png   96w,
+          ./images/logo/logo_lg_120.png 120w
+        "
+        sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 320px) 40px, 100vw"
+        src="./images/logo/logo_sm_40.png"
+        alt="company logo"
+        loading="lazy"
+      />
     </a>
-    <nav class="nav">
-      <ul class="site-nav_list">
-        <li class="site_nav_item">
-          <a href="#hero" class="site_nav_link">Home</a>
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        <li class="site-nav__item">
+          <a href="#hero" class="site-nav__link">Home</a>
         </li>
-        <li class="site_nav__item">
-          <a href="#about" class="site_nav_link">How it’s made?</a>
+        <li class="site-nav__item">
+          <a href="#about" class="site-nav__link">How it’s made?</a>
         </li>
-        <li class="site_nav_item">
-          <a href="#products" class="site_nav_link">Our products</a>
+        <li class="site-nav__item">
+          <a href="#products" class="site-nav__link">Our products</a>
         </li>
-        <li class="site_nav_item">
-          <a href="#contacts" class="site_nav_link">Contact</a>
+        <li class="site-nav__item">
+          <a href="#contacts" class="site-nav__link">Contact</a>
         </li>
       </ul>
     </nav>
-
+    <!-- mobile menu button -->
     <button
       class="menu-toggle js-open-menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
     >
-      <svg class="mobile_toggle_burger" width="32" height="32">
+      <svg class="menu__icon--burger" width="32" height="32">
         <use href="./images/icons.svg#burger-btn"></use>
       </svg>
     </button>
-    <button type="button" class="button header_button">
+    <!-- tablet and desktop button -->
+    <button type="button" class="button--experimental">
       Buy now
-      <svg class="header_button_icon" width="12" height="12">
-        <use href="./images/icons.svg#arrow-btn"></use>
-      </svg>
-    </button>
-  </div>
-  <!-- mobile menu -->
-  <div class="menu-container js-menu-container" id="mobile-menu">
-    <a href="./index.html" class="mobile_logo">
-      <svg class="logo_icon">
-        <use href="./images/icons.svg#logo"></use>
-      </svg>
-    </a>
-    <button class="menu-toggle mobile-toggle-close js-close-menu">
-      <svg class="mobile_toggle_close" width="32" height="32">
-        <use href="./images/icons.svg#close-btn"></use>
-      </svg>
-    </button>
-
-    <ul class="mobile_menu">
-      <li class="mobile_menu_item">
-        <a href="#hero" class="mobile_menu_link">Home</a>
-      </li>
-      <li class="mobile_menu_item">
-        <a href="#about" class="mobile_menu_link">How it’s made?</a>
-      </li>
-      <li class="mobile_menu_item">
-        <a href="#products" class="mobile_menu_link">Our products</a>
-      </li>
-      <li class="mobile_menu_item">
-        <a href="#contacts" class="mobile_menu_link">Contact</a>
-      </li>
-    </ul>
-    <button type="button" class="button modal_button">
-      Buy now
-      <svg class="mobile_button_icon" width="12" height="12">
+      <svg class="button__icon--arrow" width="12" height="12">
         <use href="./images/icons.svg#arrow-btn"></use>
       </svg>
     </button>

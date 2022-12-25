@@ -83,7 +83,7 @@
   color: var(--button-text-color-first);
   background-color: var(--icon-bg-color);
 
-  transition: color 500ms ease-in-out 250ms;
+  transition: color 250ms ease-in-out 250ms;
 }
 
 .button--experimental::before {
@@ -96,7 +96,7 @@
   background-color: var(--button-hover-color);
   transform-origin: left bottom;
   transform: translateX(-100%) skewx(50deg);
-  transition: transform 1000ms;
+  transition: transform 500ms;
 
   z-index: -10;
 }
