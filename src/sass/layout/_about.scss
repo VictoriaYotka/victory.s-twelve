@@ -2,6 +2,15 @@
     background-color: var(--main-bg-color);
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 20px;
+
+    @include tablet {
+        padding-bottom: 55px;
+    }
+
+    @include desktop {
+        padding-bottom: 120px;
+    }
 }
 
 .about_image_container {
@@ -84,13 +93,15 @@
 
     @include tablet {
         left: auto;
+        top: -5px;
         width: 330px;
         height: 356px;
     }
 
         @include desktop {
+            top: -15px;
             width: 491px;
-                height: 490px;
+            height: 490px;
         }
 }
 
