@@ -54,6 +54,12 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
 
+    <!-- add button animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <!-- base styles -->
     <link rel="stylesheet" href="./sass/index.scss" />
 
@@ -74,8 +80,8 @@
     </main>
     <include src="./partials/footer.html"></include>
 
-    <!-- burger menu -->
-    <include src="./partials/burger-menu.html"></include>
+    <!-- mobile-menu -->
+    <include src="./partials/mobile-menu.html"></include>
 
     <!-- modal windows -->
     <include src="./partials/buy-now-modal.html"></include>
@@ -84,7 +90,15 @@
     <include src="./partials/product-info-modal.html"></include>
     <include src="./partials/read-more-modal.html"></include>
 
-    <!-- Slick jquery -->
+    <!-- scripts mobile menu -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+
     <!-- jquery slick -->
     <script
       type="text/javascript"
@@ -95,22 +109,12 @@
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
 
-    <!-- Slick js-->
     <!-- gallery slider slick script -->
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-
-    <!-- scripts -->
     <script type="module" src="./js/slick.js"></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="./js/mobile-menu.js"></script>
 
     <!-- gallery slider -->
     <script src="./js/gallery-slider.js"></script>

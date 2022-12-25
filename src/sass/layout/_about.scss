@@ -1,171 +1,183 @@
 .about {
-    background-color: var(--main-bg-color);
-    margin-right: auto;
-    margin-left: auto;
+  background-color: var(--main-bg-color);
+
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding-bottom: 55px;
+  }
+
+  @include desktop {
+    padding-bottom: 120px;
+  }
 }
 
 .about_image_container {
-    position: relative;
+  position: relative;
 }
 
 .about_title {
-    margin-bottom: 32px;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+  margin-bottom: 32px;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 
-    @include tablet {
-        margin-bottom: 72px;
-    }
+  @include tablet {
+    margin-bottom: 72px;
+  }
 
-        @include desktop {
-            margin-bottom: 82px;
-        }
+  @include desktop {
+    margin-bottom: 82px;
+  }
 }
 
 .about_uppertitle {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .about_image {
-    position: absolute;
-    top: 22px;
-    left: calc(50% - 140px);
-    width: 278px;
-    height: 278px;
-    border-radius: 50%;
-    background-image: url(../images/about/cow_s@1x.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 2;
+  position: absolute;
+  top: 22px;
+  left: calc(50% - 140px);
+  width: 278px;
+  height: 278px;
+  border-radius: 50%;
+  background-image: url(../images/about/cow_s@1x.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+
+  @include retina {
+    background-image: url(../images/about/cow_s@2x.jpg);
+  }
+
+  @include tablet {
+    left: auto;
+    width: 330px;
+    height: 330px;
+    background-image: url(../images/about/cow_m@1x.jpg);
 
     @include retina {
-        background-image: url(../images/about/cow_s@2x.jpg);
+      background-image: url(../images/about/cow_m@2x.jpg);
     }
+  }
 
-    @include tablet {
-        left: auto;
-        width: 330px;
-        height: 330px;
-        background-image: url(../images/about/cow_m@1x.jpg);
-        
-        @include retina {
-            background-image: url(../images/about/cow_m@2x.jpg);
-    }
-    }
+  @include desktop {
+    background-image: url(../images/about/cow_l@1x.jpg);
+    width: 490px;
+    height: 490px;
 
-    @include desktop {
-        background-image: url(../images/about/cow_l@1x.jpg);
-        width: 490px;
-        height: 490px;
-
-            @include retina {
-                background-image: url(../images/about/cow_l@2x.jpg);
+    @include retina {
+      background-image: url(../images/about/cow_l@2x.jpg);
     }
-    }
+  }
 }
 
 .about_gradient {
-    position: absolute;
-    top: auto;
-    left: calc(50% - 140px);
-    width: 279px;
-    height: 278px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(0deg,
-            rgba(248, 210, 78, 0.7),
-            rgba(248, 210, 78, 0.7));
-    box-shadow: 0px 4.48px 16.82px rgba(153, 114, 23, 0.25);
-    z-index: 1;
+  position: absolute;
+  top: auto;
+  left: calc(50% - 140px);
+  width: 279px;
+  height: 278px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    0deg,
+    rgba(248, 210, 78, 0.7),
+    rgba(248, 210, 78, 0.7)
+  );
+  box-shadow: 0px 4.48px 16.82px rgba(153, 114, 23, 0.25);
+  z-index: 1;
 
-    @include tablet {
-        left: auto;
-        width: 330px;
-        height: 356px;
-    }
+  @include tablet {
+    left: auto;
+    top: -5px;
+    width: 330px;
+    height: 356px;
+  }
 
-        @include desktop {
-            width: 491px;
-                height: 490px;
-        }
+  @include desktop {
+    top: -15px;
+    width: 491px;
+    height: 490px;
+  }
 }
 
 .about_text_container {
-    @extend %text;
-        font-size: 12px;
-        line-height: 1.76;
-        text-align: center;
-        letter-spacing: 0.04em;
-        color: var(--main-text-color);
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 360px;
+  @extend %text;
+  font-size: 12px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--main-text-color);
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 360px;
 
-    @include tablet {
-        text-align: left;
-        padding-left: 368px;
-        padding-right: 0;
-        margin-top: 80px;
-        margin-bottom: 32px;
-    }
+  @include tablet {
+    text-align: left;
+    padding-left: 368px;
+    padding-right: 0;
+    margin-top: 80px;
+    margin-bottom: 32px;
+  }
 
-        @include desktop {
-            font-size: 16px;
-            padding-left: 600px;
-            padding-right: 105px;
-            margin-top: 172px;
-            margin-bottom: 54px;
-        }
+  @include desktop {
+    font-size: 16px;
+    padding-left: 600px;
+    padding-right: 105px;
+    margin-top: 172px;
+    margin-bottom: 54px;
+  }
 }
 
 .about_text_first {
-    @extend %text;
-    margin-bottom: 4px;
+  @extend %text;
+  margin-bottom: 4px;
 }
 
 .about_text_second {
-    @extend %text;
-    line-height: 1.62;
-    margin-bottom: 10px;
+  @extend %text;
+  line-height: 1.62;
+  margin-bottom: 10px;
 
-    @include desktop {
-        font-size: 14px;
-        line-height: 1.94;
-    }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.94;
+  }
 }
- 
+
 .about_text_third {
-    @extend %text;
-    display: none;
+  @extend %text;
+  display: none;
 
-    @include tablet {
-        display: block;
-    }
+  @include tablet {
+    display: block;
+  }
 
-    @include desktop {
-        font-size: 14px;
-        line-height: 1.94;
-    }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.94;
+  }
 }
 
 .about_btn {
-    display: flex;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;  
-    gap: 4px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.29;
-    @include tablet {
-        margin-right: 174px;
-    }
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  @include tablet {
+    margin-right: 174px;
+  }
 
-    @include desktop {
-        margin-right: 404px;
-    }
+  @include desktop {
+    margin-right: 404px;
+  }
 }

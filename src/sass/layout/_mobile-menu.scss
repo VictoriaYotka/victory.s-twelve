@@ -8,10 +8,17 @@
   margin: 0;
   padding: 0;
   background-color: transparent;
+  color: #ffffff;
   cursor: pointer;
   border: none;
   border-radius: 50%;
   outline: none;
+
+  transition: background-color 250ms ease-in-out;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 32px;
+  }
 
   @include desktop {
     display: none;
@@ -21,6 +28,11 @@
 .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu__icon--burger,
+.menu__icon--close {
+  fill: currentColor;
 }
 
 .menu-container {
@@ -41,8 +53,16 @@
 
   text-align: center;
 
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  transform: translateX(120%);
+  transition: transform 500ms ease-in-out;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    background-color: #97af8d;
+  }
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .menu-container.is-open {
@@ -53,16 +73,30 @@
   position: absolute;
   top: 16px;
   right: 20px;
-  color: #fff;
+
+  @include tablet {
+    top: 32px;
+    right: 32px;
+    margin-right: 0;
+  }
 }
 
-.mobile_logo {
+.logo__menu {
   position: absolute;
   top: 12px;
   left: 32px;
+  color: var(--primary-accent-color);
+
+  @include tablet {
+    top: 20px;
+  }
+
+  @include desktop {
+    display: none;
+  }
 }
 
-.mobile_menu {
+.menu__list {
   @extend %list;
   display: flex;
   flex-direction: column;
@@ -70,17 +104,25 @@
   margin-bottom: auto;
 }
 
-.mobile_menu_link {
+.menu__link {
   @extend %link;
-  font-style: normal;
   font-weight: 700;
   font-size: 32px;
-  line-height: calc(39 / 32);
+  line-height: 1.22;
   color: var(--main-text-color);
+
+  transition: color 250ms ease-in-out;
 }
 
-.mobile_button {
+.menu__link:hover,
+.menu__link:focus {
+  color: var(--button-text-color-second);
+}
+
+.menu__button {
   min-width: 152px;
+  line-height: 1.21;
+  gap: 4px;
   @include tablet {
     display: none;
   }
