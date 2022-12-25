@@ -5,6 +5,7 @@ body {
   background-image: url('../images/background/background_s.png');
   background-size: contain;
   background-repeat: repeat;
+  background-attachment: fixed;
 
   @include retina {
     background-image: url('../images/background/background_s@2x.png');

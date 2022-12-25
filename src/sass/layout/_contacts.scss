@@ -1,0 +1,240 @@
+.contacts {
+
+  background: linear-gradient(0deg, var(--main-bg-color) 72.5%, transparent 0%);
+  @include tablet {
+    background: linear-gradient(0deg, var(--main-bg-color) 52%, transparent 0%);
+    @include desktop {
+      background: linear-gradient(
+        0deg,
+        var(--main-bg-color) 76%,
+        transparent 0%
+      );
+    }
+  }
+}
+
+.contacts__card-set {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__item {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 40px;
+  padding-bottom: 24px;
+  padding-right: 32px;
+  padding-left: 32px;
+
+  background: var(--modal-bg-color);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  @include tablet {
+    padding-bottom: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  @include desktop {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.contacts__item-upertitle {
+  @extend %text;
+  display: inline-block;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 22px;
+  padding-left: 22px;
+
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+
+  background: var(--primary-accent-color);
+  border-radius: 4px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.4;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  @include desktop {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+.contacts__adress-wrap {
+  padding-top: 20px;
+  padding-bottom: 24px;
+
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contacts__adress-upertitle {
+  @extend %text;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.83;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+}
+.contacts__adress-link {
+  @extend %link;
+
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+
+  color: var(--second-accent-color);
+
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
+}
+.contacts__adress-link:hover,
+.contacts__adress-link:focus {
+  text-decoration: underline;
+}
+
+.contacts__schedule {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  font-size: 12px;
+  line-height: 1.86;
+
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+
+  @include tablet {
+    font-size: 14px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  @include desktop {
+    font-size: 16px;
+    gap: 12px;
+  }
+}
+
+.contacts__schedule-day {
+  @extend %text;
+  color: var(--secondary-text-color);
+}
+
+.contacts__schedule-time {
+  @extend %text;
+  color: var(--third-text-color);
+}
+
+.contacts__link-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 24px;
+  font-size: 12px;
+  line-height: 1.6;
+
+  @include tablet {
+    gap: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 32px;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.contacts__link-item {
+  @extend %link;
+  display: block;
+  transition: transform 250ms ease-in-out;
+  color: var(--secondary-text-color);
+}
+.contacts__link-item:hover {
+  transform: scale(1.07, 1.2);
+}
+
+.contacts__button-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.contacts__btn {
+  min-width: 196px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.contacts__btn-second {
+  border-radius: 10px;
+  color: var(--button-text-color);
+  border: 2px solid var(--icon-bg-color);
+  border-radius: 10px;
+  background-color: transparent;
+
+  transition: border 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.contacts__btn-second:hover,
+.contacts__btn-second:focus {
+  border: 2px solid var(--button-hover-color);
+  background-color: transparent;
+}
+
+.contacts__btn-second:focus {
+  color: #ffffff;
+}
+
+.contacts__btn-icon {
+  margin-left: 4px;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.contacts__btn-icon:focus {
+  fill: #ffffff;
+}
