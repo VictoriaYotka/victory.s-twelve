@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 1000;
+  z-index: 800;
   background-color: #84a278;
 }
 
@@ -17,7 +17,6 @@
   margin-right: auto;
   padding-top: 12px;
   padding-bottom: 12px;
-  z-index: 10000;
 
   @include desktop {
     margin-right: 308px;
@@ -71,7 +70,7 @@
 
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(20 / 16);
+  line-height: 1.25;
   color: var(--main-text-color);
 
   transition: color 250ms ease-in-out;
