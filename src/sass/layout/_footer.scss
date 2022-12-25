@@ -1,0 +1,231 @@
+.footer{
+        width: 100vw;
+        background-color:var(--main-bg-color);
+        padding-bottom: 20px;
+
+        @include tablet{
+            padding-bottom: 12px;
+        }
+        
+    
+}
+
+.footer__container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include tablet {
+            padding-right: 32px;
+            padding-left: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+        }
+    
+             @include desktop {
+            margin-bottom: 60px;
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 1200px;
+           
+    
+        }
+}
+
+.footer__upper-title {
+    @extend %text;
+    width: 232px;
+        display: block;
+        text-align: start;
+        font-style: normal;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.23;
+        text-transform: uppercase;
+        
+        color: var(--main-text-color);
+
+        @include tablet {
+            width: 352px;
+            font-size: 26px;
+              
+        }
+
+         @include desktop {
+                width: 504px;
+                font-weight: 400;
+                     font-size: 30px;
+                  
+            }
+            
+        }
+
+.footer__title{
+    @extend %text;
+    margin-bottom: 60px;
+    display: block;
+    font-weight: 700;
+        font-size: 34px;
+        line-height: 1.21;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-top: 8px;
+        
+        
+        
+
+@include tablet {
+           margin-bottom: 32px;
+            font-size: 48px;
+            line-height: 1.23;
+            letter-spacing: 0.06em;
+            
+        }
+
+@include desktop {
+    font-size: 58px;
+     
+    }
+
+}
+
+.footer-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 40px;
+
+    @include tablet {
+            margin-bottom: 0;
+    }
+}
+
+.socials-networks{
+@extend %list;
+display: flex;
+gap: 20px;
+margin-bottom: 20px;
+
+@include tablet {
+gap: 30px;
+margin-bottom: 34px;
+    }
+
+@include desktop {
+            margin-bottom: 40px;
+    }
+
+
+}
+
+.socials-networks__link {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        fill: var(--main-bg-color);
+background-color: var(--icon-bg-color);
+
+}
+
+
+.socials-networks__link:hover,
+.socials-networks__link:focus{
+fill:var(---main-text-color);
+}
+
+
+.footer-contacts__text {
+    @extend %text;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+    padding: 0px;
+
+    color: var(--secondary-text-color);
+
+    @include tablet {
+        font-size: 14px;
+        
+    }
+
+        @include desktop {
+        font-size: 16px;
+        
+    }
+}
+ .footer-contacts__address {
+     display: flex;
+     gap: 5px;
+     align-items: center;
+    
+ }
+
+ .footer-contacts__phone {
+    font-style: normal;
+    @extend %link;
+    font-weight: 700;
+     font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color:var(--main-text-color);
+
+    @include tablet {
+            font-size: 14px;
+            
+        }
+
+    @include desktop {
+            font-size: 16px;
+           
+        }
+ }
+
+ .footer-contect__text {
+    @extend %text;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    font-weight: 700;
+        font-size: 14px;
+        line-height: 1.52;
+      color: #7A7A7A;
+   
+ 
+@include tablet {
+    display: block;
+        line-height: 1.86;
+        letter-spacing: 0.02em;
+        padding-top: 12px;
+       
+    }
+
+                @include desktop {
+                font-size: 12px;
+                text-align: center;
+         }
+       
+
+
+    &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+    
+            top: 0;
+            left: 0;
+            border-top: 1px solid #E1E1E1;
+    
+           
+ }
+}

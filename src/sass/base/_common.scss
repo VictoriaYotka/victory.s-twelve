@@ -11,11 +11,16 @@ body {
   }
 
   @include tablet {
+    padding-right: 32px;
+     padding-left: 32px;
+    max-width: 768px;
+
     background-image: url('../images/background/background_md.png');
 
     @include retina {
       background-image: url('../images/background/background_md@2x.png');
     }
+
   }
 
   @include desktop {
