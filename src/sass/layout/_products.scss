@@ -87,11 +87,11 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    top: -97px;
+    transform: translateY(11px);
   }
 
   @include tablet {
@@ -99,7 +99,7 @@
 
     &:hover,
     &:focus {
-      top: -108px;
+      transform: translateY(12px);
     }
   }
 
@@ -112,7 +112,7 @@
 
     &:hover,
     &:focus {
-      top: -167px;
+      transform: translateY(16px);
     }
   }
 }
