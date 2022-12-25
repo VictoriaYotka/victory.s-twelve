@@ -9,14 +9,19 @@
   padding-left: 35px;
   padding-right: 35px;
 
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
   text-align: center;
+  cursor: pointer;
+  overflow: hidden;
 
   border: none;
   border-radius: 10px;
-  color: var(--button-text-color);
+  color: var(--button-text-color-first);
   background-color: var(--icon-bg-color);
 
-  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
 .button:hover,
@@ -51,4 +56,56 @@
 .button--disabled--transparent {
   border: 2px solid var(--third-text-color);
   background-color: transparent;
+}
+
+.button--experimental {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 10;
+
+  border: none;
+  border-radius: 10px;
+  color: var(--button-text-color-first);
+  background-color: var(--icon-bg-color);
+
+  transition: color 250ms ease-in-out 250ms;
+}
+
+.button--experimental::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 150%;
+  height: 150%;
+  background-color: var(--button-hover-color);
+  transform-origin: left bottom;
+  transform: translateX(-100%) skewx(50deg);
+  transition: transform 500ms;
+
+  z-index: -10;
+}
+
+.button--experimental:hover::before,
+.button--experimental:focus::before {
+  transform: translateX(0) skewx(50deg);
+}
+
+.button--experimental:focus {
+  color: white;
 }
