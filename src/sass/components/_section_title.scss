@@ -1,0 +1,19 @@
+.section_title {
+    @extend %title;
+    font-family: var(--secondary-font);
+    font-size: 30px;
+    line-height: 1.26;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+
+    @include tablet {
+        font-size: 34px;
+        letter-spacing: 0.06em;
+    }
+
+    @include desktop {
+        font-size: 36px;
+    }
+}

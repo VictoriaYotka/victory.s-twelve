@@ -1,0 +1,23 @@
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  @extend %list;
+
+  @include desktop {
+    gap: 32px;
+  }
+}
+
+.card-set__item {
+  flex-basis: 280px;
+
+  @include tablet {
+    flex-basis: calc((100% - 2 * 16px) / 3);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 2 * 32px) / 3);
+  }
+}
