@@ -81,6 +81,21 @@
   }
 }
 
+.logo__menu {
+  position: absolute;
+  top: 12px;
+  left: 32px;
+  color: var(--primary-accent-color);
+
+  @include tablet {
+    top: 20px;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
 .menu__list {
   @extend %list;
   display: flex;
