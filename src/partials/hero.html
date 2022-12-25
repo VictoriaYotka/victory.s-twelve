@@ -1,14 +1,16 @@
 <section class="hero">
-  <div class="container hero-container">
-    <div class="hero_wrapper_left">
-      <h1 class="hero_title">ice cream made with passion</h1>
-      <div class="hero_buttons">
-        <button class="hero_button-first button--transparent">Products</button>
-        <button class="hero_button-second button--transparent">
+  <div class="container hero__container">
+    <div class="hero__wrapper--left">
+      <h1 class="hero__title">ice cream made with passion</h1>
+      <div class="hero__buttons">
+        <button class="button--transparent hero__button">Products</button>
+        <button
+          class="button--transparent hero__button hero__button--underline"
+        >
           How it’s made?
         </button>
       </div>
-      <div class="hero_description">
+      <div class="hero__description">
         <picture>
           <source
             media="(min-width: 1200px)"
@@ -29,26 +31,26 @@
           />
 
           <img
-            class="hero_image"
+            class="hero__image--left"
             src="./images/hero/img1_md.png"
             width="152px"
-            alt="many ice-cream"
+            alt="ice-cream plate"
           />
         </picture>
         <div class="description__wrapper">
-          <p class="hero_text">
+          <p class="description__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </p>
-          <button class="hero_arrow">
-            <svg class="hero_arrow-icon" width="40" height="16">
+          <button class="description__arrow">
+            <svg class="description__arrow--icon" width="40" height="16">
               <use href="./images/icons.svg#hero-arrow"></use>
             </svg>
           </button>
         </div>
       </div>
     </div>
-    <div class="hero_wrapper_right">
+    <div class="hero__wrapper--right">
       <picture>
         <source
           media="(min-width: 1200px)"
@@ -69,7 +71,7 @@
         />
 
         <img
-          class="hero_img-big"
+          class="hero__img--right"
           src="./images/hero/img2_lg.png"
           alt="ice-cream with face"
           width="456px"
