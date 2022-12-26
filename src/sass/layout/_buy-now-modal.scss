@@ -16,11 +16,9 @@
   padding: 20px;
   overflow-y: scroll;
   height: 95vh;
-
   @include mobile {
     min-width: 440px;
   }
-
   @include tablet {
     min-width: 568px;
     max-height: 664px;
@@ -33,6 +31,20 @@
   opacity: 1;
   visibility: visible;
 }
+
+// .modal-buy-now {
+//   text-align: center;
+
+//   @include tablet {
+//     padding: 28px;
+//   }
+// }
+
+// .modal.active,
+// .overlay.active {
+//   opacity: 1;
+//   visibility: visible;
+// }
 
 /* Стили для кнопки закрытия */
 .modal-buy-now__btn {
@@ -52,16 +64,16 @@
   }
 }
 
-.modal__cross {
-  width: 20px;
-  height: 20px;
-  fill: #444;
+// .modal__cross {
+//   width: 20px;
+//   height: 20px;
+//   fill: #444;
 
-  @include tablet {
-    width: 24px;
-    height: 24px;
-  }
-}
+//   @include tablet {
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
 
 //Картки
 .buy-now__title {
@@ -86,8 +98,8 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    padding-right: 54px;
-    padding-left: 54px;
+    // padding-right: 54px;
+    // padding-left: 54px;
     gap: 32px;
 
     flex-basis: calc((100% - 2 * 32px) / 3);
@@ -255,7 +267,7 @@
 }
 
 .modal__field-comment {
-  padding-bottom:40px;
+  padding-bottom: 40px;
   width: 224px;
   height: 65px;
 
@@ -272,13 +284,13 @@
 .modal__checkbox {
   appearance: none;
 }
-.modal__checkbox-1:checked{
+.modal__checkbox-1:checked {
   background-color: var(--product-bg-cream);
 }
-.modal__checkbox-2:checked{
+.modal__checkbox-2:checked {
   background-color: var(--product-bg-coffe);
 }
-.modal__checkbox-3:checked{
+.modal__checkbox-3:checked {
   background-color: var(--product-bg-milkshakes);
 }
 

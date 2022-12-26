@@ -1,6 +1,6 @@
 <div class="backdrop is-hidden" data-modal>
   <div class="modal modal-buy-now" data-modal-window>
-    <button class="modal-buy-now__btn">
+    <button class="modal_btn">
       <svg class="modal__cross js-modal-close" data-modal-close>
         <use href="./images/icons.svg#close-btn"></use>
       </svg>
@@ -59,8 +59,9 @@
           id="user_name"
           placeholder="Name"
           class="placeholder"
-          pattern="[a-z]"
-          minlength="20"
+          pattern="[A-Za-z]{2,}"
+          title="Minimum 2 letters"
+          required
         />
 
         <label class="modal__label" for="user_phone"></label>
@@ -73,6 +74,7 @@
           pattern="[0-9]"
           {13}
           minlength="13"
+          required
         />
 
         <label class="modal__label" for="user_mail"></label>
@@ -82,8 +84,9 @@
           name="user_mail"
           id="user_mail"
           placeholder="Comment"
-          pattern="[a-z]"
-          minlength="50"
+          pattern="([\x1F-\xBF]*)@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+          minlength="10"
+          required
         />
       </div>
 
