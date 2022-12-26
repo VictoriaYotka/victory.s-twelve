@@ -1,0 +1,67 @@
+.location_modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_title {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+
+  display: block;
+  align-items: center;
+  text-align: center;
+
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+  margin-top: 0ch;
+
+  @include tablet {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.send_form {
+  @extend %link;
+  width: 134px;
+
+  margin-top: 24px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet {
+    margin-top: 32px;
+    width: 145px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+.card_img {
+  @include mobile {
+    min-width: 224px;
+  }
+
+  @include tablet {
+    min-width: 448px;
+  }
+}
+
+.img_location {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

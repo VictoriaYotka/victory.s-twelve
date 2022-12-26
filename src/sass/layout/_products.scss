@@ -304,3 +304,57 @@
     fill: var(--main-text-color);
   }
 }
+
+// anim
+
+.product__name,
+.product__descr,
+.products__uppertitle,
+.products__title {
+  position: relative;
+  top: 1.8rem;
+  opacity: 0;
+}
+
+.product__name._active,
+.products__uppertitle._active,
+.products__title._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.product__descr._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swift-up {
+  to {
+    top: 0rem;
+  }
+}
+
+.img-1,
+.img-2,
+.img-3,
+.grad-1,
+.grad-2,
+.grad-3 {
+  scale: (0);
+  transition: all 0.8s ease 0s;
+}
+
+.img-1._active,
+.img-2._active,
+.img-3._active,
+.grad-1._active,
+.grad-2._active,
+.grad-3._active {
+  scale: (1);
+}

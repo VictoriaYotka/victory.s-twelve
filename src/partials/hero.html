@@ -1,1 +1,92 @@
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__wrapper--left">
+      <h1 class="hero__title" id="home">ice cream made with passion</h1>
+      <div class="hero__buttons">
+        <button class="button--transparent hero__button">Products</button>
+        <button
+          class="button--transparent hero__button hero__button--underline"
+        >
+          How it’s made?
+        </button>
+      </div>
+      <div class="hero__description">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              ./images/hero/img1_lg.png    1x,
+              ./images/hero/img1_lg@2x.png 2x
+            "
+            type="image/png"
+          />
 
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              ./images/hero/img1_md.png    1x,
+              ./images/hero/img1_md@2x.png 2x
+            "
+            type="image/png"
+          />
+
+          <img
+            class="hero__image--left"
+            src="./images/hero/img1_md.png"
+            width="152px"
+            alt="ice-cream plate"
+          />
+        </picture>
+        <div class="description__wrapper">
+          <p class="description__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <button class="description__arrow">
+            <svg class="description__arrow--icon" width="40" height="16">
+              <use href="./images/icons.svg#hero-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="./images/hero/img2_lg.png 1x, ./images/hero/img2_lg@2x.png 2x"
+        type="image/png"
+      />
+
+      <source
+        media="(min-width: 768px)"
+        srcset="./images/hero/img2_md.png 1x, ./images/hero/img2_md@2x.png 2x"
+        type="image/png"
+      />
+
+      <source
+        media="(max-width: 767.98px)"
+        srcset="./images/hero/img2_s.png 1x, ./images/hero/img2_s@2x.png 2x"
+        type="image/png"
+      />
+
+      <img
+        class="hero__img--right"
+        src="./images/hero/img2_lg.png"
+        alt="ice-cream with face"
+        width="456px"
+        height="560px"
+      />
+    </picture>
+    <ul class="info__list">
+      <li class="info__item">
+        <p class="info__number">16</p>
+        <p class="info__text">cafes</p>
+      </li>
+      <li class="info__item">
+        <p class="info__number">23</p>
+        <p class="info__text">food trucks</p>
+      </li>
+    </ul>
+  </div>
+</section>

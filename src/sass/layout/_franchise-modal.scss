@@ -1,0 +1,169 @@
+.franchise {
+  @include tablet {
+    max-height: 668px;
+
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+}
+
+.franchise_title {
+  display: block;
+  margin-bottom: 20px;
+
+  max-width: 322px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: var(--secondary-font);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.franchise_text {
+  @extend %text;
+  display: block;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+.franchise_form {
+  @include tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.franchise_wrap {
+  position: relative;
+  margin-bottom: 12px;
+
+  @include tablet {
+    margin-bottom: 16px;
+  }
+}
+
+.franchise_textarea {
+  position: relative;
+  margin-bottom: 24px;
+  height: 64px;
+
+  @include tablet {
+    margin-bottom: 32px;
+    height: 84px;
+  }
+}
+
+.franchise_label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: transform 0.5s;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 14px;
+    left: 16px;
+  }
+}
+
+.franchise_textarea .comments {
+  top: 17px;
+  left: 12px;
+
+  @include tablet {
+    top: 20px;
+    left: 16px;
+  }
+}
+
+.franchise_field,
+.franchise_comment {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  width: 100%;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid var(--main-bg-color);
+  border-radius: 10px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+
+.franchise_comment {
+  resize: none;
+}
+
+.franchise_field:focus,
+.franchise_comment:focus {
+  border: 1px solid var(--button-hover-color);
+}
+
+.franchise_field:focus + .franchise_label,
+.franchise_field:not(:placeholder-shown) + .franchise_label {
+  transform: translateY(-30px);
+  transition: transform 0.4s linear;
+
+  font-size: 10px;
+
+  @include tablet {
+    transform: translateY(-37px);
+
+    font-size: 12px;
+  }
+}
+
+.franchise_comment:focus + .franchise_label,
+.franchise_comment:not(:placeholder-shown) + .franchise_label {
+  transform: translateY(-30px);
+  transition: transform 0.4s linear;
+
+  font-size: 10px;
+
+  @include tablet {
+    transform: translateY(-36px);
+
+    font-size: 12px;
+  }
+}
+
+.franchise_form > .franchise_btn {
+  min-width: 114px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+
+  cursor: pointer;
+}

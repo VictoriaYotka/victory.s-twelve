@@ -50,6 +50,7 @@
     padding-bottom: 43px;
     padding-left: 89px;
     padding-right: 89px;
+    justify-content: center;
   }
 }
 .round {
@@ -113,10 +114,6 @@
   color: var(--secondary-text-color);
 }
 
-.slick-dots li.slick-active button:before {
-  color: var(--main-bg-color);
-}
-
 .slick-dots {
   position: relative;
   bottom: -12px;
@@ -133,7 +130,6 @@
   height: 12px;
   opacity: 1;
   content: '';
-  // top: 12px;
 }
 
 .slick-dots li.slick-active button:before {
