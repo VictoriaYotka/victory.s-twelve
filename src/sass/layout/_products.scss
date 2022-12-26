@@ -323,9 +323,7 @@
   }
 }
 
-.img-1,
-.img-2,
-.img-3,
+.product__img,
 .grad-1,
 .grad-2,
 .grad-3 {
@@ -333,9 +331,7 @@
   transition: all 0.8s ease 0s;
 }
 
-.img-1._active,
-.img-2._active,
-.img-3._active,
+.product__img._active,
 .grad-1._active,
 .grad-2._active,
 .grad-3._active {
