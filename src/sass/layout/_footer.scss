@@ -110,11 +110,12 @@
   border-radius: 50%;
   fill: var(--main-bg-color);
   background-color: var(--icon-bg-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .socials-networks__link:hover,
 .socials-networks__link:focus {
-  fill: var(---main-text-color);
+  fill: var(--modal-bg-color);
 }
 
 .footer-contacts__text {
