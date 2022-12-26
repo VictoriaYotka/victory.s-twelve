@@ -1,0 +1,95 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal modal-buy-now" data-modal-window>
+    <button class="modal-buy-now__btn">
+      <svg class="modal__cross js-modal-close" data-modal-close>
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+
+    <!---------------Картки--------------->
+    <strong class="buy-now__title">Buy now</strong>
+    <ul class="buy-now__list">
+      <li class="buy-now__item buy-now__card-1">
+        <span class="buy-now__gradient card-gradient-1"></span>
+        <label class="modal__form-agreement-desc" for="user_agreement-1">
+          <input
+            class="modal__checkbox modal__checkbox-1"
+            type="checkbox"
+            id="user_agreement-1"
+          />
+          <span class="buy-now__img img-1"></span>
+        </label>
+        <p class="buy-now__name">ice cream</p>
+      </li>
+
+      <li class="buy-now__item buy-now__card-2">
+        <span class="buy-now__gradient card-gradient-2"></span>
+        <label class="modal__form-agreement-desc" for="user_agreement-2">
+          <input
+            class="modal__checkbox modal__checkbox-2"
+            type="checkbox"
+            id="user_agreement-2"
+          />
+          <span class="buy-now__img img-2"></span>
+        </label>
+        <p class="buy-now__name">ice coffe</p>
+      </li>
+
+      <li class="buy-now__item buy-now__card-3">
+        <span class="buy-now__gradient card-gradient-3"></span>
+        <label class="modal__form-agreement-desc" for="user_agreement-3">
+          <input
+            class="modal__checkbox modal__checkbox-3"
+            type="checkbox"
+            id="user_agreement-3"
+          />
+          <span class="buy-now__img img-3"></span>
+        </label>
+        <p class="buy-now__name">milkshake</p>
+      </li>
+    </ul>
+
+    <form class="modal-form" name="modal_form">
+      <div class="modal__form-group" role="group">
+        <label class="modal__label" for="user_name"></label>
+        <input
+          class="modal__field"
+          type="text"
+          name="user_name"
+          id="user_name"
+          placeholder="Name"
+          class="placeholder"
+          pattern="[a-z]"
+          minlength="20"
+        />
+
+        <label class="modal__label" for="user_phone"></label>
+        <input
+          class="modal__field"
+          type="tel"
+          name="user_phone"
+          id="user_phone"
+          placeholder="Phone"
+          pattern="[0-9]"
+          {13}
+          minlength="13"
+        />
+
+        <label class="modal__label" for="user_mail"></label>
+        <input
+          class="modal__field modal__field-comment"
+          type="email"
+          name="user_mail"
+          id="user_mail"
+          placeholder="Comment"
+          pattern="[a-z]"
+          minlength="50"
+        />
+      </div>
+
+      <div class="modal-buy-button-container">
+        <button class="modal__form-btn button" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
