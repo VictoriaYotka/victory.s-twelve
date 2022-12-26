@@ -1,0 +1,60 @@
+<div class="location_backdrop backdrop is-hidden" data-modal>
+  <div class="location_modal modal">
+    <button type="button" class="button_modal_close" data-modal-close>
+      <svg class="cross_location" width="20" height="20">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+
+    <strong class="modal_title">Our Locations</strong>
+
+    <picture class="img_location">
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/moldal_location/mapwptab1@1x.webp 1x,
+          ./images/moldal_location/mapwptab2@2x.webp 2x
+        "
+        type="image/webp"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/moldal_location/maptab@1x.jpg 1x,
+          ./images/moldal_location/maptab@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/moldal_location/mapmob@1x.webp 1x,
+          ./images/moldal_location/mapmob@2x.webp 2x
+        "
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="
+          ./images/moldal_location/mapmob@1.jpg  1x,
+          ./images/moldal_location/mapmob@2x.jpg 2x
+        "
+        type="image/jpg"
+      />
+      <img
+        class="card_img"
+        src="./images/moldal_location/mapmob@1.jpg"
+        alt=""
+        width="224"
+        height="199"
+      />
+    </picture>
+
+    <a
+      class="button send_form"
+      href="https://www.google.com.ua/maps/@50.4851493,30.4721233,14z?hl=ru"
+      >Open map</a
+    >
+  </div>
+</div>
