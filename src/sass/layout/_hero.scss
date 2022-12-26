@@ -24,7 +24,7 @@
 
 .hero__wrapper--left {
   padding-top: 100px;
-  padding-bottom: 236px;
+  padding-bottom: 19px;
 
   @include tablet {
     padding-top: 80px;
@@ -161,37 +161,21 @@
   }
 }
 
-.hero__wrapper--right {
-  position: relative;
-  display: flex;
-
-  @include tablet {
-    position: absolute;
-    bottom: 0;
-    right: 92px;
-    width: 268px;
-    height: 329px;
-  }
-
-  @include desktop {
-    position: absolute;
-    bottom: 0;
-    right: 95px;
-  }
-}
-
 .hero__img--right {
-  position: absolute;
-  bottom: 0;
-  left: 63px;
-  right: 70px;
+  // margin-left: calc(83px + 5vmax);
+  // margin-right: calc(83px + 5vmax);
+
+  margin-right: auto;
+  margin-left: auto;
+
   width: 177px;
   height: 217px;
 
   @include tablet {
-    position: relative;
-    left: 0;
-    right: 0;
+    position: absolute;
+    right: 92px;
+    bottom: 0;
+
     width: 268px;
     height: 329px;
   }
@@ -207,11 +191,18 @@
   display: none;
 
   @include tablet {
-    // position: absolute;
+    position: absolute;
+    top: 94px;
+    right: 16px;
 
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  @include desktop {
+    top: 126px;
+    right: 16px;
   }
 }
 
@@ -223,6 +214,7 @@
 }
 
 .info__number {
+  @extend %text;
   font-weight: 900;
   font-size: 28px;
   line-height: 1.21;
@@ -237,6 +229,7 @@
 }
 
 .info__text {
+  @extend %text;
   font-size: 8px;
   line-height: 1.25;
   color: var(--main-text-color);
