@@ -1,0 +1,326 @@
+.modal-buy-now {
+  position: fixed;
+  z-index: 30;
+  min-width: 280px;
+  max-height: 991px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 3px;
+  background: #fcfcfc;
+  transition: 0.3s all;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: scroll;
+  height: 95vh;
+  @include mobile {
+    min-width: 440px;
+  }
+  @include tablet {
+    min-width: 568px;
+    max-height: 664px;
+    padding: 28px;
+  }
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+// .modal-buy-now {
+//   text-align: center;
+
+//   @include tablet {
+//     padding: 28px;
+//   }
+// }
+
+// .modal.active,
+// .overlay.active {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+/* Стили для кнопки закрытия */
+.modal-buy-now__btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// .modal__cross {
+//   width: 20px;
+//   height: 20px;
+//   fill: #444;
+
+//   @include tablet {
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
+
+//Картки
+.buy-now__title {
+  display: inline-block;
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+  margin-bottom: 40px;
+  @extend %title;
+}
+
+.buy-now__list {
+  padding-inline-start: 0;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    // padding-right: 54px;
+    // padding-left: 54px;
+    gap: 32px;
+
+    flex-basis: calc((100% - 2 * 32px) / 3);
+  }
+}
+.buy-now__item {
+  display: inline-block;
+  position: relative;
+  width: 132px;
+  height: 132px;
+  border-radius: 15px;
+  @extend %list;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.buy-now__card-1 {
+  border: 2px solid #96af8c;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 82px;
+  }
+}
+.buy-now__card-2 {
+  border: 2px solid #efd478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 82px;
+  }
+}
+.buy-now__card-3 {
+  border: 2px solid #d6936d;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+
+.buy-now__gradient {
+  position: absolute;
+  top: -61px;
+  display: flex;
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+}
+.card-gradient-1 {
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+.card-gradient-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+}
+
+.card-gradient-3 {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+.modal__form-checkbox {
+  appearance: none;
+}
+
+.buy-now__name {
+  @extend %text;
+  position: relative;
+  top: -40px;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+.buy-now__img {
+  position: absolute;
+  top: -71px;
+  display: flex;
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+}
+
+/* Стили для активных классов подложки и окна */
+.modal-buy-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__form-btn {
+  width: 121px;
+  height: 42px;
+  background: #f8d24e;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.214;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.modal__label {
+  display: block;
+  margin-bottom: 16px;
+}
+.modal__field {
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  outline: none;
+  border-radius: 10px;
+  font-weight: 400;
+  width: 224;
+  height: 32px;
+  padding-left: 16px;
+
+  @include tablet {
+    width: 368px;
+    height: 42px;
+  }
+}
+.modal__field::placeholder {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--secondary-text-color);
+}
+.modal__field:focus-within {
+  outline: 3px solid rgb(171, 218, 171);
+}
+
+.modal__label {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--secondary-text-color);
+}
+
+.modal__field-comment {
+  padding-bottom: 40px;
+  width: 224px;
+  height: 65px;
+
+  @include tablet {
+    width: 368px;
+    height: 84px;
+  }
+}
+.modal__checkbox {
+  width: 101%;
+  height: 101%;
+  border-radius: 15px;
+}
+.modal__checkbox {
+  appearance: none;
+}
+.modal__checkbox-1:checked {
+  background-color: var(--product-bg-cream);
+}
+.modal__checkbox-2:checked {
+  background-color: var(--product-bg-coffe);
+}
+.modal__checkbox-3:checked {
+  background-color: var(--product-bg-milkshakes);
+}
+
+.modal__form-group {
+  margin-bottom: 32px;
+}
+
+.img-1 {
+  background-image: url(../images/buy-naw-modal/img_small-cream@1x.png);
+
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-cream@2x.png);
+  }
+}
+.img-2 {
+  background-image: url(../images/buy-naw-modal/img_small-coffe@1x.png);
+
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-coffe@2x.png);
+  }
+}
+
+.img-3 {
+  background-image: url(../images/buy-naw-modal/img_small-milkshake@1x.png);
+
+  @include retina {
+    background-image: url(../images/buy-naw-modal/img_small-milkshake@2x.png);
+  }
+}
+
+input:invalid {
+  border: 3px solid rgb(172, 48, 48);
+}

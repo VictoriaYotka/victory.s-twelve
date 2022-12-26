@@ -35,6 +35,36 @@
   margin-bottom: 12px;
 }
 
+.about_gradient {
+  position: absolute;
+  top: auto;
+  left: calc(50% - 140px);
+  width: 279px;
+  height: 278px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7));
+  box-shadow: 0px 4.48px 16.82px rgba(153, 114, 23, 0.25);
+  z-index: 0;
+
+  @include tablet {
+    left: auto;
+    top: -5px;
+    width: 330px;
+    height: 356px;
+  }
+
+  @include desktop {
+    top: -15px;
+    width: 491px;
+    height: 490px;
+  }
+}
+
 .about_image {
   position: absolute;
   top: 22px;
@@ -46,7 +76,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 0;
 
   @include retina {
     background-image: url(../images/about/cow_s@2x.jpg);
@@ -74,37 +104,6 @@
   }
 }
 
-.about_gradient {
-  position: absolute;
-  top: auto;
-  left: calc(50% - 140px);
-  width: 279px;
-  height: 278px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(
-    0deg,
-    rgba(248, 210, 78, 0.7),
-    rgba(248, 210, 78, 0.7)
-  );
-  box-shadow: 0px 4.48px 16.82px rgba(153, 114, 23, 0.25);
-  z-index: 1;
-
-  @include tablet {
-    left: auto;
-    top: -5px;
-    width: 330px;
-    height: 356px;
-  }
-
-  @include desktop {
-    top: -15px;
-    width: 491px;
-    height: 490px;
-  }
-}
 
 .about_text_container {
   @extend %text;
@@ -173,6 +172,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
+  z-index: 0;
   @include tablet {
     margin-right: 174px;
   }
