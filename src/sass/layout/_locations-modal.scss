@@ -1,43 +1,8 @@
-.location_backdrop {
-  opacity: 1;
-
-  visibility: visible;
-
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.location_backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
 .location_modal {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  min-width: 95%;
-
-  border: 2px solid var(--icon-bg-color);
-  background-color: var(--modal-bg-color);
-  border-radius: 10px;
-
-  @include tablet {
-    width: 568px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @include mobile {
-    min-width: 280px;
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  justify-content: center;
 }
 
 .modal_title {
@@ -73,13 +38,6 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.25;
-
-  font-family: var(--main-font);
-  font-style: normal;
-
   margin-left: auto;
   margin-right: auto;
 
@@ -91,26 +49,6 @@
   }
 }
 
-.button_modal_close {
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-
-  top: 12px;
-  right: 12px;
-
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  fill: var(--secondary-text-color);
-  transition: fill 250ms var(--color-transition);
-
-  padding: 0;
-}
-
 .card_img {
   @include mobile {
     min-width: 224px;
@@ -118,13 +56,6 @@
 
   @include tablet {
     min-width: 448px;
-  }
-}
-
-.cross_location {
-  @include tablet {
-    width: 24px;
-    height: 24px;
   }
 }
 
