@@ -90,6 +90,10 @@
 }
 
 .hero__button {
+  @extend %link;
+
+  color: #000000;
+
   width: 108px;
   height: 38px;
   border-radius: 10px;
