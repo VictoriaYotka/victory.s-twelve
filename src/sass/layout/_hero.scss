@@ -8,17 +8,29 @@
     display: flex;
   }
 
-  background-image: url(../images/points/points_sm1x.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
+  background-image: url(../images/points/points_sm1x.png);
+
+  @include retina {
+    background-image: url(../images/points/points_sm2x.png);
+  }
 
   @include tablet {
     background-image: url(../images/points/points_md1x.png);
+
+    @include retina {
+      background-image: url(../images/points/points_md2x.png);
+    }
   }
 
   @include desktop {
     background-image: url(../images/points/points_lg1x.png);
+
+    @include retina {
+      background-image: url(../images/points/points_lg2x.png);
+    }
   }
 }
 
@@ -168,8 +180,7 @@
   margin-right: auto;
   margin-left: auto;
 
-  width: 177px;
-  height: 217px;
+  max-width: 50%;
 
   @include tablet {
     position: absolute;
