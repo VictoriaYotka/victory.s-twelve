@@ -145,3 +145,38 @@
     max-width: 368px;
   }
 }
+
+// anim
+
+.advantages__quantity {
+  position: relative;
+  top: 1.8rem;
+  opacity: 0;
+}
+
+.advantages__text {
+  position: relative;
+  top: 1.8rem;
+  opacity: 0;
+}
+
+.advantages__text._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.advantages__quantity._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swift-up {
+  to {
+    top: 0rem;
+  }
+}

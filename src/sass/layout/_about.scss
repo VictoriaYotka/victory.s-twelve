@@ -45,9 +45,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(0deg,
-      rgba(248, 210, 78, 0.7),
-      rgba(248, 210, 78, 0.7));
+  background-image: linear-gradient(
+    0deg,
+    rgba(248, 210, 78, 0.7),
+    rgba(248, 210, 78, 0.7)
+  );
   box-shadow: 0px 4.48px 16.82px rgba(153, 114, 23, 0.25);
   z-index: 0;
 
@@ -103,7 +105,6 @@
     }
   }
 }
-
 
 .about_text_container {
   @extend %text;
@@ -179,5 +180,54 @@
 
   @include desktop {
     margin-right: 404px;
+  }
+}
+
+// animations
+
+.about_text_first,
+.about_text_second,
+.about_text_third {
+  position: relative;
+  top: 1.8rem;
+  opacity: 0;
+}
+
+.about_uppertitle,
+.about_title {
+  position: relative;
+  top: 1.8rem;
+  opacity: 0;
+}
+
+.about_text_first._active,
+.about_text_second._active,
+.about_text_third._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.about_uppertitle._active,
+.about_title._active {
+  animation: 0.5s swift-up ease-out forwards, 0.5s fade-in ease-out forwards;
+}
+
+.anim {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  top: 2rem;
+  animation: 0.8s swift-up ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swift-up {
+  to {
+    top: 0rem;
   }
 }
