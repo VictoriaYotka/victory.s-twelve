@@ -1,0 +1,296 @@
+// .modal-product_close-button {
+//   position: absolute;
+//   top: 12px;
+//   right: 12px;
+//   background-color: transparent;
+//   border: none;
+// }
+
+// .modal-product_close-icon {
+//   cursor: pointer;
+// }
+
+.modal-product {
+  // position: absolute;
+  // top: 20px;
+  // max-width: 280px;
+  padding: 28px 20px;
+  // border: 2px solid #f8d24e;
+  // border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: var(--modal-bg-color);
+
+  // @media screen and (max-width: 479px) {
+  //   min-width: 90vw;
+  // }
+
+  // @media (min-width: 480px) and (max-width: 767px) {
+  //   max-width: unset;
+  //   min-width: 440px;
+  // }
+
+  // @include tablet {
+  //   min-width: 568px;
+  //   padding: 32px 40px;
+  // }
+
+  &_title {
+    margin-bottom: 20px;
+    font-family: var(--secondary-font);
+    font-size: 20px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--secondary-text-color);
+
+    @media screen and (max-width: 767px) {
+      width: 260px;
+    }
+  }
+
+  &_picture {
+    width: 132px;
+    height: 139px;
+    margin-bottom: 22px;
+    border-radius: 50%;
+    background: var(--product-grad-cream);
+    box-shadow: var(--product-shadow-cream);
+  }
+
+  &_picture.coffee {
+    background: var(--product-grad-coffe);
+    box-shadow: var(--product-shadow-coffe);
+  }
+
+  &_picture.milk {
+    background: var(--product-grad-milkshake);
+    box-shadow: var(--product-shadow-milkshake);
+  }
+
+  &_image.cream {
+    display: block;
+    width: 132px;
+    height: 132px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/products/cream_md@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/cream_md@2x.png);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/cream_lg@1x.png);
+
+      @include retina {
+        background-image: url(../images/products/cream_lg@2x.png);
+      }
+    }
+  }
+
+  &_image.coffee {
+    display: block;
+    width: 132px;
+    height: 132px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/products/coffee_md@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/coffee_md@2x.png);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/coffee_lg@1x.png);
+
+      @include retina {
+        background-image: url(../images/products/coffee_lg@2x.png);
+      }
+    }
+  }
+
+  &_image.milk {
+    display: block;
+    width: 132px;
+    height: 132px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/products/milkshakes_md@1x.png);
+
+    @include retina {
+      background-image: url(../images/products/milkshakes_md@2x.png);
+    }
+
+    @include desktop {
+      background-image: url(../images/products/milkshakes_lg@1x.png);
+
+      @include retina {
+        background-image: url(../images/products/milkshakes_lg@2x.png);
+      }
+    }
+  }
+
+  &_nutrition {
+    @extend %list;
+    display: flex;
+    gap: 9px;
+    margin-bottom: 40px;
+  }
+
+  &_item-elipse {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 53px;
+    height: 72px;
+    padding-bottom: 8px;
+    border: 2px solid var(--ice-nutrition-background);
+    border-radius: 40px;
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -1px;
+      right: 6%;
+      width: 43px;
+      height: 43px;
+      background-color: var(--ice-nutrition-background);
+      border-radius: 40px;
+      z-index: 1;
+    }
+
+    span {
+      position: absolute;
+      top: 7px;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 2.8;
+      color: var(--secondary-text-color);
+      z-index: 2;
+    }
+  }
+
+  &_item-elipse.coffee {
+    border-color: var(--product-bg-coffe);
+  }
+
+  &_item-elipse.coffee::before {
+    background-color: var(--product-bg-coffe);
+  }
+
+  &_item-elipse.milk {
+    border-color: var(--product-bg-milkshakes);
+  }
+
+  &_item-elipse.milk::before {
+    background-color: var(--product-bg-milkshakes);
+  }
+
+  &_ingredients {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    color: var(--secondary-text-color);
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_form-list {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &_input {
+    resize: none;
+    width: 240px;
+    height: 42px;
+    padding: 11px;
+    background: var(--input-bg-color);
+    border: 1px solid var(--main-bg-color);
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--secondary-text-color);
+
+    @media screen and (min-width: 768px) {
+      width: 368px;
+      height: 42px;
+    }
+
+    &::placeholder {
+      font-family: inherit;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--secondary-text-color);
+    }
+  }
+
+  &_input.coffee {
+    border-color: var(--product-bg-coffe);
+  }
+
+  &_input.milk {
+    border-color: var(--product-bg-milkshakes);
+  }
+}
+
+.span_ingredients {
+  margin-bottom: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+}
+
+.textarea {
+  height: 84px;
+}
+
+.modal_button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--secondary-text-color);
+}

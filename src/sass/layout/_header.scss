@@ -3,8 +3,10 @@
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 1000;
+  z-index: 800;
   background-color: #84a278;
+
+  z-index: 10;
 }
 
 .header__container {
@@ -17,7 +19,6 @@
   margin-right: auto;
   padding-top: 12px;
   padding-bottom: 12px;
-  z-index: 10000;
 
   @include desktop {
     margin-right: 308px;
@@ -65,21 +66,46 @@
 .site-nav__link {
   @extend %link;
 
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(20 / 16);
+  line-height: 1.25;
   color: var(--main-text-color);
 
   transition: color 250ms ease-in-out;
 }
 
+.site-nav__link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+
+  width: 100%;
+  height: 5px;
+
+  background-color: var(--primary-accent-color);
+  border-radius: 2px;
+
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 250ms;
+}
+
 .site-nav__link:hover,
 .site-nav__link:focus {
   color: var(--primary-accent-color);
+}
+
+.site-nav__link:hover::after,
+.site-nav__link:focus::after {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .header__button {
