@@ -141,5 +141,24 @@
 
 .slick-prev:before,
 .slick-next:before {
-  color: transparent;
+  color: var(--icon-bg-color);
+  opacity: 0;
+}
+
+@include tablet {
+  .reviews:hover .slick-prev:before,
+  .reviews:hover .slick-next:before,
+  .reviews:focus .slick-prev:before,
+  .reviews:focus .slick-next:before {
+    opacity: 1;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 27px;
+  }
+
+  .slick-prev {
+    left: -37px;
+  }
 }
