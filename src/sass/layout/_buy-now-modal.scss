@@ -1,11 +1,11 @@
 .modal-buy-now {
   position: fixed;
+  z-index: 30;
   min-width: 280px;
   max-height: 991px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 30;
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 3px;
