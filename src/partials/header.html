@@ -1,99 +1,59 @@
 <header class="header">
-  <div class="container header_container">
+  <div class="container header__container">
+    <!-- company logo -->
     <a href="./index.html" class="logo">
       <img
-        srcset="./images/logo/logo_lg1x.png 1x, ./images/logo/logo_lg2x.png 2x"
-        src="./images/logo/logo_lg1x.png"
+        class="logo__icon"
+        srcset="
+          ./images/logo/logo_sm_40.png   40w,
+          ./images/logo/logo_md_48.png   48w,
+          ./images/logo/logo_lg_60.png   60w,
+          ./images/logo/logo_sm_80.png   80w,
+          ./images/logo/logo_md_96.png   96w,
+          ./images/logo/logo_lg_120.png 120w
+        "
+        sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 320px) 40px, 100vw"
+        src="./images/logo/logo_sm_40.png"
         alt="company logo"
-        width="60"
-        height="65"
+        loading="lazy"
       />
     </a>
-    <nav class="nav">
-      <ul class="site-nav_list">
-        <li class="site_nav_item">
-          <a href="#hero" class="site_nav_link">Home</a>
+    <nav class="site-nav">
+      <ul class="site-nav__list">
+        <li class="site-nav__item">
+          <a href="#hero" class="site-nav__link">Home</a>
         </li>
-        <li class="site_nav__item">
-          <a href="#about" class="site_nav_link">How it’s made?</a>
+        <li class="site-nav__item">
+          <a href="#about" class="site-nav__link">How it’s made?</a>
         </li>
-        <li class="site_nav_item">
-          <a href="#products" class="site_nav_link">Our products</a>
+        <li class="site-nav__item">
+          <a href="#products" class="site-nav__link">Our products</a>
         </li>
-        <li class="site_nav_item">
-          <a href="#contacts" class="site_nav_link">Contact</a>
+        <li class="site-nav__item">
+          <a href="#contacts" class="site-nav__link">Contact</a>
         </li>
       </ul>
     </nav>
-
+    <!-- mobile menu button -->
     <button
       class="menu-toggle js-open-menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
     >
-      <svg
-        width="24"
-        height="24"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-          clip-rule="evenodd"
-        ></path>
-      </svg>
-    </button>
-    <button type="button" class="button header_button" data-modal-open >Buy now</button>
-
-  <!-- mobile menu -->
-  <div class="menu-container js-menu-container" id="mobile-menu">
-    <a href="./index.html" class="mobile_logo">
-      <img
-        srcset="
-          ./images/logo/logo_sm1x.png 1x,
-          ./images/logo/logo_sm2x.png 2x,
-          ./images/logo/logo_md1x.png 1x,
-          ./images/logo/logo_md2x.png 2x
-        "
-        src="./images/logo/logo_sm1x.png"
-        sizes="(min-width: 768px) 48px, (min-width: 480px) 40px, 100vw"
-        alt="company logo"
-        width="48"
-        height="44"
-      />
-    </a>
-    <button class="menu-toggle js-close-menu">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-          clip-rule="evenodd"
-        ></path>
+      <svg class="menu__icon--burger" width="32" height="32">
+        <use href="./images/icons.svg#burger-btn"></use>
       </svg>
     </button>
 
-    <ul class="mobile_menu">
-      <li class="mobile_menu_item">
-        <a href="#hero" class="mobile_menu_link">Home</a>
-      </li>
-      <li class="mobile_menu_item">
-        <a href="#about" class="mobile_menu_link">How it’s made?</a>
-      </li>
-      <li class="mobile_menu_item">
-        <a href="#products" class="mobile_menu_link">Our products</a>
-      </li>
-      <li class="mobile_menu_item">
-        <a href="#contacts" class="mobile_menu_link">Contact</a>
-      </li>
-    </ul>
-    <button type="button" class="button mobile_button">Buy now</button>
+    <!-- tablet and desktop button -->
+    <button
+      type="button"
+      class="button header__button animate__animated animate__headShake animate__slow animate__infinite infinite"
+    >
+      Buy now
+      <svg class="button__icon--arrow" width="12" height="12">
+        <use href="./images/icons.svg#arrow-btn"></use>
+      </svg>
+    </button>
   </div>
 </header>

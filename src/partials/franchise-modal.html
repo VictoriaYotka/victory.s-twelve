@@ -1,0 +1,70 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="franchise modal">
+    <strong class="franchise_title"
+      >Thank you for your interest in owning an Ice Cream shop</strong
+    >
+    <p class="franchise_text">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form class="franchise_form" name="contact_form">
+      <div class="franchise_wrap">
+        <input
+          class="franchise_field"
+          type="text"
+          name="name"
+          id="name"
+          placeholder=" "
+          autocomplete="off"
+          pattern="^[a-zA-Z]+$"
+        />
+        <label class="franchise_label" for="name">Name</label>
+      </div>
+      <div class="franchise_wrap">
+        <input
+          class="franchise_field"
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder=" "
+          autocomplete="off"
+          pattern="^[ 0-9]+$"
+        />
+        <label class="franchise_label" for="tel">Phone</label>
+      </div>
+      <div class="franchise_wrap">
+        <input
+          class="franchise_field"
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder=" "
+          autocomplete="off"
+          pattern="([\x1F-\xBF]*)@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+        />
+        <label class="franchise_label" for="mail">Email</label>
+      </div>
+      <div class="franchise_textarea">
+        <textarea
+          class="franchise_comment"
+          name="comment"
+          id="comment"
+          placeholder=" "
+          rows="3"
+          autocomplete="off"
+          pattern="^[a-zA-Z]+$"
+        ></textarea>
+        <label class="franchise_label comments" for="comment">Comment</label>
+      </div>
+      <button type="submit" class="button franchise_btn">Submit</button>
+    </form>
+    <button class="modal_btn" data-modal-close>
+      <svg class="modal_icon" width="24" height="24">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
+  </div>
+</div>
