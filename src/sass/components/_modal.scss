@@ -1,11 +1,14 @@
 .modal {
   position: absolute;
   z-index: 100;
-  top: 70px;
-  left: 20px;
+  // top: 70px;
+  // left: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   width: 89vw;
-  max-height: 90%;
+  max-height: 91%;
 
   margin: auto;
   padding-top: 28px;
@@ -24,9 +27,6 @@
   overflow-y: scroll;
 
   @include mobile {
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 440px;
   }
 
@@ -81,4 +81,12 @@
   &:hover {
     fill: var(--button-hover-color);
   }
+}
+
+input:focus-within {
+  outline: 3px solid rgb(171, 218, 171);
+}
+
+input:not(:placeholder-shown):requiered:invalid {
+  border: 3px solid rgb(172, 48, 48);
 }

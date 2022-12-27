@@ -18,11 +18,13 @@
   //     justify-content: center;
   //   }
 
-  //   @include tablet {
-  //     min-width: 568px;
-  //     align-items: center;
-  //     justify-content: center;
-  //   }
+  @include tablet {
+    padding-left: 58px;
+    padding-right: 58px;
+    //     min-width: 568px;
+    //     align-items: center;
+    //     justify-content: center;
+  }
 }
 
 .modal_title {
@@ -102,9 +104,9 @@
   }
 }
 
-.cross-read_modal {
-  @include tablet {
-    width: 24px;
-    height: 24px;
-  }
-}
+// .cross-read_modal {
+//   @include tablet {
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
