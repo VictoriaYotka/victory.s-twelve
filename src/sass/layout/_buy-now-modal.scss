@@ -1,37 +1,38 @@
 .modal-buy-now {
-  position: fixed;
-  z-index: 30;
-  min-width: 280px;
-  max-height: 991px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  // position: fixed;
+  // z-index: 30;
+  // min-width: 280px;
+  // max-height: 991px;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  border-radius: 3px;
-  background: #fcfcfc;
-  transition: 0.3s all;
-  border: 2px solid #f8d24e;
-  border-radius: 10px;
-  padding: 20px;
-  overflow-y: scroll;
-  height: 95vh;
-  @include mobile {
-    min-width: 440px;
-  }
-  @include tablet {
-    min-width: 568px;
-    max-height: 664px;
-    padding: 28px;
-  }
+  max-height: 85%;
+
+  // background: #fcfcfc;
+  // transition: 0.3s all;
+  // border: 2px solid #f8d24e;
+  // border-radius: 10px;
+  // padding: 20px;
+  // overflow-y: scroll;
+  // height: 95vh;
+  // @include mobile {
+  //   min-width: 440px;
+  // }
+  // @include tablet {
+  //   min-width: 568px;
+  //   max-height: 664px;
+  //   padding: 28px;
+  // }
 }
 
-.modal.active,
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
+// .modal.active,
+// .overlay.active {
+//   opacity: 1;
+//   visibility: visible;
+// }
+//
 // .modal-buy-now {
 //   text-align: center;
 
@@ -47,22 +48,22 @@
 // }
 
 /* Стили для кнопки закрытия */
-.modal-buy-now__btn {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  padding: 0;
+// .modal-buy-now__btn {
+//   width: 20px;
+//   height: 20px;
+//   position: absolute;
+//   top: 20px;
+//   right: 20px;
+//   cursor: pointer;
+//   border: none;
+//   background-color: transparent;
+//   padding: 0;
 
-  @include tablet {
-    width: 24px;
-    height: 24px;
-  }
-}
+//   @include tablet {
+//     width: 24px;
+//     height: 24px;
+//   }
+// }
 
 // .modal__cross {
 //   width: 20px;
@@ -321,6 +322,6 @@
   }
 }
 
-input:invalid {
+input:not(:placeholder-shown):requiered:invalid {
   border: 3px solid rgb(172, 48, 48);
 }
