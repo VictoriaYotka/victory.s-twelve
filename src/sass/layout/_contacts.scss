@@ -1,5 +1,4 @@
 .contacts {
-
   background: linear-gradient(0deg, var(--main-bg-color) 72.5%, transparent 0%);
   @include tablet {
     background: linear-gradient(0deg, var(--main-bg-color) 52%, transparent 0%);
@@ -205,38 +204,15 @@
 .contacts__btn {
   z-index: 0;
   min-width: 196px;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
 }
 
 .contacts__btn-second {
   z-index: 0;
   border-radius: 10px;
-  color: var(--button-text-color);
-  border: 2px solid var(--icon-bg-color);
-  border-radius: 10px;
-  background-color: transparent;
-
-  transition: border 250ms ease-in-out, color 250ms ease-in-out;
-}
-
-.contacts__btn-second:hover,
-.contacts__btn-second:focus {
-  border: 2px solid var(--button-hover-color);
-  background-color: transparent;
-}
-
-.contacts__btn-second:focus {
-  color: #ffffff;
 }
 
 .contacts__btn-icon {
   margin-left: 4px;
   fill: currentColor;
   vertical-align: middle;
-}
-
-.contacts__btn-icon:focus {
-  fill: #ffffff;
 }
