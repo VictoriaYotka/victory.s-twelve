@@ -9,6 +9,7 @@
   // box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-height: 85%;
+  overflow-y: hidden;
 
   // background: #fcfcfc;
   // transition: 0.3s all;
@@ -320,8 +321,4 @@
   @include retina {
     background-image: url(../images/buy-naw-modal/img_small-milkshake@2x.png);
   }
-}
-
-input:not(:placeholder-shown):requiered:invalid {
-  border: 3px solid rgb(172, 48, 48);
 }
