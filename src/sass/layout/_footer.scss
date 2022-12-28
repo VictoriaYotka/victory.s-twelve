@@ -152,7 +152,6 @@
   transition: transform 250ms ease-in-out;
   color: var(--main-text-color);
 
-
   @include tablet {
     font-size: 14px;
   }
@@ -161,9 +160,9 @@
     font-size: 16px;
   }
 }
- .footer-contacts__phone:hover {
-   transform: scale(1.07, 1.2);
- }
+.footer-contacts__phone:hover {
+  transform: scale(1.07, 1.2);
+}
 
 .footer-contect__text {
   @extend %text;
