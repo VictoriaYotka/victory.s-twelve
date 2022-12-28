@@ -49,7 +49,53 @@
       </li>
     </ul>
 
-    <form class="modal-form" name="modal_form">
+     <form class="buy-now__form" name="contact_form">
+      <div class="buy-now_wrap">
+        <input
+          class="buy-now_field"
+          type="text"
+          name="name"
+          id="name"
+          placeholder=" "
+          pattern="[A-Za-z]{2,}"
+          title="Minimum 2 letters"
+          required
+        />
+        <label class="buy-now_label" for="name">Name</label>
+      </div>
+      <div class="buy-now_wrap">
+        <input
+          class="buy-now_field"
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder=" "
+          pattern="[0-9]"
+          {13}
+          minlength="13"
+          required
+        />
+        <label class="buy-now_label" for="tel">Phone</label>
+      </div>
+
+      <div class="buy-now_textarea">
+        <textarea
+          class="buy-now_comment"
+          name="comment"
+          id="comment"
+          placeholder=" "
+          rows="3"
+          autocomplete="off"
+          minlength="50"
+          pattern="^[a-zA-Z]+$"
+        ></textarea>
+        <label class="buy-now_label comments" for="comment">Comment</label>
+      </div>
+      <div class="modal-buy-button-container">
+        <button class="modal__form-btn button" type="submit">Submit</button>
+    </form>
+
+    <!-- <form class="modal-form" name="modal_form">
       <div class="modal__form-group" role="group">
         <label class="modal__label" for="user_name"></label>
         <input
@@ -87,10 +133,8 @@
           minlength="10"
           required
         />
-      </div>
+      </div> -->
 
-      <div class="modal-buy-button-container">
-        <button class="modal__form-btn button" type="submit">Submit</button>
       </div>
     </form>
   </div>

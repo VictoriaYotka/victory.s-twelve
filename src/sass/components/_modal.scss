@@ -84,7 +84,7 @@
 }
 
 input:focus-within {
-  outline: 3px solid rgb(171, 218, 171);
+   outline: 3px solid rgb(171, 218, 171);
 }
 
 input:not(:placeholder-shown):requiered:invalid {

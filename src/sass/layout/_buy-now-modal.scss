@@ -1,81 +1,8 @@
 .modal-buy-now {
-  // position: fixed;
-  // z-index: 30;
-  // min-width: 280px;
-  // max-height: 991px;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  // box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  max-height: 85%;
-  overflow-y: hidden;
-
-  // background: #fcfcfc;
-  // transition: 0.3s all;
-  // border: 2px solid #f8d24e;
-  // border-radius: 10px;
-  // padding: 20px;
-  // overflow-y: scroll;
-  // height: 95vh;
-  // @include mobile {
-  //   min-width: 440px;
-  // }
-  // @include tablet {
-  //   min-width: 568px;
-  //   max-height: 664px;
-  //   padding: 28px;
-  // }
+  max-height: 99%;
+  overflow-y: scroll;
 }
-
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
-//
-// .modal-buy-now {
-//   text-align: center;
-
-//   @include tablet {
-//     padding: 28px;
-//   }
-// }
-
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-/* Стили для кнопки закрытия */
-// .modal-buy-now__btn {
-//   width: 20px;
-//   height: 20px;
-//   position: absolute;
-//   top: 20px;
-//   right: 20px;
-//   cursor: pointer;
-//   border: none;
-//   background-color: transparent;
-//   padding: 0;
-
-//   @include tablet {
-//     width: 24px;
-//     height: 24px;
-//   }
-// }
-
-// .modal__cross {
-//   width: 20px;
-//   height: 20px;
-//   fill: #444;
-
-//   @include tablet {
-//     width: 24px;
-//     height: 24px;
-//   }
-// }
 
 //Картки
 .buy-now__title {
@@ -100,8 +27,6 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    // padding-right: 54px;
-    // padding-left: 54px;
     gap: 32px;
 
     flex-basis: calc((100% - 2 * 32px) / 3);
@@ -143,10 +68,15 @@
 .buy-now__gradient {
   position: absolute;
   top: -61px;
+  left: -2px;
   display: flex;
   height: 132px;
   width: 132px;
   border-radius: 50%;
+
+  @include tablet{
+    left: -7px;
+  }
 }
 .card-gradient-1 {
   background: linear-gradient(
@@ -194,11 +124,13 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  user-select: none;
 }
 
 .buy-now__img {
   position: absolute;
   top: -71px;
+  left: -2px;
   display: flex;
   height: 132px;
   width: 132px;
@@ -206,6 +138,10 @@
   background-size: cover;
   background-position: center;
   z-index: 999;
+
+  @include tablet {
+    left: -7px;
+  }
 }
 
 /* Стили для активных классов подложки и окна */
@@ -228,60 +164,131 @@
   text-align: center;
   color: var(--secondary-text-color);
 }
-.modal__label {
-  display: block;
-  margin-bottom: 16px;
-}
-.modal__field {
-  background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
-  outline: none;
-  border-radius: 10px;
-  font-weight: 400;
-  width: 224;
-  height: 32px;
-  padding-left: 16px;
 
+.buy-now__form {
   @include tablet {
-    width: 368px;
-    height: 42px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
-.modal__field::placeholder {
-  font-family: var(--main-font);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  color: var(--secondary-text-color);
-}
-.modal__field:focus-within {
-  outline: 3px solid rgb(171, 218, 171);
-}
 
-.modal__label {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  color: var(--secondary-text-color);
-}
-
-.modal__field-comment {
-  padding-bottom: 40px;
-  width: 224px;
-  height: 65px;
+.buy-now_wrap {
+  position: relative;
+  margin-bottom: 12px;
 
   @include tablet {
-    width: 368px;
+    margin-bottom: 16px;
+  }
+}
+
+.buy-now_textarea {
+  position: relative;
+  margin-bottom: 24px;
+  height: 64px;
+
+  @include tablet {
+    margin-bottom: 32px;
     height: 84px;
   }
 }
+
+.buy-now_label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: transform 0.5s;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+
+  @include tablet {
+    font-size: 14px;
+    left: 16px;
+  }
+}
+
+.buy-now_textarea .comments {
+  top: 17px;
+  left: 12px;
+
+  @include tablet {
+    top: 20px;
+    left: 16px;
+  }
+}
+
+.buy-now_field,
+.buy-now_comment {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  width: 100%;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid var(--main-bg-color);
+  border-radius: 10px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+
+.buy-now_comment {
+  resize: none;
+}
+.buy-now_comment:focus-within{
+  outline: 3px solid rgb(171, 218, 171);
+}
+
+
+.buy-now_field:focus,
+.buy-now_comment:focus {
+  border: 1px solid var(--button-hover-color);
+}
+
+.buy-now_field:focus + .buy-now_label,
+.buy-now_field:not(:placeholder-shown) + .buy-now_label {
+  transform: translateY(-31px);
+  transition: transform 0.4s linear;
+
+  font-size: 10px;
+
+  @include tablet {
+    transform: translateY(-40px);
+
+    font-size: 12px;
+  }
+}
+
+.buy-now_comment:focus + .buy-now_label,
+.buy-now_comment:not(:placeholder-shown) + .buy-now_label {
+  transform: translateY(-31px);
+  transition: transform 0.4s linear;
+
+  font-size: 10px;
+
+  @include tablet {
+    transform: translateY(-38px);
+
+    font-size: 12px;
+  }
+}
+
 .modal__checkbox {
-  width: 101%;
-  height: 101%;
+  width:102%;
+  height: 102%;
   border-radius: 15px;
+}
+.modal__checkbox:focus-within{
+  outline: none;
 }
 .modal__checkbox {
   appearance: none;
@@ -294,10 +301,6 @@
 }
 .modal__checkbox-3:checked {
   background-color: var(--product-bg-milkshakes);
-}
-
-.modal__form-group {
-  margin-bottom: 32px;
 }
 
 .img-1 {
