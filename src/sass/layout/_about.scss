@@ -1,14 +1,14 @@
 .about {
   background-color: var(--main-bg-color);
 
-  padding-bottom: 20px;
+  padding-bottom: 0;
 
   @include tablet {
-    padding-bottom: 55px;
+    padding-bottom: 33px;
   }
 
   @include desktop {
-    padding-bottom: 120px;
+    padding-bottom: 64px;
   }
 }
 

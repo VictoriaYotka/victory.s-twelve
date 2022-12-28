@@ -20,21 +20,21 @@
   }
 }
 
-// .logo__icon {
-//   width: 40px;
-//   height: 37px;
-//   fill: currentColor;
+.logo__icon {
+  width: 40px;
+  height: 37px;
+  fill: currentColor;
 
-//   @include tablet {
-//     width: 48px;
-//     height: 44px;
-//   }
+  @include tablet {
+    width: 48px;
+    height: 44px;
+  }
 
-//   @include desktop {
-//     width: 60px;
-//     height: 65px;
-//   }
-// }
+  @include desktop {
+    width: 60px;
+    height: 65px;
+  }
+}
 
 .site-nav {
   display: none;

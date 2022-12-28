@@ -1,20 +1,9 @@
 <!-- mobile menu -->
 <div class="menu-container js-menu-container" id="mobile-menu">
-  <a href="./index.html" class="logo__menu">
-    <img
-      class="logo__icon"
-      srcset="
-        ./images/logo/logo_sm_40.png 40w,
-        ./images/logo/logo_md_48.png 48w,
-        ./images/logo/logo_lg_60.png 60w,
-        ./images/logo/logo_sm_80.png 80w
-      "
-      sizes="(min-width: 768px) 48px, (min-width: 320px) 40px, 100vw"
-      src="./images/logo/logo_sm_40.png"
-      alt="company logo"
-      loading="lazy"
-    />
-  </a>
+  <a href="./index.html" class="logo__menu"
+    ><svg class="logo__icon" width="48" height="44">
+      <use href="./images/icons.svg#logo"></use></svg
+  ></a>
   <button class="menu-toggle menu--close js-close-menu">
     <svg class="menu__icon--close" width="32" height="32">
       <use href="./images/icons.svg#close-btn"></use>
