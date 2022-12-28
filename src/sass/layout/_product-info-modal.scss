@@ -1,40 +1,47 @@
-// .modal-product_close-button {
-//   position: absolute;
-//   top: 12px;
-//   right: 12px;
-//   background-color: transparent;
-//   border: none;
-// }
+.backdrop-product {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: flex-start;
+}
 
-// .modal-product_close-icon {
-//   cursor: pointer;
-// }
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 2% auto;
+}
+
+.modal-product_close-icon {
+  cursor: pointer;
+}
 
 .modal-product {
-  // position: absolute;
-  // top: 20px;
-  // max-width: 280px;
+  max-width: 280px;
   padding: 28px 20px;
-  // border: 2px solid #f8d24e;
-  // border-radius: 10px;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // background-color: var(--modal-bg-color);
+  background-color: var(--modal-bg-color);
 
-  // @media screen and (max-width: 479px) {
-  //   min-width: 90vw;
-  // }
+  @media screen and (max-width: 479px) {
+    min-width: 90vw;
+  }
 
-  // @media (min-width: 480px) and (max-width: 767px) {
-  //   max-width: unset;
-  //   min-width: 440px;
-  // }
+  @media (min-width: 480px) and (max-width: 767px) {
+    max-width: unset;
+    min-width: 440px;
+  }
 
-  // @include tablet {
-  //   min-width: 568px;
-  //   padding: 32px 40px;
-  // }
+  @include tablet {
+    min-width: 568px;
+    padding: 32px 40px;
+  }
 
   &_title {
     margin-bottom: 20px;
@@ -234,6 +241,10 @@
     flex-direction: column;
     gap: 16px;
     margin-bottom: 24px;
+
+    > li {
+      position: relative;
+    }
   }
 
   &_input {
@@ -255,22 +266,65 @@
       width: 368px;
       height: 42px;
     }
+  }
 
-    &::placeholder {
-      font-family: inherit;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.4;
-      color: var(--secondary-text-color);
-    }
+  &_input.textarea.cream:focus-within {
+    outline: 3px solid var(--product-bg-cream);
   }
 
   &_input.coffee {
     border-color: var(--product-bg-coffe);
   }
 
+  &_input.coffee:focus-within,
+  &_input.textarea.coffee:focus-within {
+    outline: 3px solid var(--product-bg-coffe);
+  }
+
   &_input.milk {
     border-color: var(--product-bg-milkshakes);
+  }
+
+  &_input.milk:focus-within,
+  &_input.textarea.milk:focus-within {
+    outline: 3px solid var(--product-bg-milkshakes);
+  }
+
+  &_input:not(:placeholder-shown):invalid {
+    border: 3px solid rgb(172, 48, 48);
+  }
+
+  &_label {
+    position: absolute;
+    top: 21px;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: transform 0.5s;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--secondary-text-color);
+    pointer-events: none;
+
+    @include tablet {
+      font-size: 14px;
+      left: 16px;
+    }
+  }
+
+  &_input:focus + &_label,
+  &_input:not(:placeholder-shown) + &_label {
+    transform: translateY(-37px);
+    transition: transform 0.4s linear;
+
+    font-size: 10px;
+
+    @include tablet {
+      transform: translateY(-37px);
+
+      font-size: 12px;
+    }
   }
 }
 
@@ -287,10 +341,10 @@
   height: 84px;
 }
 
-.modal_button {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.2;
-  color: var(--secondary-text-color);
+.modal__cross.coffee:hover {
+  fill: var(--product-bg-coffe);
+}
+
+.modal__cross.milk:hover {
+  fill: var(--product-bg-milkshakes);
 }
