@@ -224,6 +224,7 @@
   background: var(--input-bg-color);
   border: 1px solid var(--main-bg-color);
   border-radius: 10px;
+  transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 768px) {
     width: 368px;
@@ -231,27 +232,16 @@
   }
 }
 
-.modal-product_field.cream:focus-within,
-.modal-product_field.textarea.cream:focus-within {
-  outline: 3px solid var(--product-bg-cream);
+.modal-product_field {
+  outline: none;
 }
 
 .modal-product_field.coffee {
   border-color: var(--product-bg-coffe);
 }
 
-.modal-product_field.coffee:focus-within,
-.modal-product_field.textarea.coffee:focus-within {
-  outline: 3px solid var(--product-bg-coffe);
-}
-
 .modal-product_field.milk {
   border-color: var(--product-bg-milkshakes);
-}
-
-.modal-product_field.milk:focus-within,
-.modal-product_field.textarea.milk:focus-within {
-  outline: 3px solid var(--product-bg-milkshakes);
 }
 
 .modal-product_field:not(:placeholder-shown):invalid {
