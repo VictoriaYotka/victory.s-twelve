@@ -36,38 +36,45 @@
           <li>
             <input
               class="modal-product_input"
+              id="name-cream"
               type="text"
               name="name"
               placeholder=" "
               pattern="[A-Za-z]{2,}"
-              title="Minimum 2 letters"
+              title="Please, write your name and surname"
               required
             />
-            <label class="modal-product_label">Name</label>
+            <label class="modal-product_label" for="name-cream">Name</label>
           </li>
           <li>
             <input
               class="modal-product_input"
-              type="text"
-              name="text"
+              type="tel-cream"
+              id="tel"
+              name="tel"
               placeholder=" "
-              pattern="[0-9]"
+              pattern="\+?[0-9\s\-\(\)]+"
+              title="Please, write your phone number"
               {13}
               minlength="13"
               required
             />
-            <label class="modal-product_label">Phone</label>
+            <label class="modal-product_label" for="tel-cream">Phone</label>
           </li>
           <li>
             <textarea
               class="modal-product_input textarea cream"
               name="comment"
+              id="comment-cream"
               placeholder=" "
               autocomplete="off"
-              minlength="50"
+              minlength="10"
+              title="Please, write down your wishes for the order"
               pattern="^[a-zA-Z]+$"
             ></textarea>
-            <label class="modal-product_label">Comment</label>
+            <label class="modal-product_label" for="comment-cream"
+              >Comment</label
+            >
           </li>
         </ul>
         <button class="modal-product_button button" type="submit">
@@ -118,37 +125,45 @@
           <li>
             <input
               class="modal-product_input coffee"
+              id="name-coffee"
               type="text"
               name="name"
               placeholder=" "
               pattern="[A-Za-z]{2,}"
-              title="Minimum 2 letters"
+              title="Please, write your name and surname"
               required
             />
-            <label class="modal-product_label">Name</label>
+            <label class="modal-product_label" for="name-coffee">Name</label>
           </li>
           <li>
             <input
               class="modal-product_input coffee"
-              type="text"
-              name="text"
+              id="tel-coffee"
+              type="tel"
+              name="tel"
               placeholder=" "
-              pattern="[0-9]{10,}"
-              title="Minimum 10 numbers"
+              pattern="\+?[0-9\s\-\(\)]+"
+              title="Please, write your phone number"
+              {13}
+              minlength="13"
               required
             />
-            <label class="modal-product_label">Phone</label>
+            <label class="modal-product_label" for="tel-coffee">Phone</label>
           </li>
           <li>
             <textarea
               class="modal-product_input textarea coffee"
               name="comment"
+              id="comment-coffee"
               placeholder=" "
               autocomplete="off"
-              minlength="50"
+              minlength="10"
+              title="Please, write down your wishes for the order"
               pattern="^[a-zA-Z]+$"
             ></textarea>
-            <label class="modal-product_label">Comment</label>
+            <label class="modal-product_label" for="comment-coffee"
+              >Comment</label
+            >
           </li>
         </ul>
         <button class="modal-product_button button" type="submit">
@@ -197,37 +212,45 @@
           <li>
             <input
               class="modal-product_input milk"
+              id="name-milk"
               type="text"
               name="name"
               placeholder=" "
               pattern="[A-Za-z]{2,}"
-              title="Minimum 2 letters"
+              title="Please, write your name and surname"
               required
             />
-            <label class="modal-product_label">Name</label>
+            <label class="modal-product_label" for="name-milk">Name</label>
           </li>
           <li>
             <input
               class="modal-product_input milk"
-              type="text"
-              name="text"
+              type="tel-cream"
+              id="tel-milk"
+              name="tel"
               placeholder=" "
-              pattern="[0-9]{10,}"
-              title="Minimum 10 numbers"
+              pattern="\+?[0-9\s\-\(\)]+"
+              title="Please, write your phone number"
+              {13}
+              minlength="13"
               required
             />
-            <label class="modal-product_label">Phone</label>
+            <label class="modal-product_label" for="tel-milk">Phone</label>
           </li>
           <li>
             <textarea
               class="modal-product_input textarea milk"
               name="comment"
+              id="comment-milk"
               placeholder=" "
               autocomplete="off"
-              minlength="50"
+              minlength="10"
+              title="Please, write down your wishes for the order"
               pattern="^[a-zA-Z]+$"
             ></textarea>
-            <label class="modal-product_label">Comment</label>
+            <label class="modal-product_label" for="comment-milk"
+              >Comment</label
+            >
           </li>
         </ul>
         <button class="modal-product_button button" type="submit">

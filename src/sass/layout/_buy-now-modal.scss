@@ -1,7 +1,8 @@
 .modal-buy-now {
   text-align: center;
   max-height: 99%;
-  overflow-y: scroll;
+
+  overflow-y: auto;
 }
 
 //Картки
@@ -197,7 +198,7 @@
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  transition: transform 0.5s;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-weight: 400;
   font-size: 12px;
@@ -221,6 +222,7 @@
 }
 
 .buy-now_field,
+.buy-now_field--tel,
 .buy-now_comment {
   padding-left: 12px;
   padding-right: 12px;
@@ -244,24 +246,27 @@
 .buy-now_comment {
   resize: none;
 }
-.buy-now_comment:focus-within {
-  outline: 3px solid rgb(171, 218, 171);
+
+.buy-now_field:not(:placeholder-shown):required:invalid,
+.buy-now_comment:not(:placeholder-shown):invalid {
+  border: 3px solid rgb(172, 48, 48);
 }
 
-.buy-now_field:focus,
-.buy-now_comment:focus {
-  border: 1px solid var(--button-hover-color);
+.buy-now_field:not(:placeholder-shown):required:valid,
+.buy-now_comment:not(:placeholder-shown):valid {
+  border: 3px solid var(--button-hover-color);
 }
 
 .buy-now_field:focus + .buy-now_label,
 .buy-now_field:not(:placeholder-shown) + .buy-now_label {
   transform: translateY(-31px);
-  transition: transform 0.4s linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 10px;
 
   @include tablet {
     transform: translateY(-40px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-size: 12px;
   }
@@ -270,18 +275,20 @@
 .buy-now_comment:focus + .buy-now_label,
 .buy-now_comment:not(:placeholder-shown) + .buy-now_label {
   transform: translateY(-31px);
-  transition: transform 0.4s linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 10px;
 
   @include tablet {
     transform: translateY(-38px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-size: 12px;
   }
 }
 
 .modal__checkbox {
+  @extend %cursor;
   width: 102%;
   height: 102%;
   border-radius: 15px;

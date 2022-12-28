@@ -53,3 +53,11 @@ picture {
   max-width: 100%;
   height: auto;
 }
+
+a,
+%cursor {
+  cursor: url(../images/cursor/1x.png), pointer;
+}
+button {
+  cursor: url(../images/cursor/1x.png), pointer;
+}
