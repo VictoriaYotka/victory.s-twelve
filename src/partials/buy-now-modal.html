@@ -57,8 +57,8 @@
           name="name"
           id="name"
           placeholder=" "
-          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-          title="Minimum 2 letters"
+          pattern="[A-Za-z]{2,}"
+          title="Please, write your name and surname"
           required
         />
         <label class="buy-now_label" for="name">Name</label>
@@ -71,6 +71,7 @@
           id="tel"
           placeholder=" "
           pattern="\+?[0-9\s\-\(\)]+"
+          title="Please, write your phone number"
           {13}
           minlength="13"
           required
@@ -87,6 +88,7 @@
           rows="3"
           autocomplete="off"
           minlength="10"
+          title="Please, write down your wishes for the order"
           pattern="^[a-zA-Z]+$"
         ></textarea>
         <label class="buy-now_label comments" for="comment">Comment</label>

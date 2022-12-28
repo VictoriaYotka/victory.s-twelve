@@ -2,9 +2,7 @@
   text-align: center;
   max-height: 99%;
 
-  @media screen and (max-height: 640px) {
-    overflow-y: scroll;
-  }
+  overflow-y: auto;
 }
 
 //Картки
@@ -251,7 +249,7 @@
 
 .buy-now_field:not(:placeholder-shown):required:invalid,
 .buy-now_comment:not(:placeholder-shown):invalid {
-  border: 3px solid #f44336;
+  border: 3px solid rgb(172, 48, 48);
 }
 
 .buy-now_field:not(:placeholder-shown):required:valid,
@@ -290,6 +288,7 @@
 }
 
 .modal__checkbox {
+  @extend %cursor;
   width: 102%;
   height: 102%;
   border-radius: 15px;

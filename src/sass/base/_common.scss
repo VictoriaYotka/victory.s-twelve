@@ -54,7 +54,8 @@ picture {
   height: auto;
 }
 
-a {
+a,
+%cursor {
   cursor: url(../images/cursor/1x.png), pointer;
 }
 button {
