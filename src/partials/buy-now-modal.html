@@ -49,7 +49,7 @@
       </li>
     </ul>
 
-     <form class="buy-now__form" name="contact_form">
+    <form class="buy-now__form" name="contact_form">
       <div class="buy-now_wrap">
         <input
           class="buy-now_field"
@@ -57,7 +57,7 @@
           name="name"
           id="name"
           placeholder=" "
-          pattern="[A-Za-z]{2,}"
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
           title="Minimum 2 letters"
           required
         />
@@ -70,7 +70,7 @@
           name="tel"
           id="tel"
           placeholder=" "
-          pattern="[0-9]"
+          pattern="\+?[0-9\s\-\(\)]+"
           {13}
           minlength="13"
           required
@@ -86,13 +86,14 @@
           placeholder=" "
           rows="3"
           autocomplete="off"
-          minlength="50"
+          minlength="10"
           pattern="^[a-zA-Z]+$"
         ></textarea>
         <label class="buy-now_label comments" for="comment">Comment</label>
       </div>
       <div class="modal-buy-button-container">
         <button class="modal__form-btn button" type="submit">Submit</button>
+      </div>
     </form>
 
     <!-- <form class="modal-form" name="modal_form">
@@ -135,7 +136,7 @@
         />
       </div> -->
 
-      </div>
-    </form>
+    <!-- </div>
+    </form> -->
   </div>
 </div>
