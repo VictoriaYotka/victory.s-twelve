@@ -8,3 +8,4 @@ import './js/modal-franchise';
 import './js/modal-ingredients';
 import './js/modal-location';
 import './js/modal-readmore';
+import './js/back-to-top';
