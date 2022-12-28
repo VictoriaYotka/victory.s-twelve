@@ -74,8 +74,8 @@
   width: 132px;
   border-radius: 50%;
 
-  @include tablet{
-    left: -7px;
+  @include tablet {
+    left: -5px;
   }
 }
 .card-gradient-1 {
@@ -140,7 +140,7 @@
   z-index: 999;
 
   @include tablet {
-    left: -7px;
+    left: -5px;
   }
 }
 
@@ -244,10 +244,9 @@
 .buy-now_comment {
   resize: none;
 }
-.buy-now_comment:focus-within{
+.buy-now_comment:focus-within {
   outline: 3px solid rgb(171, 218, 171);
 }
-
 
 .buy-now_field:focus,
 .buy-now_comment:focus {
@@ -283,11 +282,11 @@
 }
 
 .modal__checkbox {
-  width:102%;
+  width: 102%;
   height: 102%;
   border-radius: 15px;
 }
-.modal__checkbox:focus-within{
+.modal__checkbox:focus-within {
   outline: none;
 }
 .modal__checkbox {

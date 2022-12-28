@@ -5,7 +5,7 @@
   "homepage": "https://VictoriaYotka.github.io/victory.s-twelve",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /victory.s-twelve/"
   },
   "repository": {
     "type": "git",
