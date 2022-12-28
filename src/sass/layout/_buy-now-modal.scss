@@ -2,9 +2,7 @@
   text-align: center;
   max-height: 99%;
 
-  @media screen and (max-height: 640px) {
-    overflow-y: scroll;
-  }
+  overflow-y: auto;
 }
 
 //Картки
@@ -290,6 +288,7 @@
 }
 
 .modal__checkbox {
+  @extend %cursor;
   width: 102%;
   height: 102%;
   border-radius: 15px;

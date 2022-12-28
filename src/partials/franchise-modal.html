@@ -23,8 +23,8 @@
           name="name"
           id="name"
           placeholder=" "
-          pattern="[A-Za-z]{2,}"
-          title="Minimum 2 letters"
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Please, write your name and surname"
           required
         />
         <label class="franchise_label" for="name">Name</label>
@@ -36,7 +36,8 @@
           name="tel"
           id="tel"
           placeholder=" "
-          pattern="[0-9]"
+          pattern="\+?[0-9\s\-\(\)]+"
+          title="Please, write your phone number"
           {13}
           minlength="13"
           required
@@ -51,6 +52,7 @@
           id="mail"
           placeholder=" "
           pattern="([\x1F-\xBF]*)@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+          title="Please, write your email"
           minlength="10"
           required
         />
@@ -64,7 +66,8 @@
           placeholder=" "
           rows="3"
           autocomplete="off"
-          minlength="50"
+          minlength="10"
+          title="Please, write down your wishes for the order"
           pattern="^[a-zA-Z]+$"
         ></textarea>
         <label class="franchise_label comments" for="comment">Comment</label>
