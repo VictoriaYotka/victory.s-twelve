@@ -127,7 +127,7 @@
 
 .franchise_field:not(:placeholder-shown):required:invalid,
 .franchise_comment:not(:placeholder-shown):invalid {
-  border: 3px solid #f44336;
+  border: 3px solid rgb(172, 48, 48);
 }
 
 .franchise_field:not(:placeholder-shown):required:valid,
