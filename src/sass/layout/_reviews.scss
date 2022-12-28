@@ -26,6 +26,7 @@
 }
 .reviews__thumb {
   display: flex;
+  justify-content: center;
   align-items: center;
   background: var(--main-bg-color);
   border-radius: 10px;
@@ -145,20 +146,20 @@
   opacity: 0;
 }
 
-@include tablet {
-  .reviews:hover .slick-prev:before,
-  .reviews:hover .slick-next:before,
-  .reviews:focus .slick-prev:before,
-  .reviews:focus .slick-next:before {
-    opacity: 1;
-  }
+// @include tablet {
+//   .reviews:hover .slick-prev:before,
+//   .reviews:hover .slick-next:before,
+//   .reviews:focus .slick-prev:before,
+//   .reviews:focus .slick-next:before {
+//     opacity: 1;
+//   }
 
-  .slick-prev:before,
-  .slick-next:before {
-    font-size: 27px;
-  }
+//   .slick-prev:before,
+//   .slick-next:before {
+//     font-size: 27px;
+//   }
 
-  .slick-prev {
-    left: -37px;
-  }
-}
+//   .slick-prev {
+//     left: -37px;
+//   }
+// }
