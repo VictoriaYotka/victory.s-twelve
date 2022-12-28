@@ -1,6 +1,6 @@
 <!-- ICE CREAM MODAL -->
 <div class="backdrop is-hidden" data-iceCream>
-  <div class="modal-product">
+  <div class="modal-product modal">
     <button class="modal_btn" data-iceCream-close>
       <svg class="modal__cross">
         <use href="./images/icons.svg#close-btn"></use>
@@ -32,9 +32,9 @@
 
     <form class="modal-product_form">
       <div class="modal-product_form-list">
-        <div>
+        <div class="modal-product_wrap">
           <input
-            class="modal-product_input cream"
+            class="modal-product_field cream"
             id="name-cream"
             type="text"
             name="name"
@@ -45,9 +45,9 @@
           />
           <label class="modal-product_label" for="name-cream">Name</label>
         </div>
-        <div>
+        <div class="modal-product_wrap">
           <input
-            class="modal-product_input cream"
+            class="modal-product_field cream"
             type="tel-cream"
             id="tel"
             name="tel"
@@ -60,9 +60,9 @@
           />
           <label class="modal-product_label" for="tel-cream">Phone</label>
         </div>
-        <div>
+        <div class="modal-product_wrap">
           <textarea
-            class="modal-product_input textarea cream"
+            class="modal-product_field textarea cream"
             name="comment"
             id="comment-cream"
             placeholder=" "
@@ -80,8 +80,8 @@
 </div>
 
 <!-- ICE COFFEE MODAL -->
-<div class="backdrop backdrop-product is-hidden" data-iceCoffee>
-  <div class="modal-product">
+<div class="backdrop is-hidden" data-iceCoffee>
+  <div class="modal-product modal">
     <button class="modal_btn" data-iceCoffee-close>
       <svg class="modal__cross coffee">
         <use href="./images/icons.svg#close-btn"></use>
@@ -112,10 +112,10 @@
     </ul>
 
     <form class="modal-product_form">
-      <ul class="modal-product_form-list">
-        <li>
+      <div class="modal-product_form-list">
+        <div class="modal-product_wrap">
           <input
-            class="modal-product_input coffee"
+            class="modal-product_field coffee"
             id="name-coffee"
             type="text"
             name="name"
@@ -125,10 +125,10 @@
             required
           />
           <label class="modal-product_label" for="name-coffee">Name</label>
-        </li>
-        <li>
+        </div>
+        <div class="modal-product_wrap">
           <input
-            class="modal-product_input coffee"
+            class="modal-product_field coffee"
             id="tel-coffee"
             type="tel"
             name="tel"
@@ -140,10 +140,10 @@
             required
           />
           <label class="modal-product_label" for="tel-coffee">Phone</label>
-        </li>
-        <li>
+        </div>
+        <div class="modal-product_wrap">
           <textarea
-            class="modal-product_input textarea coffee"
+            class="modal-product_field textarea coffee"
             name="comment"
             id="comment-coffee"
             placeholder=" "
@@ -155,16 +155,16 @@
           <label class="modal-product_label" for="comment-coffee"
             >Comment</label
           >
-        </li>
-      </ul>
+        </div>
+      </div>
       <button class="modal-product_button button" type="submit">Submit</button>
     </form>
   </div>
 </div>
 
 <!-- MILKSHAKES MODAL -->
-<div class="backdrop backdrop-product is-hidden" data-milkshakes>
-  <div class="modal-product">
+<div class="backdrop is-hidden" data-milkshakes>
+  <div class="modal-product modal">
     <button class="modal_btn" data-milkshakes-close>
       <svg class="modal__cross milk">
         <use href="./images/icons.svg#close-btn"></use>
@@ -195,10 +195,10 @@
     </ul>
 
     <form class="modal-product_form">
-      <ul class="modal-product_form-list">
-        <li>
+      <div class="modal-product_form-list">
+        <div class="modal-product_wrap">
           <input
-            class="modal-product_input milk"
+            class="modal-product_field milk"
             id="name-milk"
             type="text"
             name="name"
@@ -208,10 +208,10 @@
             required
           />
           <label class="modal-product_label" for="name-milk">Name</label>
-        </li>
-        <li>
+        </div>
+        <div class="modal-product_wrap">
           <input
-            class="modal-product_input milk"
+            class="modal-product_field milk"
             type="tel-cream"
             id="tel-milk"
             name="tel"
@@ -223,10 +223,10 @@
             required
           />
           <label class="modal-product_label" for="tel-milk">Phone</label>
-        </li>
-        <li>
+        </div>
+        <div class="modal-product_wrap">
           <textarea
-            class="modal-product_input textarea milk"
+            class="modal-product_field textarea milk"
             name="comment"
             id="comment-milk"
             placeholder=" "
@@ -236,8 +236,8 @@
             pattern="^[a-zA-Z]+$"
           ></textarea>
           <label class="modal-product_label" for="comment-milk">Comment</label>
-        </li>
-      </ul>
+        </div>
+      </div>
       <button class="modal-product_button button" type="submit">Submit</button>
     </form>
   </div>

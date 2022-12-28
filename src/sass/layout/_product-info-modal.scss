@@ -1,16 +1,4 @@
-.backdrop-product {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  align-items: flex-start;
-}
-
 .modal-product {
-  position: relative;
   max-width: 280px;
   padding: 28px 20px;
   border: 2px solid #f8d24e;
@@ -19,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--modal-bg-color);
+
+  max-height: unset;
 
   @media screen and (max-width: 479px) {
     min-width: 90vw;
@@ -40,10 +30,6 @@
   font-family: var(--secondary-font);
   font-size: 20px;
   line-height: 1.4;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: var(--secondary-text-color);
 
   @media screen and (max-width: 767px) {
     width: 260px;
@@ -154,10 +140,7 @@
   border: 2px solid var(--ice-nutrition-background);
   border-radius: 40px;
 
-  font-family: inherit;
-  font-weight: 400;
   font-size: 10px;
-  line-height: 1.2;
 
   &::before {
     content: '';
@@ -175,9 +158,7 @@
   span {
     position: absolute;
     top: 7px;
-    font-family: inherit;
     font-weight: 500;
-    font-size: 10px;
     line-height: 2.8;
     color: var(--secondary-text-color);
     z-index: 2;
@@ -212,13 +193,9 @@
 .modal-product_item {
   display: flex;
   justify-content: space-between;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.04em;
-  color: var(--secondary-text-color);
 }
 
 .modal-product_form {
@@ -233,13 +210,13 @@
   flex-direction: column;
   gap: 16px;
   margin-bottom: 24px;
-
-  > li {
-    position: relative;
-  }
 }
 
-.modal-product_input {
+.modal-product_wrap {
+  position: relative;
+}
+
+.modal-product_field {
   resize: none;
   width: 240px;
   height: 42px;
@@ -248,43 +225,41 @@
   border: 1px solid var(--main-bg-color);
   border-radius: 10px;
 
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4;
-  color: var(--secondary-text-color);
-
   @media screen and (min-width: 768px) {
     width: 368px;
     height: 42px;
   }
 }
 
-.modal-product_input.cream:focus-within,
-.modal-product_input.textarea.cream:focus-within {
+.modal-product_field.cream:focus-within,
+.modal-product_field.textarea.cream:focus-within {
   outline: 3px solid var(--product-bg-cream);
 }
 
-.modal-product_input.coffee {
+.modal-product_field.coffee {
   border-color: var(--product-bg-coffe);
 }
 
-.modal-product_input.coffee:focus-within,
-.modal-product_input.textarea.coffee:focus-within {
+.modal-product_field.coffee:focus-within,
+.modal-product_field.textarea.coffee:focus-within {
   outline: 3px solid var(--product-bg-coffe);
 }
 
-.modal-product_input.milk {
+.modal-product_field.milk {
   border-color: var(--product-bg-milkshakes);
 }
 
-.modal-product_input.milk:focus-within,
-.modal-product_input.textarea.milk:focus-within {
+.modal-product_field.milk:focus-within,
+.modal-product_field.textarea.milk:focus-within {
   outline: 3px solid var(--product-bg-milkshakes);
 }
 
-.modal-product_input:not(:placeholder-shown):invalid {
-  border: 1px solid rgb(172, 48, 48);
+.modal-product_field:not(:placeholder-shown):invalid {
+  border: 3px solid var(--val-invalid);
+}
+
+.modal-product_field:not(:placeholder-shown):valid {
+  border: 3px solid var(--button-hover-color);
 }
 
 .modal-product_label {
@@ -293,11 +268,6 @@
   left: 12px;
   transform: translateY(-50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.4;
-  color: var(--secondary-text-color);
   pointer-events: none;
 
   @include tablet {
@@ -306,8 +276,8 @@
   }
 }
 
-.modal-product_input:focus + .modal-product_label,
-.modal-product_input:not(:placeholder-shown) + .modal-product_label {
+.modal-product_field:focus + .modal-product_label,
+.modal-product_field:not(:placeholder-shown) + .modal-product_label {
   transform: translateY(-37px);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -322,11 +292,9 @@
 
 .span_ingredients {
   margin-bottom: 24px;
-  font-family: inherit;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.4;
-  color: var(--secondary-text-color);
 }
 
 .textarea {
