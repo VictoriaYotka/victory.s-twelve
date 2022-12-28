@@ -59,7 +59,7 @@
   background-color: #ffffff;
   border: none;
   outline: 0;
-  cursor: pointer;
+  // cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include tablet {
@@ -84,7 +84,7 @@
 }
 
 input:focus-within {
-   outline: 3px solid rgb(171, 218, 171);
+  outline: 3px solid rgb(171, 218, 171);
 }
 
 input:not(:placeholder-shown):requiered:invalid {
