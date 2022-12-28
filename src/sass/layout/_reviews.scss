@@ -124,6 +124,12 @@
   }
 }
 
+.slick-dots li button,
+.slick-next,
+.slick-prev {
+  @extend %cursor;
+}
+
 .slick-dots li button:before {
   background-color: rgba(217, 217, 217, 1);
   border-radius: 50%;
