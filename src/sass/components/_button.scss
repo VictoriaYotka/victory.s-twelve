@@ -102,9 +102,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  // background-color: #629460;
   background-color: var(--icon-bg-color);
-  // opacity: 0.5;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.45);
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
@@ -129,7 +127,6 @@
     height: 25px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    // border-color: #f5f0f6;
     border-color: var(--icon-bg-color);
   }
 
