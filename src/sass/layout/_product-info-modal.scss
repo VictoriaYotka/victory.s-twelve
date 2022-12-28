@@ -291,7 +291,7 @@
   }
 
   &_input:not(:placeholder-shown):invalid {
-    border: 3px solid rgb(172, 48, 48);
+    border: 1px solid rgb(172, 48, 48);
   }
 
   &_label {
