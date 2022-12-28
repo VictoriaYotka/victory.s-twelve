@@ -22,9 +22,7 @@
   border: 2px solid var(--icon-bg-color);
   border-radius: 10px;
 
-  transition: opacity 800ms 500ms ease;
-
-  overflow-y: scroll;
+  transition: opacity 800ms 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include mobile {
     width: 440px;
@@ -83,11 +81,11 @@
   }
 }
 
-input:focus-within {
-  outline: 3px solid rgb(171, 218, 171);
-}
+// input:focus-within {
+//   outline: 3px solid rgb(171, 218, 171);
+// }
 
-input:not(:placeholder-shown):requiered:invalid {
-  outline: none;
-  border: 3px solid rgb(172, 48, 48);
-}
+// input:not(:placeholder-shown):requiered:invalid {
+//   outline: none;
+//   border: 3px solid rgb(172, 48, 48);
+// }
