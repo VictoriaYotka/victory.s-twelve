@@ -84,7 +84,12 @@
   box-shadow: var(--product-shadow-milkshake);
 }
 
-.modal-product_image.cream {
+.modal-product_image{
+  position: relative;
+  transform: translateY(-7px);
+}
+
+.modal-product_image.product-cream {
   display: block;
   width: 132px;
   height: 132px;
@@ -106,7 +111,7 @@
   }
 }
 
-.modal-product_image.coffee {
+.modal-product_image.product-coffee {
   display: block;
   width: 132px;
   height: 132px;
@@ -128,7 +133,7 @@
   }
 }
 
-.modal-product_image.milk {
+.modal-product_image.product-milk {
   display: block;
   width: 132px;
   height: 132px;
