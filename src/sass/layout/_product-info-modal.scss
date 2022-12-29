@@ -31,6 +31,8 @@
 
 .modal-product-chocolate {
   border: 2px solid var(--ice-nutrition-background);
+
+  scrollbar-color: var(--ice-nutrition-background) var(--modal-bg-color);
 }
 
 .modal-product-chocolate::-webkit-scrollbar-thumb {
@@ -40,6 +42,8 @@
 
 .modal-product-coffee {
   border: 2px solid var(--primary-accent-color);
+
+  scrollbar-color: var(--primary-accent-color) var(--modal-bg-color);
 }
 .modal-product-coffee::-webkit-scrollbar-thumb {
   background-color: var(--primary-accent-color);
@@ -48,6 +52,8 @@
 
 .modal-product-milkshake {
   border: 2px solid var(--product-bg-milkshakes);
+
+  scrollbar-color: var(--product-bg-milkshakes) var(--modal-bg-color);
 }
 .modal-product-milkshake::-webkit-scrollbar-thumb {
   background-color: var(--product-bg-milkshakes);
@@ -84,7 +90,7 @@
   box-shadow: var(--product-shadow-milkshake);
 }
 
-.modal-product_image{
+.modal-product_image {
   position: relative;
   transform: translateY(-7px);
 }
