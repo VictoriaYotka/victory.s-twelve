@@ -7,6 +7,18 @@
   }
 }
 
+.franchise::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  border-radius: 20px;
+  border: 3px solid var(--modal-bg-color);
+}
+
+.franchise::-webkit-scrollbar-thumb {
+  background-color: var(--primary-accent-color);
+  border-radius: 20px;
+}
+
 .franchise_title {
   display: block;
   margin-bottom: 20px;

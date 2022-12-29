@@ -5,6 +5,18 @@
   overflow-y: auto;
 }
 
+.modal-buy-now::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  border-radius: 20px;
+  border: 3px solid var(--modal-bg-color);
+}
+
+.modal-buy-now::-webkit-scrollbar-thumb {
+  background-color: var(--primary-accent-color);
+  border-radius: 20px;
+}
+
 //Картки
 .buy-now__title {
   display: inline-block;
