@@ -3,6 +3,8 @@
   max-height: 99%;
 
   overflow-y: auto;
+
+  scrollbar-color: var(--primary-accent-color) var(--modal-bg-color);
 }
 
 .modal-buy-now::-webkit-scrollbar {
@@ -79,6 +81,8 @@
 }
 
 .buy-now__gradient {
+  @extend %cursor;
+
   position: absolute;
   top: -61px;
   left: -2px;
@@ -124,6 +128,8 @@
 }
 
 .buy-now__name {
+  @extend %cursor;
+
   @extend %text;
   position: relative;
   top: -40px;
@@ -141,6 +147,8 @@
 }
 
 .buy-now__img {
+  @extend %cursor;
+
   position: absolute;
   top: -71px;
   left: -2px;
