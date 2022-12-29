@@ -247,13 +247,11 @@
   resize: none;
 }
 
-.buy-now_field:not(:placeholder-shown):required:invalid,
-.buy-now_comment:not(:placeholder-shown):invalid {
-  border: 3px solid rgb(172, 48, 48);
+.buy-now_field:not(:placeholder-shown):required:invalid {
+  border: 3px solid var(--val-invalid);
 }
 
-.buy-now_field:not(:placeholder-shown):required:valid,
-.buy-now_comment:not(:placeholder-shown):valid {
+.buy-now_field:not(:placeholder-shown):required:valid {
   border: 3px solid var(--button-hover-color);
 }
 
