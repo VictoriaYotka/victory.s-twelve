@@ -1,14 +1,12 @@
 .modal-product {
   max-width: 280px;
   padding: 28px 20px;
-  border: 2px solid #f8d24e;
+  border: 2px solid var(--primary-accent-color);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--modal-bg-color);
-
-  max-height: unset;
 
   @media screen and (max-width: 479px) {
     min-width: 90vw;
@@ -23,6 +21,18 @@
     min-width: 568px;
     padding: 32px 40px;
   }
+}
+
+.modal-product::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  border-radius: 20px;
+  border: 3px solid var(--modal-bg-color);
+}
+
+.modal-product::-webkit-scrollbar-thumb {
+  background-color: var(--primary-accent-color);
+  border-radius: 20px;
 }
 
 .modal-product_title {
@@ -216,15 +226,15 @@
   position: relative;
 }
 
-.modal-product_field {
-  resize: none;
+.modal-product_field,
+.modal-product_field--comment {
   width: 240px;
   height: 42px;
   padding: 11px;
-  background: var(--input-bg-color);
-  border: 1px solid var(--main-bg-color);
+  background-color: var(--input-bg-color);
   border-radius: 10px;
   transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 
   @media screen and (min-width: 768px) {
     width: 368px;
@@ -232,15 +242,15 @@
   }
 }
 
-.modal-product_field {
-  outline: none;
+.cream {
+  border: 1px solid var(--main-bg-color);
 }
 
-.modal-product_field.coffee {
+.coffee {
   border-color: var(--product-bg-coffe);
 }
 
-.modal-product_field.milk {
+.milk {
   border-color: var(--product-bg-milkshakes);
 }
 
@@ -267,7 +277,9 @@
 }
 
 .modal-product_field:focus + .modal-product_label,
-.modal-product_field:not(:placeholder-shown) + .modal-product_label {
+.modal-product_field:not(:placeholder-shown) + .modal-product_label,
+.modal-product_field--comment:focus + .modal-product_label,
+.modal-product_field--comment:not(:placeholder-shown) + .modal-product_label {
   transform: translateY(-37px);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -288,6 +300,8 @@
 }
 
 .textarea {
+  outline: none;
+  resize: none;
   height: 84px;
 }
 

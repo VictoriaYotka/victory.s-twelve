@@ -1,7 +1,7 @@
 .reviews {
   padding-top: 0px;
   padding-bottom: 40px;
-  width: 100vw;
+  width: 100%;
 
   @include tablet {
     padding-top: 0px;
@@ -21,9 +21,11 @@
 .reviews__list {
   @extend %list;
 }
+
 .reviews__picture {
   margin-bottom: 32px;
 }
+
 .reviews__thumb {
   display: flex;
   justify-content: center;
