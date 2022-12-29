@@ -1,262 +1,244 @@
 <!-- ICE CREAM MODAL -->
-<div class="backdrop backdrop-product is-hidden" data-iceCream>
-  <div class="modal-dialog">
-    <div class="modal-product">
-      <button class="modal_btn" data-iceCream-close>
-        <svg class="modal__cross">
-          <use href="./images/icons.svg#close-btn"></use>
-        </svg>
-      </button>
+<div class="backdrop is-hidden" data-iceCream>
+  <div class="modal-product modal">
+    <button class="modal_btn" data-iceCream-close>
+      <svg class="modal__cross">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
 
-      <strong class="modal-product_title">Chololate icecream</strong>
+    <strong class="modal-product_title">Chololate icecream</strong>
 
-      <span class="modal-product_picture">
-        <span class="modal-product_image cream"></span>
-      </span>
+    <span class="modal-product_picture">
+      <span class="modal-product_image cream"></span>
+    </span>
 
-      <ul class="modal-product_nutrition">
-        <li class="modal-product_item-elipse"><span>320</span> kcal</li>
-        <li class="modal-product_item-elipse"><span>4g</span>Protein</li>
-        <li class="modal-product_item-elipse"><span>8,2g</span>Fats</li>
-        <li class="modal-product_item-elipse"><span>40,4g</span>Carbs</li>
-      </ul>
+    <ul class="modal-product_nutrition">
+      <li class="modal-product_item-elipse"><span>320</span> kcal</li>
+      <li class="modal-product_item-elipse"><span>4g</span>Protein</li>
+      <li class="modal-product_item-elipse"><span>8,2g</span>Fats</li>
+      <li class="modal-product_item-elipse"><span>40,4g</span>Carbs</li>
+    </ul>
 
-      <span class="span_ingredients">Ingredients</span>
-      <ul class="modal-product_ingredients">
-        <li class="modal-product_item">Milk <span>100ml</span></li>
-        <li class="modal-product_item">Belgian chocolate<span>20g</span></li>
-        <li class="modal-product_item">Cream <span>150 ml</span></li>
-        <li class="modal-product_item">Cocoa powder<span>30g</span></li>
-        <li class="modal-product_item">Sugar <span>40g</span></li>
-        <li class="modal-product_item">Vanilla sugar<span>10g</span></li>
-      </ul>
+    <span class="span_ingredients">Ingredients</span>
+    <ul class="modal-product_ingredients">
+      <li class="modal-product_item">Milk <span>100ml</span></li>
+      <li class="modal-product_item">Belgian chocolate<span>20g</span></li>
+      <li class="modal-product_item">Cream <span>150 ml</span></li>
+      <li class="modal-product_item">Cocoa powder<span>30g</span></li>
+      <li class="modal-product_item">Sugar <span>40g</span></li>
+      <li class="modal-product_item">Vanilla sugar<span>10g</span></li>
+    </ul>
 
-      <form class="modal-product_form">
-        <ul class="modal-product_form-list">
-          <li>
-            <input
-              class="modal-product_input"
-              id="name-cream"
-              type="text"
-              name="name"
-              placeholder=" "
-              pattern="[A-Za-z]{2,}"
-              title="Please, write your name and surname"
-              required
-            />
-            <label class="modal-product_label" for="name-cream">Name</label>
-          </li>
-          <li>
-            <input
-              class="modal-product_input"
-              type="tel"
-              id="tel-cream"
-              name="tel"
-              placeholder=" "
-              pattern="\+?[0-9\s\-\(\)]+"
-              title="Please, write your phone number"
-              {13}
-              minlength="13"
-              required
-            />
-            <label class="modal-product_label" for="tel-cream">Phone</label>
-          </li>
-          <li>
-            <textarea
-              class="modal-product_input textarea cream"
-              name="comment"
-              id="comment-cream"
-              placeholder=" "
-              autocomplete="off"
-              minlength="10"
-              title="Please, write down your wishes for the order"
-              pattern="^[a-zA-Z]+$"
-            ></textarea>
-            <label class="modal-product_label" for="comment-cream"
-              >Comment</label
-            >
-          </li>
-        </ul>
-        <button class="modal-product_button button" type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
+    <form class="modal-product_form">
+      <div class="modal-product_form-list">
+        <div class="modal-product_wrap">
+          <input
+            class="modal-product_field cream"
+            id="name-cream"
+            type="text"
+            name="name"
+            placeholder=" "
+            pattern="[A-Za-z]{2,}"
+            title="Please, write your name and surname"
+            required
+          />
+          <label class="modal-product_label" for="name-cream">Name</label>
+        </div>
+        <div class="modal-product_wrap">
+          <input
+            class="modal-product_field cream"
+            type="tel-cream"
+            id="tel"
+            name="tel"
+            placeholder=" "
+            pattern="\+?[0-9\s\-\(\)]+"
+            title="Please, write your phone number"
+            {13}
+            minlength="13"
+            required
+          />
+          <label class="modal-product_label" for="tel-cream">Phone</label>
+        </div>
+        <div class="modal-product_wrap">
+          <textarea
+            class="modal-product_field textarea cream"
+            name="comment"
+            id="comment-cream"
+            placeholder=" "
+            autocomplete="off"
+            minlength="10"
+            title="Please, write down your wishes for the order"
+            pattern="^[a-zA-Z]+$"
+          ></textarea>
+          <label class="modal-product_label" for="comment-cream">Comment</label>
+        </div>
+      </div>
+      <button class="modal-product_button button" type="submit">Submit</button>
+    </form>
   </div>
 </div>
 
 <!-- ICE COFFEE MODAL -->
-<div class="backdrop backdrop-product is-hidden" data-iceCoffee>
-  <div class="modal-dialog">
-    <div class="modal-product">
-      <button class="modal_btn" data-iceCoffee-close>
-        <svg class="modal__cross coffee">
-          <use href="./images/icons.svg#close-btn"></use>
-        </svg>
-      </button>
+<div class="backdrop is-hidden" data-iceCoffee>
+  <div class="modal-product modal">
+    <button class="modal_btn" data-iceCoffee-close>
+      <svg class="modal__cross coffee">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
 
-      <strong class="modal-product_title">Chololate icecoffee</strong>
+    <strong class="modal-product_title">Chololate icecoffee</strong>
 
-      <span class="modal-product_picture coffee">
-        <span class="modal-product_image coffee"></span>
-      </span>
+    <span class="modal-product_picture coffee">
+      <span class="modal-product_image coffee"></span>
+    </span>
 
-      <ul class="modal-product_nutrition">
-        <li class="modal-product_item-elipse coffee"><span>320</span> kcal</li>
-        <li class="modal-product_item-elipse coffee"><span>4g</span>Protein</li>
-        <li class="modal-product_item-elipse coffee"><span>8,2g</span>Fats</li>
-        <li class="modal-product_item-elipse coffee">
-          <span>40,4g</span>Carbs
-        </li>
-      </ul>
+    <ul class="modal-product_nutrition">
+      <li class="modal-product_item-elipse coffee"><span>320</span> kcal</li>
+      <li class="modal-product_item-elipse coffee"><span>4g</span>Protein</li>
+      <li class="modal-product_item-elipse coffee"><span>8,2g</span>Fats</li>
+      <li class="modal-product_item-elipse coffee"><span>40,4g</span>Carbs</li>
+    </ul>
 
-      <span class="span_ingredients">Ingredients</span>
-      <ul class="modal-product_ingredients">
-        <li class="modal-product_item">Milk <span>100ml</span></li>
-        <li class="modal-product_item">Belgian chocolate<span>20g</span></li>
-        <li class="modal-product_item">Cream <span>150 ml</span></li>
-        <li class="modal-product_item">Cocoa powder<span>30g</span></li>
-        <li class="modal-product_item">Sugar <span>40g</span></li>
-        <li class="modal-product_item">Vanilla sugar<span>10g</span></li>
-      </ul>
+    <span class="span_ingredients">Ingredients</span>
+    <ul class="modal-product_ingredients">
+      <li class="modal-product_item">Milk <span>100ml</span></li>
+      <li class="modal-product_item">Belgian chocolate<span>20g</span></li>
+      <li class="modal-product_item">Cream <span>150 ml</span></li>
+      <li class="modal-product_item">Cocoa powder<span>30g</span></li>
+      <li class="modal-product_item">Sugar <span>40g</span></li>
+      <li class="modal-product_item">Vanilla sugar<span>10g</span></li>
+    </ul>
 
-      <form class="modal-product_form">
-        <ul class="modal-product_form-list">
-          <li>
-            <input
-              class="modal-product_input coffee"
-              id="name-coffee"
-              type="text"
-              name="name"
-              placeholder=" "
-              pattern="[A-Za-z]{2,}"
-              title="Please, write your name and surname"
-              required
-            />
-            <label class="modal-product_label" for="name-coffee">Name</label>
-          </li>
-          <li>
-            <input
-              class="modal-product_input coffee"
-              type="tel"
-              id="tel-coffee"
-              name="tel"
-              placeholder=" "
-              pattern="\+?[0-9\s\-\(\)]+"
-              title="Please, write your phone number"
-              {13}
-              minlength="13"
-              required
-            />
-            <label class="modal-product_label" for="tel-coffee">Phone</label>
-          </li>
-          <li>
-            <textarea
-              class="modal-product_input textarea coffee"
-              name="comment"
-              id="comment-coffee"
-              placeholder=" "
-              autocomplete="off"
-              minlength="10"
-              title="Please, write down your wishes for the order"
-              pattern="^[a-zA-Z]+$"
-            ></textarea>
-            <label class="modal-product_label" for="comment-coffee"
-              >Comment</label
-            >
-          </li>
-        </ul>
-        <button class="modal-product_button button" type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
+    <form class="modal-product_form">
+      <div class="modal-product_form-list">
+        <div class="modal-product_wrap">
+          <input
+            class="modal-product_field coffee"
+            id="name-coffee"
+            type="text"
+            name="name"
+            placeholder=" "
+            pattern="[A-Za-z]{2,}"
+            title="Please, write your name and surname"
+            required
+          />
+          <label class="modal-product_label" for="name-coffee">Name</label>
+        </div>
+        <div class="modal-product_wrap">
+          <input
+            class="modal-product_field coffee"
+            id="tel-coffee"
+            type="tel"
+            name="tel"
+            placeholder=" "
+            pattern="\+?[0-9\s\-\(\)]+"
+            title="Please, write your phone number"
+            {13}
+            minlength="13"
+            required
+          />
+          <label class="modal-product_label" for="tel-coffee">Phone</label>
+        </div>
+        <div class="modal-product_wrap">
+          <textarea
+            class="modal-product_field textarea coffee"
+            name="comment"
+            id="comment-coffee"
+            placeholder=" "
+            autocomplete="off"
+            minlength="10"
+            title="Please, write down your wishes for the order"
+            pattern="^[a-zA-Z]+$"
+          ></textarea>
+          <label class="modal-product_label" for="comment-coffee"
+            >Comment</label
+          >
+        </div>
+      </div>
+      <button class="modal-product_button button" type="submit">Submit</button>
+    </form>
   </div>
 </div>
 
 <!-- MILKSHAKES MODAL -->
-<div class="backdrop backdrop-product is-hidden" data-milkshakes>
-  <div class="modal-dialog">
-    <div class="modal-product">
-      <button class="modal_btn" data-milkshakes-close>
-        <svg class="modal__cross milk">
-          <use href="./images/icons.svg#close-btn"></use>
-        </svg>
-      </button>
+<div class="backdrop is-hidden" data-milkshakes>
+  <div class="modal-product modal">
+    <button class="modal_btn" data-milkshakes-close>
+      <svg class="modal__cross milk">
+        <use href="./images/icons.svg#close-btn"></use>
+      </svg>
+    </button>
 
-      <strong class="modal-product_title">Chololate milkshake</strong>
+    <strong class="modal-product_title">Chololate milkshake</strong>
 
-      <span class="modal-product_picture milk">
-        <span class="modal-product_image milk"></span>
-      </span>
+    <span class="modal-product_picture milk">
+      <span class="modal-product_image milk"></span>
+    </span>
 
-      <ul class="modal-product_nutrition">
-        <li class="modal-product_item-elipse milk"><span>320</span> kcal</li>
-        <li class="modal-product_item-elipse milk"><span>4g</span>Protein</li>
-        <li class="modal-product_item-elipse milk"><span>8,2g</span>Fats</li>
-        <li class="modal-product_item-elipse milk"><span>40,4g</span>Carbs</li>
-      </ul>
+    <ul class="modal-product_nutrition">
+      <li class="modal-product_item-elipse milk"><span>320</span> kcal</li>
+      <li class="modal-product_item-elipse milk"><span>4g</span>Protein</li>
+      <li class="modal-product_item-elipse milk"><span>8,2g</span>Fats</li>
+      <li class="modal-product_item-elipse milk"><span>40,4g</span>Carbs</li>
+    </ul>
 
-      <span class="span_ingredients">Ingredients</span>
-      <ul class="modal-product_ingredients">
-        <li class="modal-product_item">Milk <span>100ml</span></li>
-        <li class="modal-product_item">Belgian chocolate<span>20g</span></li>
-        <li class="modal-product_item">Cream <span>150 ml</span></li>
-        <li class="modal-product_item">Cocoa powder<span>30g</span></li>
-        <li class="modal-product_item">Sugar <span>40g</span></li>
-        <li class="modal-product_item">Vanilla sugar<span>10g</span></li>
-      </ul>
+    <span class="span_ingredients">Ingredients</span>
+    <ul class="modal-product_ingredients">
+      <li class="modal-product_item">Milk <span>100ml</span></li>
+      <li class="modal-product_item">Belgian chocolate<span>20g</span></li>
+      <li class="modal-product_item">Cream <span>150 ml</span></li>
+      <li class="modal-product_item">Cocoa powder<span>30g</span></li>
+      <li class="modal-product_item">Sugar <span>40g</span></li>
+      <li class="modal-product_item">Vanilla sugar<span>10g</span></li>
+    </ul>
 
-      <form class="modal-product_form">
-        <ul class="modal-product_form-list">
-          <li>
-            <input
-              class="modal-product_input milk"
-              id="name-milk"
-              type="text"
-              name="name"
-              placeholder=" "
-              pattern="[A-Za-z]{2,}"
-              title="Please, write your name and surname"
-              required
-            />
-            <label class="modal-product_label" for="name-milk">Name</label>
-          </li>
-          <li>
-            <input
-              class="modal-product_input milk"
-              type="tel"
-              id="tel-milk"
-              name="tel"
-              placeholder=" "
-              pattern="\+?[0-9\s\-\(\)]+"
-              title="Please, write your phone number"
-              {13}
-              minlength="13"
-              required
-            />
-            <label class="modal-product_label" for="tel-milk">Phone</label>
-          </li>
-          <li>
-            <textarea
-              class="modal-product_input textarea milk"
-              name="comment"
-              id="comment-milk"
-              placeholder=" "
-              autocomplete="off"
-              minlength="10"
-              title="Please, write down your wishes for the order"
-              pattern="^[a-zA-Z]+$"
-            ></textarea>
-            <label class="modal-product_label" for="comment-milk"
-              >Comment</label
-            >
-          </li>
-        </ul>
-        <button class="modal-product_button button" type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
+    <form class="modal-product_form">
+      <div class="modal-product_form-list">
+        <div class="modal-product_wrap">
+          <input
+            class="modal-product_field milk"
+            id="name-milk"
+            type="text"
+            name="name"
+            placeholder=" "
+            pattern="[A-Za-z]{2,}"
+            title="Please, write your name and surname"
+            required
+          />
+          <label class="modal-product_label" for="name-milk">Name</label>
+        </div>
+        <div class="modal-product_wrap">
+          <input
+            class="modal-product_field milk"
+            type="tel-cream"
+            id="tel-milk"
+            name="tel"
+            placeholder=" "
+            pattern="\+?[0-9\s\-\(\)]+"
+            title="Please, write your phone number"
+            {13}
+            minlength="13"
+            required
+          />
+          <label class="modal-product_label" for="tel-milk">Phone</label>
+        </div>
+        <div class="modal-product_wrap">
+          <textarea
+            class="modal-product_field textarea milk"
+            name="comment"
+            id="comment-milk"
+            placeholder=" "
+            autocomplete="off"
+            minlength="10"
+            title="Please, write down your wishes for the order"
+            pattern="^[a-zA-Z]+$"
+          ></textarea>
+          <label class="modal-product_label" for="comment-milk">Comment</label>
+        </div>
+      </div>
+      <button class="modal-product_button button" type="submit">Submit</button>
+    </form>
   </div>
 </div>
