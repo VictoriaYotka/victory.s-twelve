@@ -5,6 +5,8 @@
     padding-left: 58px;
     padding-right: 58px;
   }
+
+  scrollbar-color: var(--primary-accent-color) var(--modal-bg-color);
 }
 
 .franchise::-webkit-scrollbar {
