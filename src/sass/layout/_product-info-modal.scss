@@ -1,7 +1,6 @@
 .modal-product {
   max-width: 280px;
   padding: 28px 20px;
-  border: 2px solid var(--primary-accent-color);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -30,8 +29,28 @@
   border: 3px solid var(--modal-bg-color);
 }
 
-.modal-product::-webkit-scrollbar-thumb {
+.modal-product-chocolate {
+  border: 2px solid var(--ice-nutrition-background);
+}
+
+.modal-product-chocolate::-webkit-scrollbar-thumb {
+  background-color: var(--ice-nutrition-background);
+  border-radius: 20px;
+}
+
+.modal-product-coffee {
+  border: 2px solid var(--primary-accent-color);
+}
+.modal-product-coffee::-webkit-scrollbar-thumb {
   background-color: var(--primary-accent-color);
+  border-radius: 20px;
+}
+
+.modal-product-milkshake {
+  border: 2px solid var(--product-bg-milkshakes);
+}
+.modal-product-milkshake::-webkit-scrollbar-thumb {
+  background-color: var(--product-bg-milkshakes);
   border-radius: 20px;
 }
 
