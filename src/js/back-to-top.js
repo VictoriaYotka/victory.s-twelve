@@ -1,18 +1,21 @@
-function backToTop() {
-  let button = $('.back-to-top');
+function backToTop () {
+  let button = document.querySelector('.back-to-top');
 
-  $(window).on('scroll', () => {
-    if ($(this).scrollTop() >= 200) {
-      button.fadeIn();
+  // When the user scrolls down 200px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
+    ) {
+      button.style.display = 'block';
     } else {
-      button.fadeOut();
+      button.style.display = 'none';
     }
-  });
-
-  button.on('click', e => {
-    e.preventDefault();
-    $('html').animate({ scrollTop: 0 }, 1000);
-  });
+  }
 }
 
 backToTop();
