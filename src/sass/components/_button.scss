@@ -31,14 +31,14 @@
   position: absolute;
   bottom: -5px;
   left: -5px;
-  width: 150%;
+  width: 200%;
   height: 150%;
 
   z-index: -1;
 
   background-color: var(--button-hover-color);
 
-  transform-origin: left bottom;
+  transform-origin: 0 85%;
   transform: translateX(-120%) skewX(50deg);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
