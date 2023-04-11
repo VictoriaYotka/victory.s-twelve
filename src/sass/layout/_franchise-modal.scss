@@ -135,17 +135,20 @@
   }
 }
 
+.franchise_field::placeholder,
+.franchise_comment::placeholder {
+  opacity: 0;
+}
+
 .franchise_comment {
   resize: none;
 }
 
-.franchise_field:not(:placeholder-shown):required:invalid,
-.franchise_comment:not(:placeholder-shown):invalid {
+.franchise_field:invalid:not(:placeholder-shown) {
   border: 3px solid rgb(172, 48, 48);
 }
 
-.franchise_field:not(:placeholder-shown):required:valid,
-.franchise_comment:not(:placeholder-shown):valid {
+.franchise_field:valid:not(:placeholder-shown) {
   border: 3px solid var(--button-hover-color);
 }
 

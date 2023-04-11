@@ -263,15 +263,21 @@
   }
 }
 
+.buy-now_field::placeholder,
+.buy-now_comment::placeholder {
+  opacity: 0;
+}
+
+
 .buy-now_comment {
   resize: none;
 }
 
-.buy-now_field:not(:placeholder-shown):required:invalid {
+.buy-now_field:invalid:not(:placeholder-shown) {
   border: 3px solid var(--val-invalid);
 }
 
-.buy-now_field:not(:placeholder-shown):required:valid {
+.buy-now_field:valid:not(:placeholder-shown) {
   border: 3px solid var(--button-hover-color);
 }
 

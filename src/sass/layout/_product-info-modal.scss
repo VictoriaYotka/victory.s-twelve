@@ -284,11 +284,16 @@
   border: 1px solid var(--product-bg-milkshakes);
 }
 
-.modal-product_field:not(:placeholder-shown):invalid {
+.modal-product_field::placeholder,
+.modal-product_field--comment::placeholder {
+  opacity: 0;
+}
+
+.modal-product_field:invalid:not(:placeholder-shown) {
   border: 3px solid var(--val-invalid);
 }
 
-.modal-product_field:not(:placeholder-shown):valid {
+.modal-product_field:valid:not(:placeholder-shown) {
   border: 3px solid var(--button-hover-color);
 }
 
