@@ -106,7 +106,9 @@
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
 
   &:hover,
   &:focus {
@@ -146,4 +148,9 @@
     border-top: 5px solid var(--main-text-color);
     border-left: 5px solid var(--main-text-color);
   }
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
