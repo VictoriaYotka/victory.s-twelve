@@ -1,99 +1,52 @@
-# Parcel template
+# Icecream Online Store 🍦
 
-Этот проект был создан при помощи Parcel. Для знакомства и настройки
-дополнительных возможностей [обратись к документации](https://parceljs.org/).
+Icecream is an online store project developed by a group of aspiring frontend developers. This repository contains the frontend code for the Icecream application.
 
-## Подготовка нового проекта
+## Project Overview 🌟
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Склонируй этот репозиторий.
-3. Измени имя папки с `parcel-project-template` на имя своего проекта.
-4. Создай новый пустой репозиторий на GitHub.
-5. Открой проект в VSCode, запусти терминал и свяжи проект с GitHub-репозиторием
-   [по инструкции](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
-6. Установи зависимости проекта в терминале командой `npm install` .
-7. Запусти режим разработки, выполнив команду `npm start`.
-8. Перейди в браузере по адресу [http://localhost:1234](http://localhost:1234).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+Icecream is a web-based application that allows users to browse and purchase ice cream online. The main features of the application include:
 
-## Файлы и папки
+- Ice cream browsing and searching 🔍
+- Ice cream details and reviews 📝
+- Order placement and payment processing 💳
 
-- Все паршалы файлов стилей должны лежать в папке `src/sass` и импортироваться в
-  файлы стилей страниц. Например, для `index.html` файл стилей называется
-  `index.scss`.
-- Изображения добавляй в папку `src/images`. Сборщик оптимизирует их, но только
-  при деплое продакшн версии проекта. Все это происходит в облаке, чтобы не
-  нагружать твой компьютер, так как на слабых машинах это может занять много
-  времени.
+The goal of this project is to provide a user-friendly and intuitive platform for ice cream lovers to discover, purchase, and review their favorite flavors.
 
-## Деплой
+## Technologies Used 🚀
 
-Для настройки деплоя проекта необходимо выполнить несколько дополнительных шагов
-по настройке твоего репозитория. Зайди во вкладку `Settings` и в подсекции
-`Actions` выбери выбери пункт `General`.
+The frontend of the Icecream application is built using the following technologies:
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+- HTML <a href="https://www.w3.org/html/" target="_blank">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/></a>
+- SASS <a href="https://sass-lang.com" target="_blank">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/></a>
+- JavaScript
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/></a>
+- Parsel <a href="https://parceljs.org/" target="_blank">
+  <img src="https://www.vectorlogo.zone/logos/parceljs/parceljs-ar21.svg" alt="parsel" height="40"/>
+  </a>
 
-Пролистай страницу до последней секции, в которой убедись что выбраны опции как
-на следующем изображении и нажми `Save`. Без этих настроек у сборки будет
-недостаточно прав для автоматизации процесса деплоя.
+The website is hosted on GitHub Pages.
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+## Credits 👏
 
-Продакшн версия проекта будет автоматически собираться и деплоиться на GitHub
-Pages, в ветку `gh-pages`, каждый раз когда обновляется ветка `main`. Например,
-после прямого пуша или принятого пул-реквеста. Для этого необходимо в файле
-`package.json` отредактировать поле `homepage` и скрипт `build`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+This project was created by the following team members:
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /your_repo_name/"
-},
-```
+- [Victoria Yotka](https://github.com/VictoriaYotka) - TeamLead, developer
+- [Mikhailo Salko](https://github.com/MikhailoSalko) - TechLead, developer
+- [Olena Bondarchuk](https://github.com/Olena-L-Bondarchuk) - Scrum Master, developer
+- [Oleksandr Moskaliuk](https://github.com/OleksandrPM) - Developer
+- [Heorhii Markov](https://github.com/GeryMarkury) - Developer
+- [Andrii Sachuk](https://github.com/ansachuk) - Developer
+- [Roman Ryabchinskiy](https://github.com/RomanOdessa75) - Developer
+- [Alekshorol](https://github.com/Alekshorol) - Developer
+- [DenysLikh](https://github.com/DenysLikh) - Developer
+- [Anhelina26](https://github.com/Anhelina26) - Developer
+- [SERGIY](https://github.com/23serik) - Developer
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+## Feedback 📝
 
-![GitHub Pages settings](./assets/repo-settings.png)
-
-### Статус деплоя
-
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
-
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
-
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
-
-![Deployment status](./assets/status.png)
-
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` или скрипта `build` в
-файле `package.json`.
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.
+You are welcome to leave any feedback or suggestions for improvement. Please
+feel free to open an issue on our GitHub repository or contact us directly.
+Thank you for visiting Icecream!
